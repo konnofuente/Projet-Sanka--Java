@@ -28,6 +28,21 @@
                <font>
                   <Font name="Calibri" size="18.0" />
                </font></Button>
+            <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="81.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@health-clinic.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="156.0" layoutY="292.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="CREATE CLINIC">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="156.0" layoutY="383.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="STOCK MANAGEMENT">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
       <AnchorPane prefHeight="500.0" prefWidth="66.0" />
    </children>
