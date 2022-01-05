@@ -15,17 +15,17 @@
                </image></ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="417.0" prefWidth="329.0" style="-fx-background-color: #588BAE;">
+      <AnchorPane prefHeight="417.0" prefWidth="328.0" style="-fx-background-color: WHITE;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="190.0" layoutX="70.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@customer.png" />
                </image></ImageView>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #45BD96;" text="SERVICES">
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="SERVICES">
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #45BD96;" text="ADMINISTRATOR" textAlignment="CENTER">
+            <Button alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="ADMINISTRATOR" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Button>
