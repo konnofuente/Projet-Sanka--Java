@@ -21,13 +21,13 @@
                <image>
                   <Image url="@customer.png" />
                </image></ImageView>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="SERVICES">
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="SERVICES" textFill="#f8f5f5">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="ADMINISTRATOR" textAlignment="CENTER">
+            <Button alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="ADMINISTRATOR" textAlignment="CENTER" textFill="#f8f0f0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font></Button>
             <Label contentDisplay="CENTER" layoutX="57.0" layoutY="14.0" prefHeight="45.0" prefWidth="180.0" text="      WELCOME" textAlignment="CENTER" textFill="#588bae">
                <font>
