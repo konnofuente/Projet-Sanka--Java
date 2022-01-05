@@ -7,8 +7,8 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="95.0" />
-      <AnchorPane prefHeight="500.0" prefWidth="544.0">
+      <AnchorPane prefHeight="500.0" prefWidth="71.0" style="-fx-background-color: #1D2951;" />
+      <AnchorPane prefHeight="500.0" prefWidth="567.0">
          <children>
             <Label layoutX="191.0" layoutY="14.0" text="WELCOME MR" textFill="#588bae">
                <font>
@@ -49,6 +49,6 @@
                </font>
             </Button>
          </children></AnchorPane>
-      <AnchorPane prefHeight="500.0" prefWidth="66.0" />
+      <AnchorPane prefHeight="500.0" prefWidth="64.0" style="-fx-background-color: #1D2951;" />
    </children>
 </HBox>
