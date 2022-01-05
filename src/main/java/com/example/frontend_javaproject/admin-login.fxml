@@ -5,18 +5,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="242.0" style="-fx-background-color: #588BAE;">
+      <AnchorPane prefHeight="273.0" prefWidth="235.0" style="-fx-background-color: #85C7F2;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="32.0" layoutY="235.0" text="237-653633002/690160047">
+            <Label layoutX="30.0" layoutY="219.0" text="237-653633002/690160047">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="42.0" layoutY="267.0" text="sankaprojet@gmail.com">
+            <Label layoutX="43.0" layoutY="253.0" text="sankaprojet@gmail.com">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
@@ -26,6 +24,15 @@
                   <Font name="Arial Italic" size="14.0" />
                </font>
             </Label>
+            <ImageView fitHeight="137.0" fitWidth="151.0" layoutX="48.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@2-LOGGO.png" />
+               </image></ImageView>
+            <ImageView fitHeight="162.0" fitWidth="162.0" layoutX="35.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@administrator.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="469.0" prefWidth="421.0">
