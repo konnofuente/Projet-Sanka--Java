@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -11,9 +11,14 @@
             <ImageView fitHeight="500.0" fitWidth="545.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="500.0" prefWidth="256.0">
+      <AnchorPane prefHeight="500.0" prefWidth="256.0" style="-fx-background-color: #588BAE;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="28.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="150.0" fitWidth="190.0" layoutX="53.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@customer.png" />
+               </image></ImageView>
+            <Button alignment="TOP_CENTER" layoutX="57.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="SERVICES" />
+            <Button alignment="CENTER" layoutX="57.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="ADMINISTRATOR" />
          </children>
       </AnchorPane>
    </children>
