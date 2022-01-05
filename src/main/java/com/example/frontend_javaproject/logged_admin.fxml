@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.frontend_javaproject.loggedin_admincontroller"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="95.0" />
+      <AnchorPane prefHeight="500.0" prefWidth="544.0">
+         <children>
+            <Label layoutX="191.0" layoutY="14.0" text="WELCOME MR" textFill="#588bae">
+               <font>
+                  <Font name="Calibri" size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="168.0" layoutY="118.0" mnemonicParsing="false" text="CLIENT MANAGEMENT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="66.0" />
+   </children>
+</HBox>

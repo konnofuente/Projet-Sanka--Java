@@ -48,7 +48,7 @@
             <TextField layoutX="195.0" layoutY="231.0" />
             <TextField layoutX="195.0" layoutY="292.0" />
             <Button layoutX="130.0" layoutY="355.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #588BAE;" text="Log In" />
-            <Button layoutX="19.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="19.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Add Admin" />
          </children>
       </AnchorPane>
    </children>
