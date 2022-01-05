@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.frontend_javaproject.AdminLogin"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="242.0" style="-fx-background-color: #588BAE;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="32.0" layoutY="235.0" text="237-653633002/690160047">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="267.0" text="sankaprojet@gmail.com">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="415.0" text="Protect the world with a facemask">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="469.0" prefWidth="421.0">
+         <children>
+            <ImageView fitHeight="162.0" fitWidth="163.0" layoutX="114.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="235.0" text="Admin Matricule">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="297.0" text="Admin Password">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="195.0" layoutY="231.0" />
+            <TextField layoutX="195.0" layoutY="292.0" />
+            <Button layoutX="130.0" layoutY="355.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #588BAE;" text="Log In" />
+            <Button layoutX="19.0" layoutY="430.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
