@@ -25,7 +25,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="196.0" layoutY="351.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #194E72;" text="DISPLAY STATS" textFill="#fcf9f9">
+            <Button layoutX="196.0" layoutY="351.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #194E72;" text="MODIFIE" textFill="#fcf9f9">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Button>
