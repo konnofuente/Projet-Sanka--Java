@@ -35,13 +35,8 @@ public class loggedin_admincontroller implements Initializable {
             }
         });
 
-        btn_stock.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
 
-            }
-        });
-        
+
         btn_create.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
