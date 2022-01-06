@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="287.0" style="-fx-background-color: #85C7F2;">
+         <children>
+            <ImageView fitHeight="190.0" fitWidth="189.0" layoutX="49.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@menuclinic.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="189.0" fitWidth="211.0" layoutX="44.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@2-LOGGO.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="125.0" layoutY="255.0" text="Label" />
+            <Label layoutX="125.0" layoutY="301.0" text="Label" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="405.0">
+         <children>
+            <Label layoutX="121.0" layoutY="14.0" text="CLINIC MENU" textFill="#070707">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="137.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #588BAE;" text="CREATE CLINIC" textFill="#fdfcfc">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="130.0" layoutY="365.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="MANAGE CLINIC STOCK" textFill="#fdf9f9">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="91.0" layoutY="484.0" prefHeight="17.0" prefWidth="245.0" text="Protect the world by wearing a face mask" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@planning.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
