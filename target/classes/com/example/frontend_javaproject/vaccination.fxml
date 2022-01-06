@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<<<<<<< HEAD
+=======
+<?import javafx.scene.effect.*?>
+>>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<<<<<<< HEAD
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="437.0" prefWidth="246.0">
          <children>
             <ImageView fitHeight="168.0" fitWidth="216.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+=======
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="437.0" prefWidth="246.0" style="-fx-background-color: #1D2951;">
+         <children>
+            <ImageView fitHeight="168.0" fitWidth="216.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bw-loggo.png" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect></ImageView>
+>>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
          </children></AnchorPane>
       <AnchorPane prefHeight="437.0" prefWidth="533.0">
          <children>
@@ -37,9 +55,15 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
+<<<<<<< HEAD
             <Button layoutX="178.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #194e7 #194e72;" text="VACCINATE">
                <font>
                   <Font size="18.0" />
+=======
+            <Button layoutX="178.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #194e72;" text="VACCINATE" textFill="#fcf9f9">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+>>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
                </font></Button>
             <TextField layoutX="228.0" layoutY="82.0" prefHeight="40.0" prefWidth="253.0" />
             <TextField layoutX="228.0" layoutY="152.0" prefHeight="40.0" prefWidth="253.0" />

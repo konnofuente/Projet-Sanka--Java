@@ -6,7 +6,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<<<<<<< HEAD
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+=======
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+>>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
    <children>
       <AnchorPane prefHeight="540.0" prefWidth="229.0" style="-fx-background-color: #1D2951;">
          <children>
@@ -45,11 +49,19 @@
             <TextField layoutX="190.0" layoutY="211.0" prefHeight="40.0" prefWidth="241.0" />
             <TextField layoutX="190.0" layoutY="280.0" prefHeight="40.0" prefWidth="241.0" />
             <TextField layoutX="190.0" layoutY="344.0" prefHeight="40.0" prefWidth="241.0" />
+<<<<<<< HEAD
             <Button layoutX="180.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #194e72;" text="TEST">
                <font>
                   <Font size="18.0" />
                </font></Button>
             <Label layoutX="119.0" layoutY="21.0" prefHeight="40.0" prefWidth="241.0" text="CREATE A RECORD" textAlignment="CENTER">
+=======
+            <Button layoutX="180.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #194e72;" text="TEST" textFill="#fcf9f9">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font></Button>
+            <Label layoutX="120.0" layoutY="21.0" prefHeight="40.0" prefWidth="241.0" text="CREATE A RECORD" textAlignment="CENTER">
+>>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
