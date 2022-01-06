@@ -33,7 +33,7 @@
                   <Image url="@administrator.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnmenu" layoutX="-1.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" style="-fx-background-color: #588BAE;" text="MAIN MENU" textFill="#2b2827">
+            <Button fx:id="btnmain" layoutX="-1.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" style="-fx-background-color: #588BAE;" text="MAIN MENU" textFill="#2b2827">
                <font>
                   <Font size="8.0" />
                </font>

@@ -19,6 +19,8 @@ public class admin_logincontrol implements Initializable {
 
     @FXML private Button btnadd_admin;
 
+    @FXML private Button btn_next;
+
     @FXML private Button btnlogin_admin;
 
     @FXML private Button btnreturn;
@@ -40,21 +42,25 @@ public class admin_logincontrol implements Initializable {
         btnlogin_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (!tfadmin_mat.getText().trim().isEmpty() || !tfadmin_pwd.getText().trim().isEmpty()) {
+                if (tfadmin_mat.getText().trim().isEmpty() || tfadmin_pwd.getText().trim().isEmpty()) {
 
 
-                    Alert alert=new Alert(Alert.AlertType.WARNING);
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
                     alert.setContentText("Please enter the Matricule and password");
                     alert.show();
 
                 } else {
-                    try {
+                    DBUtils.changeover(actionEvent, "logged_admin.fxml");
+                    /*try {
+
                         DBUtils.logInUser(actionEvent, tfadmin_mat.getText(), tfadmin_pwd.getText());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                }*/
+
                 }
             }
         });
