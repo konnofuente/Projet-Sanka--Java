@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 
 public class loggedin_admincontroller implements Initializable {
 
-   @FXML private Button btn_return;
+
 
     @FXML private Button btn_client;
 
@@ -23,10 +23,40 @@ public class loggedin_admincontroller implements Initializable {
 
     @FXML private Button btn_stock;
 
+    @FXML private Button btn_return;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        btn_return.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"admin-login.fxml");
+            }
+        });
+
+
+
+        btn_create.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"create_clinic.fxml");
+            }
+        });
+
+        btn_clinic.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"menu_clinic.fxml");
+            }
+        });
+
+         btn_client.setOnAction(new EventHandler<ActionEvent>() {
+             @Override
+             public void handle(ActionEvent actionEvent) {
+                 DBUtils.changeover(actionEvent,"M_cltmenu.fxml");
+             }
+         });
 
     }
 

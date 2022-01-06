@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.example.frontend_javaproject.loggedin_admincontroller" >
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.loggedin_admincontroller">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="149.0" style="-fx-background-color: #1D2951;" />
       <AnchorPane prefHeight="500.0" prefWidth="567.0">
@@ -15,7 +15,7 @@
                   <Font name="Calibri" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="156.0" layoutY="108.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLIENT MANAGEMENT">
+            <Button fx:id="btn_client" layoutX="156.0" layoutY="108.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLIENT MANAGEMENT">
                <font>
                   <Font size="18.0" />
                </font>
@@ -24,7 +24,7 @@
                <image>
                   <Image url="@hand-customer.png" />
                </image></ImageView>
-            <Button layoutX="156.0" layoutY="204.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLINIC MANAGEMENT">
+            <Button fx:id="btn_clinic" layoutX="156.0" layoutY="204.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLINIC MANAGEMENT">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font></Button>
@@ -33,12 +33,12 @@
                   <Image url="@health-clinic.png" />
                </image>
             </ImageView>
-            <Button layoutX="156.0" layoutY="292.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CREATE CLINIC">
+            <Button fx:id="btn_create" layoutX="156.0" layoutY="292.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CREATE CLINIC">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="156.0" layoutY="383.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="STOCK MANAGEMENT">
+            <Button fx:id="btn_stock" layoutX="156.0" layoutY="383.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="STOCK MANAGEMENT">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
