@@ -15,4 +15,11 @@ public class Hopital {
         }
 
     }
+    public static void main(){
+        int comp;
+        Scanner clavier = new Scanner(System.in);
+        System.out.println("Veillez entrer le stock de vaccins: ");
+        comp = Integer.parseInt(clavier.nextLine);
+
+    }
 }
