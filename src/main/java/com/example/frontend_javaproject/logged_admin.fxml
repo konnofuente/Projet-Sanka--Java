@@ -15,7 +15,7 @@
                   <Font name="Calibri" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="156.0" layoutY="108.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="CLIENT MANAGEMENT">
+            <Button layoutX="156.0" layoutY="108.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLIENT MANAGEMENT">
                <font>
                   <Font size="18.0" />
                </font>
@@ -24,7 +24,7 @@
                <image>
                   <Image url="@hand-customer.png" />
                </image></ImageView>
-            <Button layoutX="156.0" layoutY="204.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="CLINIC MANAGEMENT">
+            <Button layoutX="156.0" layoutY="204.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CLINIC MANAGEMENT">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font></Button>
@@ -33,12 +33,12 @@
                   <Image url="@health-clinic.png" />
                </image>
             </ImageView>
-            <Button layoutX="156.0" layoutY="292.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="CREATE CLINIC">
+            <Button layoutX="156.0" layoutY="292.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="CREATE CLINIC">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="156.0" layoutY="383.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #588BAE;" text="STOCK MANAGEMENT">
+            <Button layoutX="156.0" layoutY="383.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="231.0" style="-fx-background-color: #194E72;" text="STOCK MANAGEMENT">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>

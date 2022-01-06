@@ -3,20 +3,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="287.0" style="-fx-background-color: #588BAE;" />
-      <AnchorPane prefHeight="400.0" prefWidth="409.0" style="-fx-background-color: WHITE;">
+      <AnchorPane prefHeight="400.0" prefWidth="100.0" style="-fx-background-color: #194E72;" />
+      <AnchorPane prefHeight="400.0" prefWidth="505.0" style="-fx-background-color: WHITE;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="164.0" layoutX="121.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@syringe.png" />
                </image></ImageView>
             <AnchorPane layoutX="106.0" layoutY="235.0" />
-            <Button layoutX="131.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #588BAE;" text="TEST" />
-            <Button layoutX="131.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #588BAE;" text="VACCINATION" />
+            <Button layoutX="132.0" layoutY="211.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" style="-fx-background-color: #194E72;" text="TEST">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button layoutX="132.0" layoutY="282.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="206.0" style="-fx-background-color: #194E72;" text="VACCINATION">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label alignment="TOP_CENTER" layoutX="133.0" layoutY="356.0" prefHeight="17.0" prefWidth="218.0" text="Label" />
          </children>
       </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="100.0" style="-fx-background-color: #194E72;" />
    </children>
 </HBox>
