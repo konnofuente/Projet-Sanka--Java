@@ -20,8 +20,8 @@ public class loggedin_admincontroller implements Initializable {
     btn_logout.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent actionEvent) {
-            DBUtils.switchpanel(actionEvent,"admin-login.fxml");
-            DBUtils.changescene(actionEvent, "admin-login.fxml", null, null);
+
+            DBUtils.changescene(actionEvent, "admin-login.fxml", "welcome", null,null);
 
         }
     });

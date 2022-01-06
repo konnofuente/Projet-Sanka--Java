@@ -127,7 +127,7 @@ public class DBUtils {
     }
 }
 
-    public static void switchpanel (ActionEvent event,String fxml) throws IOException{
+    /*public static void switchpanel (ActionEvent event,String fxml) throws IOException{
         private Stage stage;
         private Scene scene;
         private Parent root;
@@ -137,5 +137,5 @@ public class DBUtils {
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 }

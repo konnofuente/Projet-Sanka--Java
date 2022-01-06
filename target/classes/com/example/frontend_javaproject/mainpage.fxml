@@ -5,19 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<<<<<<< HEAD
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #1d2951;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane prefHeight="500.0" prefWidth="545.0">
-         <children>
-            <ImageView fitHeight="410.0" fitWidth="509.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-=======
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" style="-fx-background-color: #1d2951;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="545.0">
          <children>
             <ImageView fitHeight="410.0" fitWidth="509.0" layoutX="1.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
->>>>>>> 29478e9157a9434ec9a6a222b0a5e0aa22c893e3
                <image>
                   <Image url="@vacc.jpg" />
                </image></ImageView>

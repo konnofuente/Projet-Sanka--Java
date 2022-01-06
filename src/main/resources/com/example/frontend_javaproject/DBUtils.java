@@ -16,7 +16,7 @@ public class DBUtils {
 
 
 
-    public static void changescene(ActionEvent event,String fxmlFile,String admin_name,String mat) throws IOException {
+    public static void changescene(ActionEvent event,String fxmlFile,String title,String admin_name,String mat) throws IOException {
         Parent root=null;
         if(admin_name!=null && mat!=null) {
             try {
