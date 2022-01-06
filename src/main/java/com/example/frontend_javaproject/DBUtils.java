@@ -61,6 +61,7 @@ public class DBUtils {
                 psInsert.setString(3,pwd);
                 psInsert.executeUpdate();
 
+
                 changescene(actionEvent,"logged_admin.fxml","Welcome","admin_name","admin_mat");
 
             }

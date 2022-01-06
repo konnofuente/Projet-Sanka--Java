@@ -16,29 +16,27 @@ import java.util.ResourceBundle;
 public class signup_admincontroller implements Initializable {
     @FXML private Button btncreate_admin;
 
-    @FXML private TextField tfadminmat; String mat=tfadmin_mat.getText();
+    @FXML
+    private TextField tfmat;
+    @FXML
+    private TextField tfname;
+    @FXML
+    private TextField tfpwd;
 
-    @FXML private TextField tfadmin_name; String name=tfadmin_name.getText();
-
-    @FXML private TextField tfadmin_pwd; String pwd=tfadmin_pwd.getText();
-    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btncreate_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setContentText("you just click");
-                alert.show();
-                if(!tfadmin_mat.getText().trim().isEmpty() && !tfadmin_pwd.getText().trim().isEmpty() ){
+                if(!tfmat.getText().trim().isEmpty() && !tfpwd.getText().trim().isEmpty() ){
                     try {
-                        DBUtils.signUpAdmin(event,mat,name,pwd);
+                        DBUtils.signUpAdmin(event,tfmat.getText().trim(),tfname.getText().trim(),tfpwd.getText().trim());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 } else{
-                    System.out.println("please neter all information");
+                    System.out.println("please enter all information");
                     Alert alert=new Alert(Alert.AlertType.ERROR);
                     alert.setContentText("Please fill all your information to get Sign Up");
                     alert.show();
