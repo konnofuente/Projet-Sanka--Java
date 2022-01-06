@@ -10,7 +10,7 @@
       <AnchorPane prefHeight="500.0" prefWidth="149.0" style="-fx-background-color: #1D2951;" />
       <AnchorPane prefHeight="500.0" prefWidth="567.0">
          <children>
-            <Label layoutX="191.0" layoutY="14.0" text="WELCOME MR" textFill="#588bae">
+            <Label fx:id="label_welcome" layoutX="191.0" layoutY="14.0" text="WELCOME MR" textFill="#588bae">
                <font>
                   <Font name="Calibri" size="27.0" />
                </font>
