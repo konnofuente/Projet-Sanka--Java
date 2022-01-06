@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="437.0" prefWidth="246.0" style="-fx-background-color: #1D2951;">
+      <AnchorPane prefHeight="437.0" prefWidth="246.0">
          <children>
-            <ImageView fitHeight="168.0" fitWidth="216.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@bw-loggo.png" />
-               </image>
-               <effect>
-                  <Reflection />
-               </effect></ImageView>
+            <ImageView fitHeight="168.0" fitWidth="216.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
       <AnchorPane prefHeight="437.0" prefWidth="533.0">
          <children>
@@ -44,7 +37,7 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button layoutX="178.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #194e72;" text="VACCINATE">
+            <Button layoutX="178.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #194e7 #194e72;" text="VACCINATE">
                <font>
                   <Font size="18.0" />
                </font></Button>
