@@ -7,7 +7,14 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.servicepagecontroller">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="50.0" style="-fx-background-color: #85C7F2;" />
+      <AnchorPane prefHeight="400.0" prefWidth="78.0" style="-fx-background-color: #85C7F2;">
+         <children>
+            <Button fx:id="btn_return" layoutX="5.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #194E72;" text="RETURN" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="511.0">
          <children>
             <Button layoutX="179.0" layoutY="250.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="TEST" textFill="WHITE">
@@ -31,9 +38,8 @@
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font></Label>
-            <Button fx:id="btn_return" layoutX="25.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="50.0" style="-fx-background-color: #85C7F2;" />
+      <AnchorPane prefHeight="400.0" prefWidth="60.0" style="-fx-background-color: #85C7F2;" />
    </children>
 </HBox>

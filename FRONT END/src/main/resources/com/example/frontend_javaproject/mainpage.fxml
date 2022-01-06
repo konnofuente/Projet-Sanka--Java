@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" style="-fx-background-color: #1d2951;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.mainpagecontroller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" style="-fx-background-color: #85C7F2;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.mainpagecontroller">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="545.0">
          <children>
@@ -17,21 +17,26 @@
       </AnchorPane>
       <AnchorPane prefHeight="417.0" prefWidth="328.0" style="-fx-background-color: WHITE;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="190.0" layoutX="70.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="174.0" fitWidth="214.0" layoutX="59.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@customer.png" />
                </image></ImageView>
-            <Button fx:id="btn_service" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="SERVICES" textFill="#f8f5f5">
+            <Button fx:id="btn_service" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="SERVICES" textFill="#f8f5f5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="btn_admin" alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="ADMINISTRATOR" textAlignment="CENTER" textFill="#f8f0f0">
+            <Button fx:id="btn_admin" alignment="CENTER" layoutX="71.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="ADMINISTRATOR" textAlignment="CENTER" textFill="#f8f0f0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Label contentDisplay="CENTER" layoutX="57.0" layoutY="14.0" prefHeight="45.0" prefWidth="180.0" text="      WELCOME" textAlignment="CENTER" textFill="#194e72">
+            <Label contentDisplay="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="45.0" prefWidth="207.0" text="      WELCOME" textAlignment="CENTER" textFill="#194e72">
                <font>
-                  <Font size="22.0" />
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="445.0" text="We can together protect the world">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Label>
          </children>
