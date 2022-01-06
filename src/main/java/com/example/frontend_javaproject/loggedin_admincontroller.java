@@ -21,11 +21,8 @@ public class loggedin_admincontroller implements Initializable {
         @Override
         public void handle(ActionEvent actionEvent) {
 
-            try {
-                DBUtils.changescene(actionEvent, "admin-login.fxml", "welcome", null,null);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            DBUtils.changeover(actionEvent,"admin_admin.fxml");
+            //  DBUtils.changescene(actionEvent, "admin-login.fxml");
 
         }
     });

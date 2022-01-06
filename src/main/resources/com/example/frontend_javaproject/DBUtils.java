@@ -16,27 +16,8 @@ public class DBUtils {
 
 
 
-    public static void changescene(ActionEvent event,String fxmlFile,String title,String admin_name,String mat) throws IOException {
-        Parent root=null;
-        if(admin_name!=null && mat!=null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
-                root = loader.load();
-                loggedin_admincontroller loggedin_admincontroller = loader.getController();
-                loggedin_admincontroller.setuser_info(admin_name);
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }else{
-            FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));;
 
-        }
 
-       /* Stage stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle(title);
-        stage.setScene(new Scene(root));
-        stage.show();*/
-    }
 
     public static  void signUpAdmin(ActionEvent actionEvent,String admin_mat,String admin_name,String pwd) throws SQLException, IOException {
         Connection connection=null;
@@ -61,7 +42,8 @@ public class DBUtils {
                 psInsert.setString(3,pwd);
                 psInsert.executeUpdate();
 
-                changescene(actionEvent,"logged_admin.fxml","Welcome","admin_name","admin_mat");
+                //changescene(actionEvent,"logged_admin.fxml","Welcome","admin_name","admin_mat");
+                changeover(actionEvent,"logged_admin.fxml");
 
             }
         }catch (SQLException e){
@@ -100,7 +82,8 @@ public class DBUtils {
                     String retrievepwd = resultSet.getString("Password");
                     String retrivename = resultSet.getString("Name");
                     if (retrievepwd.equals(pwd)) {
-                        changescene(actionEvent, "logged_admin.fxml", "Welcome", "null", "admin_mat");
+                        //changescene(actionEvent, "logged_admin.fxml", "Welcome", "null", "admin_mat");
+                        changeover(actionEvent,"logged_admin.fxml");
 
                     } else{
                         System.out.println("password did not match");
@@ -127,15 +110,20 @@ public class DBUtils {
     }
 }
 
-    public static void switchpanel (ActionEvent event,String fxml) throws IOException{
-        private Stage stage;
-        private Scene scene;
-        private Parent root;
 
-        Parent root=FXMLLoader.load(getClass().getResource(fxml));
-        stage =(stage)((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+    public static void changeover(ActionEvent actionEvent, String s) {
+        Parent root=null;
+        if(admin_name!=null && mat!=null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
+                root = loader.load();
+                loggedin_admincontroller loggedin_admincontroller = loader.getController();
+                loggedin_admincontroller.setuser_info(admin_name);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }else{
+            FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));;
     }
 }

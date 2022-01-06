@@ -28,16 +28,33 @@ public class admin_logincontrol implements Initializable {
         btnlogin_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                try {
-                    DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                if (!tfadmin_mat.getText().trim().isEmpty() || !tfadmin_pwd.getText().trim().isEmpty()) {
+                    try {
+                        DBUtils.logInUser(actionEvent, tfadmin_mat.getText(), tfadmin_pwd.getText());
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    Alert alert=new Alert(Alert.AlertType.WARNING);
+                    alert.setContentText("Please enter the Matricule and password");
+                    alert.show();
                 }
             }
         });
-       
+
+        btnadd_admin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("You Be directed to Creat Admin");
+                alert.show();
+                //DBUtils.changescene(actionEvent,"signup_admin.fxml");
+                DBUtils.changeover(actionEvent,"signup_admin.fxml");
+            }
+        });
 
     }
 }
