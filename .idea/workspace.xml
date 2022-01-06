@@ -46,7 +46,13 @@
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\Front_end" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in Front-End_Java-Project">
+    <configuration name="HelloApplication" type="Application" factoryName="Application">
+      <module name="Front-End_Java-Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Front-End_Java-Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Front-End_Java-Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -58,6 +64,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="JUnit.All in Front-End_Java-Project" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Front-End_Java-Project" />

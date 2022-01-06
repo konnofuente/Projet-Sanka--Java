@@ -7,19 +7,24 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class loggedin_admincontroller implements Initializable {
-    @FXML private Button btn_return;
-    @FXML private Label label_welcome;
+    @FXML private Button btn_logout;
+   @FXML private Label label_welcome;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    btn_return.setOnAction(new EventHandler<ActionEvent>() {
+    btn_logout.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent actionEvent) {
-
+            try {
+                DBUtils.changescene(actionEvent,"admin-login.fxml","Log in!",null,null );
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     });
 
