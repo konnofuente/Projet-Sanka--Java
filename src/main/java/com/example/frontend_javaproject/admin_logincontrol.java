@@ -15,8 +15,6 @@ import java.util.ResourceBundle;
 
 public class admin_logincontrol implements Initializable {
 
-
-
     @FXML private Button btnadd_admin;
 
     @FXML private Button btn_next;
