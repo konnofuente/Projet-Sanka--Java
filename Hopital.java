@@ -9,6 +9,10 @@ public class Hopital {
         this.Stock_vacc=Stock_vacc;
     }
     public int Supply_vacc(){
+        int num_vac;
+        if(num_vacc<50){
+            System.out.println("The stock is finishing!! Add more Vaccines");
+        }
 
     }
 }
