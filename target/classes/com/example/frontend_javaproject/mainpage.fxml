@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" style="-fx-background-color: #1d2951;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" style="-fx-background-color: #1d2951;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.mainpagecontroller">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="545.0">
          <children>
@@ -21,11 +21,11 @@
                <image>
                   <Image url="@customer.png" />
                </image></ImageView>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="SERVICES" textFill="#f8f5f5">
+            <Button fx:id="btn_service" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="SERVICES" textFill="#f8f5f5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="ADMINISTRATOR" textAlignment="CENTER" textFill="#f8f0f0">
+            <Button fx:id="btn_admin" alignment="CENTER" layoutX="71.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="ADMINISTRATOR" textAlignment="CENTER" textFill="#f8f0f0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>

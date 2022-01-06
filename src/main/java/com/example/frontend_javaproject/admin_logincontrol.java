@@ -16,19 +16,38 @@ import java.util.ResourceBundle;
 public class admin_logincontrol implements Initializable {
 
 
-    @FXML private Button btnlogin_admin;
 
     @FXML private Button btnadd_admin;
+
+    @FXML private Button btnlogin_admin;
+
+    @FXML private Button btnreturn;
 
     @FXML private TextField tfadmin_mat;
 
     @FXML private TextField tfadmin_pwd;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"mainpage.fxml");
+            }
+        });
+
+
         btnlogin_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if (!tfadmin_mat.getText().trim().isEmpty() || !tfadmin_pwd.getText().trim().isEmpty()) {
+
+
+                    Alert alert=new Alert(Alert.AlertType.WARNING);
+                    alert.setContentText("Please enter the Matricule and password");
+                    alert.show();
+
+                } else {
                     try {
                         DBUtils.logInUser(actionEvent, tfadmin_mat.getText(), tfadmin_pwd.getText());
                     } catch (SQLException e) {
@@ -36,11 +55,6 @@ public class admin_logincontrol implements Initializable {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-                } else {
-                    Alert alert=new Alert(Alert.AlertType.WARNING);
-                    alert.setContentText("Please enter the Matricule and password");
-                    alert.show();
                 }
             }
         });
@@ -51,7 +65,7 @@ public class admin_logincontrol implements Initializable {
                 Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setContentText("You Be directed to Creat Admin");
                 alert.show();
-                //DBUtils.changescene(actionEvent,"signup_admin.fxml");
+
                 DBUtils.changeover(actionEvent,"signup_admin.fxml");
             }
         });

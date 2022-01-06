@@ -5,18 +5,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cond">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.conditioncontroller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="246.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="401.0">
+      <AnchorPane prefHeight="503.0" prefWidth="423.0">
          <children>
-            <Button layoutX="87.0" layoutY="181.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="Button" />
-            <Button layoutX="89.0" layoutY="273.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="Button" />
+            <Button layoutX="113.0" layoutY="234.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="Button" />
+            <Button layoutX="113.0" layoutY="320.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="Button" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="112.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </children>

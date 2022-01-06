@@ -15,11 +15,6 @@ public class DBUtils {
 
 
 
-
-  //  public static void changescene(ActionEvent event,String fxmlFile) throws IOException {
-
-    //        FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
-    //}
     public static void changeover(ActionEvent event, String fxml){
         Parent root=null;
 
@@ -31,7 +26,7 @@ public class DBUtils {
         }
         Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
         //stage.setTitle();
-        stage.setScene(new Scene(root,700,500));
+        stage.setScene(new Scene(root));
         stage.show();
 
     }

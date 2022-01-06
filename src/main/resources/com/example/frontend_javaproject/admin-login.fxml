@@ -33,6 +33,16 @@
                   <Image url="@administrator.png" />
                </image>
             </ImageView>
+            <Button fx:id="btnmenu" layoutX="-1.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" style="-fx-background-color: #588BAE;" text="MAIN MENU" textFill="#2b2827">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnreturn" layoutX="68.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" style="-fx-background-color: #588BAE;" text="RETURN" textFill="#2b2827">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="469.0" prefWidth="421.0">
@@ -52,10 +62,10 @@
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="tfmat_admin" layoutX="195.0" layoutY="231.0" />
-            <TextField fx:id="tfdmin_pwd" layoutX="195.0" layoutY="292.0" />
-            <Button fx:id="btnlogin_admin" layoutX="130.0" layoutY="355.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #588BAE;" text="Log In" />
+            <TextField fx:id="tfadmin_mat" layoutX="195.0" layoutY="231.0" />
+            <TextField fx:id="tfadmin_pwd" layoutX="195.0" layoutY="292.0" />
             <Button fx:id="btnadd_admin" layoutX="19.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Add Admin" />
+            <Button fx:id="btnlogin_admin" layoutX="140.0" layoutY="365.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #588BAE;" text="Log In" />
          </children>
       </AnchorPane>
    </children>
