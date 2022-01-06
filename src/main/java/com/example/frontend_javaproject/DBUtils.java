@@ -43,8 +43,8 @@ public class DBUtils {
 
         try{
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root","1430");
-            checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE Name=?");
-            checkUserExist.setString(1,admin_name);
+            checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE Mat=?");
+            checkUserExist.setString(1,admin_mat);
             resultSet=checkUserExist.executeQuery();
             if(resultSet.isBeforeFirst()){
                 System.out.println("admin already Exist");
@@ -76,4 +76,51 @@ public class DBUtils {
         }
 
     }
+
+    public static void logInUser(ActionEvent actionEvent,String admin_mat,String pwd) throws SQLException, IOException {
+        Connection connection=null;
+        PreparedStatement psInsert=null;
+        PreparedStatement checkUserExist=null;
+        ResultSet resultSet=null;
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java", "root", "1430");
+            checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE Mat=?");
+            checkUserExist.setString(1, admin_mat);
+            resultSet = checkUserExist.executeQuery();
+            if (resultSet.isBeforeFirst()) {
+                System.out.println("User not found in database");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Provided credentialse are incorrect");
+                alert.show();
+            } else {
+                while (resultSet.next()) {
+                    String retrievepwd = resultSet.getString("Password");
+                    String retrivename = resultSet.getString("Name");
+                    if (retrievepwd.equals(pwd)) {
+                        changescene(actionEvent, "logged_admin.fxml", "Welcome", "null", "admin_mat");
+
+                    } else{
+                        System.out.println("password did not match");
+                        Alert alert=new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("You cannot add this administrator");
+                        alert.show();
+                    }
+                }
+
+
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (resultSet != null || psInsert != null || checkUserExist != null) {
+                    resultSet.close();
+                    psInsert.close();
+                    checkUserExist.close();
+                }
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+    }
+}
 }
