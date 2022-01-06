@@ -13,7 +13,10 @@ import java.sql.*;
 
 public class DBUtils {
 
-    public static void changescene(ActionEvent event,String fxmlFile,String title,String admin_name,String mat) throws IOException {
+
+
+
+    public static void changescene(ActionEvent event,String fxmlFile,String admin_name,String mat) throws IOException {
         Parent root=null;
         if(admin_name!=null && mat!=null) {
             try {
@@ -29,10 +32,10 @@ public class DBUtils {
 
         }
 
-        Stage stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+       /* Stage stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();*/
     }
 
     public static  void signUpAdmin(ActionEvent actionEvent,String admin_mat,String admin_name,String pwd) throws SQLException, IOException {
@@ -123,4 +126,16 @@ public class DBUtils {
             }
     }
 }
+
+    public static void switchpanel (ActionEvent event,String fxml) throws IOException{
+        private Stage stage;
+        private Scene scene;
+        private Parent root;
+
+        Parent root=FXMLLoader.load(getClass().getResource(fxml));
+        stage =(stage)((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

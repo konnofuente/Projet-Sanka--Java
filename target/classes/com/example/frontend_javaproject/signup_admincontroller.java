@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class signup_admincontroller implements Initializable {
     @FXML private Button btncreate_admin;
 
-    @FXML private TextField tfadmin_mat; String mat=tfadmin_mat.getText();
+    @FXML private TextField tfadminmat; String mat=tfadmin_mat.getText();
 
     @FXML private TextField tfadmin_name; String name=tfadmin_name.getText();
 
@@ -25,10 +25,13 @@ public class signup_admincontroller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btncreate_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(ActionEvent event) {
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("you just click");
+                alert.show();
                 if(!tfadmin_mat.getText().trim().isEmpty() && !tfadmin_pwd.getText().trim().isEmpty() ){
                     try {
-                        DBUtils.signUpAdmin(actionEvent,mat,name,pwd);
+                        DBUtils.signUpAdmin(event,mat,name,pwd);
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {

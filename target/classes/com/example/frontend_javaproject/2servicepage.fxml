@@ -27,7 +27,11 @@
                   <Font size="18.0" />
                </font>
             </Label>
+<<<<<<< HEAD:src/main/resources/com/example/frontend_javaproject/2servicepage.fxml
             <Label layoutX="157.0" layoutY="369.0" prefHeight="17.0" prefWidth="194.0" text="Protect the world with a face Mask" />
+=======
+            <Label layoutX="104.0" layoutY="368.0" prefHeight="17.0" prefWidth="194.0" text="Protect the world by wearing a mask" />
+>>>>>>> bd45c0fcbcd6b34601ac538d17dab268bb8ce049:src/main/java/com/example/frontend_javaproject/2servicepage.fxml
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="50.0" style="-fx-background-color: #1d2951;" />
