@@ -43,9 +43,9 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="tfmat_admin" layoutX="194.0" layoutY="148.0" prefHeight="36.0" prefWidth="318.0" />
-            <TextField fx:id="tfname_admin" layoutX="194.0" layoutY="219.0" prefHeight="36.0" prefWidth="318.0" />
-            <TextField fx:id="tfpwd_admin" layoutX="194.0" layoutY="290.0" prefHeight="36.0" prefWidth="318.0" />
+            <TextField fx:id="tfadmin_mat" layoutX="194.0" layoutY="148.0" prefHeight="36.0" prefWidth="318.0" />
+            <TextField fx:id="tfadmin_name" layoutX="194.0" layoutY="219.0" prefHeight="36.0" prefWidth="318.0" />
+            <TextField fx:id="tfadmin_pwd" layoutX="194.0" layoutY="290.0" prefHeight="36.0" prefWidth="318.0" />
             <Label layoutX="67.0" layoutY="359.0" text="Re-Password">
                <font>
                   <Font size="18.0" />

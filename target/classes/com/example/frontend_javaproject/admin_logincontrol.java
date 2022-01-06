@@ -7,7 +7,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class admin_logincontrol implements Initializable {
@@ -23,7 +25,13 @@ public class admin_logincontrol implements Initializable {
         btnlogin_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
+                try {
+                    DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 

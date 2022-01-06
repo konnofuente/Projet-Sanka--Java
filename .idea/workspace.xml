@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -37,18 +37,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
       <recent name="C:\Users\ICH\OneDrive\Desktop\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\front-end" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\Front_end" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Front-End_Java-Project">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.frontend_javaproject.HelloApplication" />
       <module name="Front-End_Java-Project" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-17.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signup_admin.fxml" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.frontend_javaproject.HelloApplication" />
+      <module name="Front-End_Java-Project" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-17.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,8 +76,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
+      <option name="WORKING_DIRECTORY" value="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.signup_admin.fxml" />
       <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="JAR Application.Unnamed" />
       <item itemvalue="JUnit.All in Front-End_Java-Project" />
     </list>
     <recent_temporary>
@@ -84,5 +103,17 @@
       <updated>1641392391575</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

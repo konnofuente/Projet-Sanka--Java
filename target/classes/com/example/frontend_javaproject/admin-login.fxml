@@ -55,7 +55,7 @@
             <TextField fx:id="tfmat_admin" layoutX="195.0" layoutY="231.0" />
             <TextField fx:id="tfdmin_pwd" layoutX="195.0" layoutY="292.0" />
             <Button fx:id="btnlogin_admin" layoutX="130.0" layoutY="355.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #588BAE;" text="Log In" />
-            <Button layoutX="19.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Add Admin" />
+            <Button fx:id="btnadd_admin" layoutX="19.0" layoutY="430.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Add Admin" />
          </children>
       </AnchorPane>
    </children>
