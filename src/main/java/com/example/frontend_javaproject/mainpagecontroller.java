@@ -18,6 +18,7 @@ public class mainpagecontroller implements Initializable {
 
 
     @FXML private Button btn_admin;
+    @FXML private Button btn_service;
 
 
 
@@ -29,6 +30,13 @@ public class mainpagecontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.changeover(actionEvent,"admin-login.fxml");
+            }
+        });
+
+        btn_service.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent, "2servicepage.fxml");
             }
         });
 
