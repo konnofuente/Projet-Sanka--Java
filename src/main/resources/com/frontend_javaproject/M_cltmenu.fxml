@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="475.0" prefWidth="50.0" style="-fx-background-color: #1D2951;" />
+      <AnchorPane prefHeight="475.0" prefWidth="564.0">
+         <children>
+            <Label layoutX="98.0" layoutY="63.0" prefHeight="27.0" prefWidth="390.0" text="CHOOSE AN OPERATION BELOW" textAlignment="CENTER" textFill="#194e72">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="173.0" layoutY="144.0" mnemonicParsing="false" style="-fx-background-color: #194e72;" text="CHECK CLIENT STATUS" textFill="#070707">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="173.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #194e72;" text="MODIFIE CLIENT INFO" textFill="#070707">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="173.0" layoutY="340.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="212.0" style="-fx-background-color: #194e72;" text="XXX-XXXX-XXX-X" textFill="#070707">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="166.0" layoutY="444.0" text="PROTECT THE WORLD WITH A FACE MASK">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="475.0" prefWidth="50.0" style="-fx-background-color: #1D2951;" />
+   </children>
+</HBox>
