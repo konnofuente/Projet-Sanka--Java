@@ -9,7 +9,7 @@
       <AnchorPane prefHeight="475.0" prefWidth="50.0" style="-fx-background-color: #1D2951;" />
       <AnchorPane prefHeight="475.0" prefWidth="564.0">
          <children>
-            <Label layoutX="107.0" layoutY="63.0" text="CHOSE AN OPERATION ABOVE" textFill="#194e72">
+            <Label layoutX="98.0" layoutY="63.0" prefHeight="27.0" prefWidth="390.0" text="CHOOSE AN OPERATION BELOW" textAlignment="CENTER" textFill="#194e72">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
