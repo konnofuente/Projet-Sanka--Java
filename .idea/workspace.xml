@@ -21,14 +21,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="ProjectId" id="23HYEXKLdJNZTSSmdjZbyYLOvPN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/clt_modie.fxml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -45,13 +37,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example" />
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
       <recent name="C:\Users\ICH\OneDrive\Desktop\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
+      <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\front-end" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\Front_end" />
     </key>
