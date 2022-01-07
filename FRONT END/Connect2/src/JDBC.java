@@ -22,11 +22,11 @@ public class JDBC {
 
             // create the mysql insert preparedstatement
             PreparedStatement preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setInt (1, 100210);
-            preparedStmt.setString (2, "Rubble");
-            preparedStmt.setString  (3, "cameroun");
-            preparedStmt.setInt(4, 690768832);
-            preparedStmt.setBoolean    (5, false);
+            preparedStmt.setInt (1, 1005650);
+            preparedStmt.setString (2, "NYOBE");
+            preparedStmt.setString  (3, "Gabon");
+            preparedStmt.setInt(4, 690779455);
+            preparedStmt.setBoolean    (5, true);
             preparedStmt.setDate   (6, startDate);
 
             // execute the preparedstatement

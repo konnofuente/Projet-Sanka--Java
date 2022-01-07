@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="658b0374-574e-4ad5-8a10-f1debe1bd84c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Connect2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/Connect2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/lib/mysql-connector-java-8.0.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/out/production/Connect2/JDBC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/pepareSQL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connect2/src/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connect2/src/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connect2/src/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End_Java-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End_Java-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/signup_admincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/signup_admincontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/signup_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/signup_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lib/mysql-connector-java-8.0.27.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -57,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DJOB\OneDrive\Bureau\Projet-Sanka--Java\FRONT END" />
       <recent name="C:\Users\ICH\OneDrive\Desktop\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\java\com\example\frontend_javaproject" />
       <recent name="C:\Users\K.Fuente\Desktop\L2\ict207 java\TP_GROUPE\Github_work\Projet-Sanka--Java\src\main\resources\com\example\frontend_javaproject" />
