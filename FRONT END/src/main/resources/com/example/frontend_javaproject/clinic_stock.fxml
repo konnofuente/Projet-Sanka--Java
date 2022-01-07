@@ -25,25 +25,26 @@
       </AnchorPane>
       <AnchorPane prefHeight="514.0" prefWidth="435.0">
          <children>
-            <Label layoutX="106.0" layoutY="14.0" text="MANAGE CLINIC STOCKS" textFill="#588bae">
+            <Label layoutX="86.0" layoutY="6.0" text="MANAGE CLINIC STOCKS" textFill="#588bae">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="177.0" layoutY="189.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE VACCINES" />
-            <Button layoutX="192.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE TEST" />
-            <AnchorPane layoutY="275.0" prefHeight="224.0" prefWidth="441.0" style="-fx-background-color: grey;">
+            <Button layoutX="157.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE VACCINES" />
+            <Button layoutX="172.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE TEST" />
+            <AnchorPane layoutY="287.0" prefHeight="212.0" prefWidth="441.0" style="-fx-background-color: grey;">
                <children>
-                  <Button layoutX="176.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="VACCINES AVAILABLE" />
-                  <Button layoutX="191.0" layoutY="102.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="TEST AVAILABLE" />
-                  <Label layoutX="117.0" layoutY="175.0" prefHeight="17.0" prefWidth="249.0" text="Protect the world by wearing a face mask" textFill="#fbf8f8">
+                  <Button layoutX="154.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="VACCINES AVAILABLE" />
+                  <Button layoutX="169.0" layoutY="70.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="TEST AVAILABLE" />
+                  <Label layoutX="97.0" layoutY="190.0" prefHeight="17.0" prefWidth="249.0" text="Protect the world by wearing a face mask" textFill="#fbf8f8">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="12.0" />
                      </font>
                   </Label>
+                  <Button layoutX="184.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #f5ad13;" text="EXIT" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="83.0" fitWidth="143.0" layoutX="199.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="83.0" fitWidth="143.0" layoutX="180.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@inventory.png" />
                </image>
