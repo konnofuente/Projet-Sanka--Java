@@ -25,21 +25,27 @@ public class signup_admincontroller implements Initializable {
     private TextField tfpwd;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         btncreate_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(!tfmat.getText().trim().isEmpty() && !tfpwd.getText().trim().isEmpty() ){
+
+                String mat=tfmat.getText();
+                String name=tfname.getText();
+                String pwd=tfpwd.getText();
+
+                if(!tfmat.getText().trim().isEmpty() || !tfpwd.getText().trim().isEmpty() ){
+
                     try {
-                        DBUtils.signUpAdmin(event,tfmat.getText().trim(),tfname.getText().trim(),tfpwd.getText().trim());
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
+                        DBUtils.signUpAdmin(event,mat,name,pwd);
+                    } catch (SQLException | IOException e) {
                         e.printStackTrace();
                     }
+
                 } else{
                     System.out.println("please enter all information");
                     Alert alert=new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("Please fill all your information to get Sign Up");
+                    alert.setContentText("please fill in your info"+name+" .");
                     alert.show();
                 }
             }
