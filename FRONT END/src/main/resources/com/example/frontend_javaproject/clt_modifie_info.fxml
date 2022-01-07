@@ -75,6 +75,7 @@
                   <Image url="@client.png" />
                </image>
             </ImageView>
+            <Label layoutX="238.0" layoutY="469.0" text="Label" />
          </children>
       </AnchorPane>
    </children>
