@@ -1,0 +1,199 @@
+ 
+ THIS IS TO DELETE ELEMENTS FROM  THE DB
+ try
+    {
+      // create the mysql database connection
+      String myDriver = "org.gjt.mm.mysql.Driver";
+      String myUrl = "jdbc:mysql://localhost/test";
+      Class.forName(myDriver);
+      Connection conn = DriverManager.getConnection(myUrl, "root", "");
+      
+      // create the mysql delete statement.
+      // i'm deleting the row where the id is "3", which corresponds to my
+      // "Barney Rubble" record.
+      String query = "delete from users where id = ?";
+      PreparedStatement preparedStmt = conn.prepareStatement(query);
+      preparedStmt.setInt(1, 3);
+
+      // execute the preparedstatement
+      preparedStmt.execute();
+      
+      conn.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+
+    THIS IS TO UPDATE IN THE DB
+     try
+    {
+      // create a java mysql database connection
+      String myDriver = "org.gjt.mm.mysql.Driver";
+      String myUrl = "jdbc:mysql://localhost/test";
+      Class.forName(myDriver);
+      Connection conn = DriverManager.getConnection(myUrl, "root", "");
+    
+      // create the java mysql update preparedstatement
+      String query = "update users set num_points = ? where first_name = ?";
+      PreparedStatement preparedStmt = conn.prepareStatement(query);
+      preparedStmt.setInt   (1, 6000);
+      preparedStmt.setString(2, "Fred");
+
+      // execute the java preparedstatement
+      preparedStmt.executeUpdate();
+      
+      conn.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+
+    THIS IS TO SELECT 
+    try
+    {
+      // create our mysql database connection
+      String myDriver = "org.gjt.mm.mysql.Driver";
+      String myUrl = "jdbc:mysql://localhost/test";
+      Class.forName(myDriver);
+      Connection conn = DriverManager.getConnection(myUrl, "root", "");
+      
+      // our SQL SELECT query. 
+      // if you only need a few columns, specify them by name instead of using "*"
+      String query = "SELECT * FROM users";
+
+      // create the java statement
+      Statement st = conn.createStatement();
+      
+      // execute the query, and get a java resultset
+      ResultSet rs = st.executeQuery(query);
+      
+      // iterate through the java resultset
+      while (rs.next())
+      {
+        int id = rs.getInt("id");
+        String firstName = rs.getString("first_name");
+        String lastName = rs.getString("last_name");
+        Date dateCreated = rs.getDate("date_created");
+        boolean isAdmin = rs.getBoolean("is_admin");
+        int numPoints = rs.getInt("num_points");
+        
+        // print the results
+        System.out.format("%s, %s, %s, %s, %s, %s\n", id, firstName, lastName, dateCreated, isAdmin, numPoints);
+      }
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+
+
+    SAME BUT JOINT
+
+    package com.devdaily.sqlprocessortests;
+
+import java.sql.*;
+
+public class BasicJDBCDemo
+{
+  Connection conn;
+
+  public static void main(String[] args)
+  {
+    new BasicJDBCDemo();
+  }
+ 
+  public BasicJDBCDemo()
+  {
+    try
+    {
+      Class.forName("com.mysql.jdbc.Driver").newInstance();
+      String url = "jdbc:mysql://localhost/coffeebreak";
+      conn = DriverManager.getConnection(url, "username", "password");
+      doTests();
+      conn.close();
+    }
+    catch (ClassNotFoundException ex) {System.err.println(ex.getMessage());}
+    catch (IllegalAccessException ex) {System.err.println(ex.getMessage());}
+    catch (InstantiationException ex) {System.err.println(ex.getMessage());}
+    catch (SQLException ex)           {System.err.println(ex.getMessage());}
+  }
+
+  private void doTests()
+  {
+    doSelectTest();
+
+    doInsertTest();  doSelectTest();
+    doUpdateTest();  doSelectTest();
+    doDeleteTest();  doSelectTest();
+  }
+
+  private void doSelectTest()
+  {
+    System.out.println("[OUTPUT FROM SELECT]");
+    String query = "SELECT COF_NAME, PRICE FROM COFFEES";
+    try
+    {
+      Statement st = conn.createStatement();
+      ResultSet rs = st.executeQuery(query);
+      while (rs.next())
+      {
+        String s = rs.getString("COF_NAME");
+        float n = rs.getFloat("PRICE");
+        System.out.println(s + "   " + n);
+      }
+    }
+    catch (SQLException ex)
+    {
+      System.err.println(ex.getMessage());
+    }
+  }
+
+  private void doInsertTest()
+  {
+    System.out.print("\n[Performing INSERT] ... ");
+    try
+    {
+      Statement st = conn.createStatement();
+      st.executeUpdate("INSERT INTO COFFEES " +
+                       "VALUES ('BREAKFAST BLEND', 200, 7.99, 0, 0)");
+    }
+    catch (SQLException ex)
+    {
+      System.err.println(ex.getMessage());
+    }
+  }
+
+  private void doUpdateTest()
+  {
+    System.out.print("\n[Performing UPDATE] ... ");
+    try
+    {
+      Statement st = conn.createStatement();
+      st.executeUpdate("UPDATE COFFEES SET PRICE=4.99 WHERE COF_NAME='BREAKFAST BLEND'");
+    }
+    catch (SQLException ex)
+    {
+      System.err.println(ex.getMessage());
+    }
+  }
+
+  private void doDeleteTest()
+  {
+    System.out.print("\n[Performing DELETE] ... ");
+    try
+    {
+      Statement st = conn.createStatement();
+      st.executeUpdate("DELETE FROM COFFEES WHERE COF_NAME='BREAKFAST BLEND'");
+    }
+    catch (SQLException ex)
+    {
+      System.err.println(ex.getMessage());
+    }
+  }
+}

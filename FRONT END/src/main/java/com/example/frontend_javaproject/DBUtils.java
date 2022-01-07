@@ -38,8 +38,8 @@ public class DBUtils {
         ResultSet resultSet=null;
 
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root","1430");
-            checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE Mat=?");
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat=?");
             checkUserExist.setString(1,admin_mat);
             resultSet=checkUserExist.executeQuery();
             if(resultSet.isBeforeFirst()){
