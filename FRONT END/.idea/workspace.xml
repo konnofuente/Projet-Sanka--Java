@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="658b0374-574e-4ad5-8a10-f1debe1bd84c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connect2/src/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connect2/src/JDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End_Java-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End_Java-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/signup_admincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/signup_admincontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/signup_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/signup_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller.class" afterDir="false" />
-    </list>
+    <list default="true" id="658b0374-574e-4ad5-8a10-f1debe1bd84c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
