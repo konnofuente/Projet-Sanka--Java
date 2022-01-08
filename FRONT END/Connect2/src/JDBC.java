@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Calendar;
 
-public class JDBC {
+
     public static void main(String[] args) {
         try {
             Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );

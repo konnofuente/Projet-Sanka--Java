@@ -25,7 +25,7 @@ public class DBUtils {
             e.printStackTrace();
         }
         Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
-        //stage.setTitle();
+       // stage.setTitle();
         stage.setScene(new Scene(root));
         stage.show();
 

@@ -17,14 +17,14 @@ import java.util.ResourceBundle;
 public class mainpagecontroller implements Initializable {
 
 
-    @FXML private Button btn_admin;
-    @FXML private Button btn_service;
-
+    @FXML
+    private Button btn_admin;
+    @FXML
+    private Button btn_service;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
 
         btn_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -36,9 +36,10 @@ public class mainpagecontroller implements Initializable {
         btn_service.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent, "2servicepage.fxml");
+               DBUtils.changeover(actionEvent, "2servicepage.fxml");
             }
         });
+
 
     }
 }

@@ -18,11 +18,6 @@ public class servicepagecontroller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    btn_return.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
-        public void handle(ActionEvent actionEvent) {
-            DBUtils.changeover(actionEvent, "mainpage.fxml");
-        }
-    });
+
     }
 }
