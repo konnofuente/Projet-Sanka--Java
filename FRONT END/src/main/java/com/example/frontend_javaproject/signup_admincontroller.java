@@ -30,22 +30,13 @@ public class signup_admincontroller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
 
-                String mat=tfmat.getText();
-                String name=tfname.getText();
-                String pwd=tfpwd.getText();
-
-                if(!tfmat.getText().trim().isEmpty() || !tfpwd.getText().trim().isEmpty() ){
-
-                    try {
-                        DBUtils.signUpAdmin(event,mat,name,pwd);
-                    } catch (SQLException | IOException e) {
-                        e.printStackTrace();
-                    }
+                if(!tfmat.getText().trim().isEmpty() && !tfpwd.getText().trim().isEmpty() ){
+                    DBUtils.signUpAdmin(event,tfmat.getText(),tfname.getText(),tfpwd.getText());
 
                 } else{
                     System.out.println("please enter all information");
                     Alert alert=new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("please fill in your info"+name+" .");
+                    alert.setContentText("please fill in your information inorder to create adminstrator account  MR "+tfname.getText() +". !!!!");
                     alert.show();
                 }
             }

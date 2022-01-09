@@ -6,13 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<<<<<<< HEAD
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.signup_admincontroller">
-=======
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.signup_admincontroller">
->>>>>>> c5f8f4efd88034900ebd94ccf6f1c81e6b3cae58
    <children>
-      <AnchorPane prefHeight="450.0" prefWidth="266.0" style="-fx-background-color: #85C7F2;">
+      <AnchorPane prefHeight="439.0" prefWidth="217.0" style="-fx-background-color: #85C7F2;">
          <children>
             <ImageView fitHeight="197.0" fitWidth="191.0" layoutX="13.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,30 +18,26 @@
                   <Reflection />
                </effect>
             </ImageView>
-            <Label layoutX="75.0" layoutY="456.0" text="sankaproject" />
+            <Label layoutX="42.0" layoutY="428.0" text="sankaprojet@gmail.com">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></Label>
          </children></AnchorPane>
-      <AnchorPane prefHeight="450.0" prefWidth="533.0">
+      <AnchorPane prefHeight="472.0" prefWidth="496.0">
          <children>
-<<<<<<< HEAD
+
             <Label layoutX="66.0" layoutY="209.0" text="NAME" />
             <TextField fx:id="tfname" layoutX="149.0" layoutY="205.0" prefHeight="25.0" prefWidth="224.0" />
             <Label layoutX="66.0" layoutY="293.0" text="PASSWORD" />
             <Label layoutX="66.0" layoutY="251.0" text="MATRICULE" />
             <TextField fx:id="tfmat" layoutX="149.0" layoutY="247.0" prefHeight="25.0" prefWidth="224.0" />
             <TextField fx:id="tfpwd" layoutX="149.0" layoutY="289.0" prefHeight="25.0" prefWidth="224.0" />
-            <Button fx:id="btncreate_admin" layoutX="292.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="CREATE" textFill="#fcfcfc">
-=======
-            <Label layoutX="61.0" layoutY="218.0" text="NAME" />
-            <TextField fx:id="t" layoutX="149.0" layoutY="214.0" prefHeight="25.0" prefWidth="224.0" />
-            <Label layoutX="60.0" layoutY="302.0" text="PASSWORD" />
-            <Label layoutX="60.0" layoutY="260.0" text="ID" />
-            <TextField fx:id="t" layoutX="149.0" layoutY="256.0" prefHeight="25.0" prefWidth="224.0" />
-            <TextField fx:id="tfadmin_pwd" layoutX="149.0" layoutY="298.0" prefHeight="25.0" prefWidth="224.0" />
             <Button fx:id="btncreate_admin" layoutX="297.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="CREATE" textFill="#fcfcfc">
->>>>>>> c5f8f4efd88034900ebd94ccf6f1c81e6b3cae58
+
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Label layoutX="144.0" layoutY="6.0" prefHeight="28.0" prefWidth="233.0" text="ADD A NEW ADMIN" textFill="#588bae">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -56,7 +48,7 @@
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Button>
-            <Label layoutX="131.0" layoutY="443.0" text="Protect the world by wearing a face mask" textFill="#588bae">
+            <Label layoutX="131.0" layoutY="429.0" text="Protect the world by wearing a face mask" textFill="#588bae">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
