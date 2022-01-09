@@ -1,0 +1,6 @@
+your Aim is to create a phone application that will permit a client to have access to it
+vaccination or test information 
+-First is very easy just do a front end then connect your program to our data base that will
+ do a recherche and look for his name then display it to the screen
+
+-dont forget to use intellij to do the program

@@ -1,0 +1,10 @@
+You have to create a program that will be able to have a client information through a barcode
+
+dont forget that a client is discribed by his 
+-CNI
+-Name
+-Nationality
+-phone
+-status
+
+And the program should be able to take a picture into consideration
