@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.signup_admincontroller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.signup_admincontroller">
    <children>
       <AnchorPane prefHeight="439.0" prefWidth="217.0" style="-fx-background-color: #85C7F2;">
          <children>
@@ -32,7 +36,7 @@
             <Label layoutX="66.0" layoutY="251.0" text="MATRICULE" />
             <TextField fx:id="tfmat" layoutX="149.0" layoutY="247.0" prefHeight="25.0" prefWidth="224.0" />
             <TextField fx:id="tfpwd" layoutX="149.0" layoutY="289.0" prefHeight="25.0" prefWidth="224.0" />
-            <Button fx:id="btncreate_admin" layoutX="297.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="CREATE" textFill="#fcfcfc">
+            <Button fx:id="btncreate_admin" layoutX="336.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="CREATE" textFill="#fcfcfc">
 
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
@@ -43,7 +47,7 @@
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btncreate_admin1" layoutX="144.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="btncreate_admin1" layoutX="208.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="LOG IN" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
@@ -58,6 +62,11 @@
                   <Image url="@profile.png" />
                </image>
             </ImageView>
+            <Button fx:id="btncreate_admin11" layoutX="74.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #588BAE;" text="RESET" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

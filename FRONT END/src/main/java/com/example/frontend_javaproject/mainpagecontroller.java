@@ -29,14 +29,14 @@ public class mainpagecontroller implements Initializable {
         btn_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"admin-login.fxml");
+                DBUtils.changeover(actionEvent,"admin-login.fxml","LOG IN");
             }
         });
 
         btn_service.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-               DBUtils.changeover(actionEvent, "2servicepage.fxml");
+               DBUtils.changeover(actionEvent, "2servicepage.fxml","SERVICES");
             }
         });
 

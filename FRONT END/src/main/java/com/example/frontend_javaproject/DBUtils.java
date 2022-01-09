@@ -22,7 +22,7 @@ public class DBUtils {
     private static Integer phone;
     private static String status;
 
-    public static void changeover(ActionEvent event, String fxml){
+    public static void changeover(ActionEvent event, String fxml,String title){
         Parent root=null;
 
         try{
@@ -32,8 +32,8 @@ public class DBUtils {
             e.printStackTrace();
         }
         Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
-       // stage.setTitle();
-        stage.setScene(new Scene(root));
+        stage.setTitle(title);
+        stage.setScene(new Scene(root,800,550));
         stage.show();
 
     }
@@ -134,26 +134,29 @@ public class DBUtils {
         PreparedStatement checkUserExist=null;
         ResultSet resultSet=null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java", "root", "");
-            checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE =?");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
+            checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat =?");
             checkUserExist.setString(1, admin_mat);
             resultSet = checkUserExist.executeQuery();
-            if (resultSet.isBeforeFirst()) {
+            if (!resultSet.isBeforeFirst()) {
                 System.out.println("User not found in database");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided credentialse are incorrect");
+                alert.setContentText("Provided credentialse are incorrect \n User not Found in program");
                 alert.show();
             } else {
                 while (resultSet.next()) {
-                    String retrievepwd = resultSet.getString("Password");
-                    String retrivename = resultSet.getString("Name");
+                    String retrievepwd = resultSet.getString("password");
+                    String retrivename = resultSet.getString("admin_name");
                     if (retrievepwd.equals(pwd)) {
-                        changeover(actionEvent, "logged_admin.fxml");
+                        Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setContentText("log in successfull Mr " +retrivename+".");
+                        alert.show();
+                        changeover(actionEvent, "logged_admin.fxml","ADMINISTRATION");
 
                     } else{
                         System.out.println("password did not match");
                         Alert alert=new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("You cannot add this administrator");
+                        alert.setContentText("Sorry password did not match \n Re-Enter Password!!!!!");
                         alert.show();
                     }
                 }
@@ -164,9 +167,9 @@ public class DBUtils {
             e.printStackTrace();
         }finally {
             try {
-                if (resultSet != null || psInsert != null || checkUserExist != null) {
+                if (resultSet != null /* || psInsert != null*/ || checkUserExist != null) {
                     resultSet.close();
-                    psInsert.close();
+                    //psInsert.close();
                     checkUserExist.close();
                 }
             }catch (SQLException e){

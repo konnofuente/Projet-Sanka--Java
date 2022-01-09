@@ -31,7 +31,7 @@ public class loggedin_admincontroller implements Initializable {
         btn_return.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"admin-login.fxml");
+                DBUtils.changeover(actionEvent,"admin-login.fxml","LOG IN ADMIN");
             }
         });
 
@@ -40,21 +40,21 @@ public class loggedin_admincontroller implements Initializable {
         btn_create.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"create_clinic.fxml");
+                DBUtils.changeover(actionEvent,"create_clinic.fxml","CREATE CLINIC");
             }
         });
 
         btn_clinic.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"menu_clinic.fxml");
+                DBUtils.changeover(actionEvent,"menu_clinic.fxml","MENU CLINIC");
             }
         });
 
          btn_client.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent actionEvent) {
-                 DBUtils.changeover(actionEvent,"M_cltmenu.fxml");
+                 DBUtils.changeover(actionEvent,"M_cltmenu.fxml","CLINIC");
              }
          });
 

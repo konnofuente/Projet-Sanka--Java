@@ -9,32 +9,31 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="140.0" style="-fx-background-color: #85C7F2;" />
-      <AnchorPane prefHeight="400.0" prefWidth="399.0">
+      <AnchorPane prefHeight="450.0" prefWidth="420.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="112.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="140.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@stock.png" />
                </image>
             </ImageView>
-            <Label layoutX="44.0" layoutY="213.0" text="NUM VACCINES" />
-            <Label layoutX="44.0" layoutY="253.0" text="NUM TEST" />
-            <TextField layoutX="138.0" layoutY="209.0" prefHeight="25.0" prefWidth="183.0" />
-            <TextField layoutX="138.0" layoutY="249.0" prefHeight="25.0" prefWidth="183.0" />
-            <Label layoutX="94.0" layoutY="363.0" text="Protect the world by wearing a face mask">
+            <Label layoutX="72.0" layoutY="220.0" text="NUM VACCINES" />
+            <Label layoutX="72.0" layoutY="260.0" text="NUM TEST" />
+            <TextField layoutX="166.0" layoutY="216.0" prefHeight="25.0" prefWidth="183.0" />
+            <TextField layoutX="166.0" layoutY="256.0" prefHeight="25.0" prefWidth="183.0" />
+            <Label layoutX="103.0" layoutY="400.0" text="Protect the world by wearing a face mask">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="12.0" />
+                  <Font name="System Italic" size="12.0" />
                </font>
             </Label>
-            <Button layoutX="224.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #588BAE;" text="CONFIRM" textFill="WHITE">
+            <Button layoutX="292.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #588BAE;" text="UPDATE" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="94.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #588BAE;" text="CANCEL" textFill="WHITE">
+            <Button layoutX="93.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #588BAE;" text="CANCEL" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>

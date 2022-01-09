@@ -17,7 +17,7 @@ public class admin_logincontrol implements Initializable {
 
     @FXML private Button btnadd_admin;
 
-    @FXML private Button btn_next;
+    @FXML private Button btn_reset;
 
     @FXML private Button btnlogin_admin;
 
@@ -29,10 +29,19 @@ public class admin_logincontrol implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        btn_reset.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                tfadmin_pwd.clear();
+                tfadmin_mat.clear();
+
+            }
+        });
+
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"mainpage.fxml");
+                DBUtils.changeover(actionEvent,"logged_admin.fxml","WELCOME TO MAIN PAGE");
             }
         });
 
@@ -48,17 +57,13 @@ public class admin_logincontrol implements Initializable {
                     alert.show();
 
                 } else {
-                    DBUtils.changeover(actionEvent, "logged_admin.fxml");
-                    /*try {
-
-                        DBUtils.logInUser(actionEvent, tfadmin_mat.getText(), tfadmin_pwd.getText());
+                    try {
+                        DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                }*/
-
                 }
             }
         });
@@ -70,7 +75,7 @@ public class admin_logincontrol implements Initializable {
                 alert.setContentText("You Be directed to Creat Admin");
                 alert.show();
 
-                DBUtils.changeover(actionEvent,"signup_admin.fxml");
+                DBUtils.changeover(actionEvent,"signup_admin.fxml","SIGN UP PAGE");
             }
         });
 
