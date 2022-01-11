@@ -15,9 +15,34 @@ import java.util.ResourceBundle;
 
 public class servicepagecontroller implements Initializable {
 
+    @FXML private Button btnreturn;
+
+    @FXML private Button btntest;
+
+
+    @FXML private Button btnvaccinate;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"vaccination.fxml","Vaccination");
+            }
+        });
+
+        btntest.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"test.fxml","Test Operation");
+            }
+        });
+            btnreturn.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    DBUtils.changeover(actionEvent,"mainpage.fxml","welcome");
+                }
+            });
     }
 }
