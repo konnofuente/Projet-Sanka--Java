@@ -1,5 +1,7 @@
 package com.example.frontend_javaproject;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -14,7 +16,7 @@ public class M_cltmenu_control implements Initializable {
      * */
     @FXML private Button btnclt_status;
 
-    @FXML private Button btnclt_info;
+    @FXML private Button btnclt_modifie;
 
     @FXML private Button btnexit;
 
@@ -22,5 +24,39 @@ public class M_cltmenu_control implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        btnexit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"logged_admin","ADMINISTRATOR");
+            }
+        });
+
+        /**
+         * THIS Button will permit the user to check a client information in the database that
+         * it status
+         * */
+
+        btnclt_status.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"checkstatus.fxml","CLIENT STATUS");
+            }
+
+        });
+
+        btnclt_modifie.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"clt_modifie_info.fxml","CLIENT MODIFICATION");
+
+            }
+        });
+
+        btnexit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"logged_admin.fxml","CLIENT MODIFICATION");
+            }
+        });
     }
 }

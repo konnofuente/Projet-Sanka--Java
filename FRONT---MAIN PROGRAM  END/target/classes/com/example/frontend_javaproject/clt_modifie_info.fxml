@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.clt_modifie_control">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="330.0" style="-fx-background-color: #85C7F2;">
          <children>
@@ -25,7 +25,7 @@
                   <Reflection />
                </effect>
             </ImageView>
-            <Button fx:id="btnreturn" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="47.0" style="-fx-background-color: #194E72;">
+            <Button fx:id="btnreturn" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="41.0" style="-fx-background-color: #e8662f;">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,42 +52,40 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="252.0" text="NAME">
+            <Label layoutX="62.0" layoutY="289.0" text="NAME">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="204.0" layoutY="246.0" prefHeight="27.0" prefWidth="287.0" />
-            <Label layoutX="61.0" layoutY="293.0" text="NATIONALITY">
+            <TextField fx:id="tfname" layoutX="204.0" layoutY="283.0" prefHeight="27.0" prefWidth="287.0" promptText="NEW CLIENT NAME" />
+            <Label layoutX="61.0" layoutY="330.0" text="NATIONALITY">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="342.0" text="PHONE NUMBER">
+            <Label layoutX="62.0" layoutY="379.0" text="PHONE NUMBER">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="395.0" text="STATUS">
+            <Label layoutX="62.0" layoutY="432.0" text="STATUS">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="205.0" layoutY="389.0" prefHeight="27.0" prefWidth="287.0" />
-            <TextField layoutX="205.0" layoutY="336.0" prefHeight="27.0" prefWidth="287.0" />
-            <TextField layoutX="204.0" layoutY="287.0" prefHeight="27.0" prefWidth="287.0" />
-            <Label layoutX="62.0" layoutY="206.0" text="CLIENT_ID">
+            <TextField fx:id="tfstatus" layoutX="205.0" layoutY="426.0" prefHeight="27.0" prefWidth="287.0" promptText="NEW STATUS" />
+            <TextField fx:id="tfphone" layoutX="205.0" layoutY="373.0" prefHeight="27.0" prefWidth="287.0" promptText="NEW PHONE NUMBER" />
+            <TextField fx:id="tfnationality" layoutX="204.0" layoutY="324.0" prefHeight="27.0" prefWidth="287.0" promptText="NEW NATIONALITY" />
+            <Label layoutX="62.0" layoutY="206.0" text="CLIENT_NIC" textFill="#0a0a0a">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="204.0" layoutY="200.0" prefHeight="27.0" prefWidth="287.0" />
-            <Button layoutX="320.0" layoutY="449.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #194E72;" text="CONFIRM" textFill="WHITE">
+            <TextField fx:id="tfold_nic" layoutX="204.0" layoutY="200.0" prefHeight="27.0" prefWidth="287.0" promptText="NIC REQUIRED">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="12.0" />
-               </font>
-            </Button>
-            <Button layoutX="113.0" layoutY="449.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #194E72;" text="CANCEL" textFill="WHITE">
+                  <Font name="System Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="btnexit" layoutX="62.0" layoutY="483.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #e8662f;" text="EXIT" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
@@ -97,6 +95,22 @@
                   <Image url="@client.png" />
                </image>
             </ImageView>
+            <Label layoutX="61.0" layoutY="252.0" text="NEW CLIENT NIC">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfnew_nic" layoutX="203.0" layoutY="239.0" prefHeight="27.0" prefWidth="287.0" promptText="NOT REQUIRED" />
+            <Button fx:id="btnconfirm" layoutX="225.0" layoutY="483.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #194E72;" text="CONFIRM" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnreset" layoutX="383.0" layoutY="483.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #e8662f;" text="RESET" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
