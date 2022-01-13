@@ -18,5 +18,7 @@ public class Barcode_Image {
 		fos.flush();
 		fos.close();
 		} catch (Exception e) {
-
-}
+			// TODO: handle exception
+					}
+				}
+		}
