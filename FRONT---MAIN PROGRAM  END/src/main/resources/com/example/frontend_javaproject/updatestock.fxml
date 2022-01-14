@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.updatestock_controller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="140.0" style="-fx-background-color: #85C7F2;" />
       <AnchorPane prefHeight="450.0" prefWidth="420.0">
@@ -33,7 +33,7 @@
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="93.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #588BAE;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="btncancel" layoutX="93.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #588BAE;" text="CANCEL" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>

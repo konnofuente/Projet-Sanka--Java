@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.clinic_stockcontroller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="263.0" style="-fx-background-color: #85C7F2;">
          <children>
@@ -56,18 +56,18 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="204.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE VACCINES" />
-            <Button layoutX="219.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE TEST" />
+            <Button fx:id="btn_increase" layoutX="204.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE VACCINES" />
+            <Button disable="true" layoutX="219.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="INCREASE TEST" />
             <AnchorPane layoutY="287.0" prefHeight="261.0" prefWidth="535.0" style="-fx-background-color: grey;">
                <children>
-                  <Button layoutX="200.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="VACCINES AVAILABLE" />
-                  <Button layoutX="215.0" layoutY="71.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="TEST AVAILABLE" />
+                  <Button fx:id="btn_availabe" layoutX="200.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="VACCINES AVAILABLE" />
+                  <Button disable="true" layoutX="215.0" layoutY="71.0" mnemonicParsing="false" style="-fx-background-color: #588BAE;" text="TEST AVAILABLE" />
                   <Label layoutX="143.0" layoutY="191.0" prefHeight="17.0" prefWidth="249.0" text="Protect the world by wearing a face mask" textFill="#fbf8f8">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button layoutX="230.0" layoutY="116.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #f5ad13;" text="EXIT" />
+                  <Button fx:id="btnexit" layoutX="230.0" layoutY="116.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #f5ad13;" text="EXIT" />
                </children>
             </AnchorPane>
             <ImageView fitHeight="83.0" fitWidth="143.0" layoutX="227.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">

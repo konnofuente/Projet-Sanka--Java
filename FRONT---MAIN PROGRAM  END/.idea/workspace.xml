@@ -29,6 +29,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/menu_clinic.fxml" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="23HYEXKLdJNZTSSmdjZbyYLOvPN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">

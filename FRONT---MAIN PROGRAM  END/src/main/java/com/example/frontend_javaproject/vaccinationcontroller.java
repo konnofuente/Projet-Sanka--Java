@@ -30,6 +30,17 @@ public class vaccinationcontroller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
+
+        btnreset.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                cni.clear();
+                name.clear();
+                phone_num.clear();
+                nationality.clear();
+            }
+        });
+
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

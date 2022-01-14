@@ -9,24 +9,12 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class create_cliniccontroller implements Initializable {
+public class updatestock_controller implements Initializable {
 
     @FXML
     private Button btncancel;
-
-    @FXML
-    private Button btnreturn;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLINIC MANAGEMENT");
-            }
-        });
-
 
         btncancel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -34,5 +22,6 @@ public class create_cliniccontroller implements Initializable {
                 DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLINIC MANAGEMENT");
             }
         });
+
     }
 }

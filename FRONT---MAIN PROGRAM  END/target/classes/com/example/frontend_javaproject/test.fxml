@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.testcontroller">
    <children>
       <AnchorPane prefHeight="550.0" prefWidth="279.0" style="-fx-background-color: #85C7F2;">
          <children>
@@ -22,9 +22,9 @@
                   <Image url="@Vaccinate.png" />
                </image>
                <effect>
-                  <Reflection />
+                  <Reflection topOpacity="0.31" />
                </effect></ImageView>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #588BAE;" textFill="#fcf9f9">
+            <Button fx:id="btnreturn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #588BAE;" textFill="#fcf9f9">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
@@ -49,51 +49,65 @@
          </children></AnchorPane>
       <AnchorPane prefHeight="550.0" prefWidth="570.0">
          <children>
-            <Label layoutX="94.0" layoutY="266.0" prefHeight="27.0" prefWidth="57.0" text="NAME" textAlignment="CENTER">
+            <Label layoutX="75.0" layoutY="153.0" prefHeight="27.0" prefWidth="57.0" text="NAME" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="94.0" layoutY="354.0" prefHeight="27.0" prefWidth="120.0" text="NATIONALITY">
+            <Label layoutX="74.0" layoutY="201.0" prefHeight="27.0" prefWidth="120.0" text="NATIONALITY">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="97.0" layoutY="226.0" text="ID">
+            <Label layoutX="76.0" layoutY="109.0" prefHeight="27.0" prefWidth="107.0" text="NIC NUMBER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="94.0" layoutY="310.0" prefHeight="27.0" prefWidth="107.0" text="NIC NUMBER">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label layoutX="95.0" layoutY="399.0" text="PHONE NUMBER">
+            <Label layoutX="75.0" layoutY="246.0" text="PHONE NUMBER">
                <font>
                   <Font size="14.0" />
                </font></Label>
             <TextField layoutX="190.0" layoutY="79.0" prefHeight="40.0" prefWidth="241.0" style="-fx-background-color: arsh;" />
-            <TextField layoutX="251.0" layoutY="266.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField layoutX="250.0" layoutY="310.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField layoutX="251.0" layoutY="354.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField layoutX="251.0" layoutY="395.0" prefHeight="27.0" prefWidth="241.0" />
-            <Button layoutX="293.0" layoutY="455.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #588BAE;" text="TEST" textFill="#fcf9f9">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font></Button>
+            <TextField fx:id="tfname" layoutX="232.0" layoutY="153.0" prefHeight="27.0" prefWidth="241.0" />
+            <TextField fx:id="tfnationality" layoutX="231.0" layoutY="201.0" prefHeight="27.0" prefWidth="241.0" />
+            <TextField fx:id="tfphone" layoutX="231.0" layoutY="242.0" prefHeight="27.0" prefWidth="241.0" />
             <Label layoutX="109.0" layoutY="40.0" prefHeight="40.0" prefWidth="403.0" text="ENTER CLIENT INFORMATION" textAlignment="CENTER" textFill="#588bae">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="250.0" layoutY="222.0" prefHeight="27.0" prefWidth="241.0" />
-            <Button layoutX="106.0" layoutY="455.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #588BAE;" text="EXIT" textFill="#fcf9f9">
+            <TextField fx:id="tfnic" layoutX="231.0" layoutY="109.0" prefHeight="27.0" prefWidth="241.0" />
+            <Button fx:id="btnexit" layoutX="226.0" layoutY="454.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: #588BAE;" text="EXIT" textFill="#fcf9f9">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Button>
-            <ImageView fitHeight="119.0" fitWidth="169.0" layoutX="189.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
-            <Button layoutX="201.0" layoutY="511.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text=".....First Vaccinate !!!" textFill="#3e3eee">
+            <Button fx:id="btnvaccinate" layoutX="201.0" layoutY="511.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text=".....First Vaccinate !!!" textFill="#3e3eee">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
+            </Button>
+            <Button fx:id="btnpositive" layoutX="76.0" layoutY="341.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="POSITIVE" textAlignment="RIGHT" textFill="#fcf9f9">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnnegative" layoutX="327.0" layoutY="341.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="NEGATIVE" textAlignment="RIGHT" textFill="#fcf9f9">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children></AnchorPane>
    </children>
