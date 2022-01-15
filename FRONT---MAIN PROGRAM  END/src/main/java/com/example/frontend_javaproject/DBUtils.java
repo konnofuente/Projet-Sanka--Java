@@ -48,7 +48,7 @@ public class DBUtils {
     {
 
         try {
-            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1430" );
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery( "select * from client");
 
@@ -92,7 +92,7 @@ public class DBUtils {
         ResultSet resultSet=null;
 
         try{
-            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "1430" );
             checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat=?");
             checkUserExist.setString(1,admin_mat);
             resultSet=checkUserExist.executeQuery();
@@ -134,7 +134,7 @@ public class DBUtils {
         PreparedStatement checkUserExist=null;
         ResultSet resultSet=null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "1430");
             checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat =?");
             checkUserExist.setString(1, admin_mat);
             resultSet = checkUserExist.executeQuery();
