@@ -16,28 +16,38 @@ public class vaccinationcontroller implements Initializable {
 
     @FXML private Button btnreset;
 
-    @FXML private TextField cni;
+    @FXML private Button btnvaccinate;
 
-    @FXML private TextField name;
+    @FXML private TextField tfnic;
 
-    @FXML private TextField phone_num;
+    @FXML private TextField tfname;
 
-    @FXML private TextField nationality;
+    @FXML private TextField tftel;
+
+    @FXML private TextField tfnationality;
+
+    @FXML private TextField tfproffesion;
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
+        btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
+            }
+        });
 
         btnreset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                cni.clear();
-                name.clear();
-                phone_num.clear();
-                nationality.clear();
+                tfnic.clear();
+                tfname.clear();
+                tftel.clear();
+                tfnationality.clear();
+                tfproffesion.clear();
             }
         });
 

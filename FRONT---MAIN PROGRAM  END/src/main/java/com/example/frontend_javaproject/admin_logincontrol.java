@@ -58,8 +58,14 @@ public class admin_logincontrol implements Initializable {
 
                 } else {
 
-                    //  DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
-                    DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
+                    try {
+                        DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                   // DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
 
 
                 }

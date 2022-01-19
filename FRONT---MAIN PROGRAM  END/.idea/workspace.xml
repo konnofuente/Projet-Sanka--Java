@@ -136,7 +136,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
-          <line>135</line>
+          <line>237</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

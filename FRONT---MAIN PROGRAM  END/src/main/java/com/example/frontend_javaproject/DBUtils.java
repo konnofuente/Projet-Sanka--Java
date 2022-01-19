@@ -44,33 +44,33 @@ public class DBUtils {
     /**
     the client info function will be use to send a client info imto the databse
      */
-    public static  void clientinfo (ActionEvent actionEvent,Integer cni,String name,String nationality,Integer phone,String status)
+    public static  void clientinfo (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer phone,String profession)
     {
 
         try {
-            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1430" );
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery( "select * from client");
+            ResultSet resultSet = statement.executeQuery( "select * from client_vaccine");
 
 
             while(resultSet.next()){
-                System.out.println(resultSet.getString("clientName"));
+                System.out.println(resultSet.getString("name"));
             }
             // create a sql date object so we can use it in our INSERT statement
             Calendar calendar = Calendar.getInstance();
             java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
             // the mysql insert statement
-            String query = " insert into client (idclient, clientName, nationality, phone, status,vac_date)"
+            String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion,vac_date)"
                     + " values (?, ?, ?, ?, ?,?)";
 
             // create the mysql insert preparedstatement
             PreparedStatement preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setInt (1,cni);
+            preparedStmt.setInt (1,nic);
             preparedStmt.setString (2,name);
             preparedStmt.setString  (3, nationality);
             preparedStmt.setInt(4, phone);
-            preparedStmt.setString    (5, status);
+            preparedStmt.setString    (5, profession);
             preparedStmt.setDate   (6,startDate);
 
             // execute the preparedstatement
@@ -83,7 +83,109 @@ public class DBUtils {
             System.err.println("Got an exception!");
             System.err.println(e.getMessage());
         }
+
+        DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
     }
+
+
+    public static  void clienttaste (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer tel,Integer N_gadget,String status)
+    {
+
+        try {
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery( "select * from client_taste");
+
+
+            while(resultSet.next()){
+                System.out.println(resultSet.getString("NIC"));
+            }
+            // create a sql date object so we can use it in our INSERT statement
+            Calendar calendar = Calendar.getInstance();
+            java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+
+            // the mysql insert statement
+            String query = " insert into client_taste (NIC,name,nationality,tel_number,gadget_number,status,date_taste)"
+                    + " values (?, ?, ?, ?, ?, ?, ?)";
+
+            // create the mysql insert preparedstatement
+            PreparedStatement preparedStmt = connection.prepareStatement(query);
+            preparedStmt.setInt (1,nic);
+            preparedStmt.setString (2,name);
+            preparedStmt.setString  (3, nationality);
+            preparedStmt.setInt(4, tel);
+            preparedStmt.setInt   (5, N_gadget);
+            preparedStmt.setString (6,status);
+            preparedStmt.setDate   (7,startDate);
+
+            // execute the preparedstatement
+            preparedStmt.execute();
+
+            DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+
+
+            connection.close();
+        }
+        catch (Exception e)
+        {
+
+
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
+
+
+    }
+
+
+    public static  void createclinic (ActionEvent actionEvent,Integer id,String name,Integer qty_vacc,Integer qty_taste,String hospital)
+    {
+
+        try {
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery( "select * from clinic");
+
+
+            while(resultSet.next()){
+                System.out.println(resultSet.getString("idclinic"));
+            }
+            // create a sql date object so we can use it in our INSERT statement
+            Calendar calendar = Calendar.getInstance();
+            java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+
+            // the mysql insert statement
+            String query = " insert into clinic (idclinic,name,qty_vacc,qty_taste,hospital,creation_date)"
+                    + " values (?, ?, ?, ?, ?, ?)";
+
+            // create the mysql insert preparedstatement
+            PreparedStatement preparedStmt = connection.prepareStatement(query);
+            preparedStmt.setInt (1,id);
+            preparedStmt.setString (2,name);
+            preparedStmt.setInt  (3,qty_vacc);
+            preparedStmt.setInt(4, qty_taste);
+            preparedStmt.setString   (5, hospital);
+            preparedStmt.setDate   (6,startDate);
+
+            // execute the preparedstatement
+            preparedStmt.execute();
+
+            DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLIENT MANAGEMENT");
+
+
+            connection.close();
+        }
+        catch (Exception e)
+        {
+
+
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
+
+
+    }
+
 
     public static  void signUpAdmin(ActionEvent actionEvent,String admin_mat,String admin_name,String pwd)  {
         Connection connection=null;
@@ -92,7 +194,7 @@ public class DBUtils {
         ResultSet resultSet=null;
 
         try{
-            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "1430" );
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
             checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat=?");
             checkUserExist.setString(1,admin_mat);
             resultSet=checkUserExist.executeQuery();
@@ -104,7 +206,7 @@ public class DBUtils {
             }
             else
             {
-                String query = " insert into administrator (admin_mat,admin_name,password)" + "values (?,?,?)";
+                String query = " insert into administrator (admin_mat,admin_name,pwd)" + "values (?,?,?)";
 
                 psInsert=connection.prepareStatement(query) ;
                 psInsert.setString(1,admin_mat);
@@ -134,7 +236,7 @@ public class DBUtils {
         PreparedStatement checkUserExist=null;
         ResultSet resultSet=null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "1430");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
             checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat =?");
             checkUserExist.setString(1, admin_mat);
             resultSet = checkUserExist.executeQuery();
@@ -145,7 +247,7 @@ public class DBUtils {
                 alert.show();
             } else {
                 while (resultSet.next()) {
-                    String retrievepwd = resultSet.getString("password");
+                    String retrievepwd = resultSet.getString("pwd");
                     String retrivename = resultSet.getString("admin_name");
                     if (retrievepwd.equals(pwd)) {
                         Alert alert =new Alert(Alert.AlertType.CONFIRMATION);

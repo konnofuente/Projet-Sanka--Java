@@ -68,7 +68,7 @@
             <TextField layoutX="190.0" layoutY="79.0" prefHeight="40.0" prefWidth="241.0" style="-fx-background-color: arsh;" />
             <TextField fx:id="tfname" layoutX="232.0" layoutY="153.0" prefHeight="27.0" prefWidth="241.0" />
             <TextField fx:id="tfnationality" layoutX="231.0" layoutY="201.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField fx:id="tfphone" layoutX="231.0" layoutY="242.0" prefHeight="27.0" prefWidth="241.0" />
+            <TextField fx:id="tftel" layoutX="231.0" layoutY="242.0" prefHeight="27.0" prefWidth="241.0" />
             <Label layoutX="109.0" layoutY="40.0" prefHeight="40.0" prefWidth="403.0" text="ENTER CLIENT INFORMATION" textAlignment="CENTER" textFill="#588bae">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -109,6 +109,12 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label layoutX="76.0" layoutY="295.0" text="Gadget Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfgadget_num" layoutX="232.0" layoutY="291.0" prefHeight="27.0" prefWidth="241.0" />
          </children></AnchorPane>
    </children>
 </HBox>
