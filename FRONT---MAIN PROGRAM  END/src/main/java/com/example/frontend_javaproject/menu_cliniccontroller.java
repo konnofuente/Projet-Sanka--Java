@@ -42,7 +42,7 @@ public class menu_cliniccontroller implements Initializable {
         btnstock.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"updatestock.fxml","CLINIC MANAGEMENT");
+                DBUtils.changeover(actionEvent,"update_clinic.fxml","CLINIC MANAGEMENT");
             }
         });
 

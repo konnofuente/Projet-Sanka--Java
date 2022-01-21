@@ -49,7 +49,7 @@ public class loggedin_admincontroller implements Initializable {
          btn_client.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent actionEvent) {
-                 DBUtils.changeover(actionEvent,"M_cltmenu.fxml","CLINIC");
+                 DBUtils.changeover(actionEvent,"update_clinic.fxml","CLINIC");
              }
          });
 

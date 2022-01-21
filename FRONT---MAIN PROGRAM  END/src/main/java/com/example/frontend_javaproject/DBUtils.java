@@ -7,10 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
+import java.util.InputMismatchException;
 
 public class DBUtils {
 
@@ -22,6 +24,9 @@ public class DBUtils {
     private static Integer phone;
     private static String status;
 
+    /**
+     the changover permit the tranfer from one window to another
+     */
     public static void changeover(ActionEvent event, String fxml,String title){
         Parent root=null;
 
@@ -38,9 +43,6 @@ public class DBUtils {
 
     }
 
-
-
-
     /**
     the client info function will be use to send a client info imto the databse
      */
@@ -48,35 +50,45 @@ public class DBUtils {
     {
 
         try {
-            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery( "select * from client_vaccine");
+            PreparedStatement checkUserExist = null;
+            ResultSet resultSet=null;
+            checkUserExist = connection.prepareStatement("SELECT * FROM client_vaccine WHERE NIC=?");
+            checkUserExist.setInt(1, nic);
+            resultSet = checkUserExist.executeQuery();
 
+            if (resultSet.isBeforeFirst()) {
+                System.out.println("client already Exist");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("You cannot Vaccinate some who is Already vaccinated !!!!!!!!!");
+                alert.show();
+            } else
+            {
 
-            while(resultSet.next()){
-                System.out.println(resultSet.getString("name"));
+                // create a sql date object so we can use it in our INSERT statement
+                Calendar calendar = Calendar.getInstance();
+                java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+
+                // the mysql insert statement
+                String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion,vac_date)"
+                        + " values (?, ?, ?, ?, ?,?)";
+
+                // create the mysql insert preparedstatement
+                PreparedStatement preparedStmt = connection.prepareStatement(query);
+                preparedStmt.setInt(1, nic);
+                preparedStmt.setString(2, name);
+                preparedStmt.setString(3, nationality);
+                preparedStmt.setInt(4, phone);
+                preparedStmt.setString(5, profession);
+                preparedStmt.setDate(6, startDate);
+
+                // execute the preparedstatement
+                preparedStmt.execute();
+
+                connection.close();
+                DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
             }
-            // create a sql date object so we can use it in our INSERT statement
-            Calendar calendar = Calendar.getInstance();
-            java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
-
-            // the mysql insert statement
-            String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion,vac_date)"
-                    + " values (?, ?, ?, ?, ?,?)";
-
-            // create the mysql insert preparedstatement
-            PreparedStatement preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setInt (1,nic);
-            preparedStmt.setString (2,name);
-            preparedStmt.setString  (3, nationality);
-            preparedStmt.setInt(4, phone);
-            preparedStmt.setString    (5, profession);
-            preparedStmt.setDate   (6,startDate);
-
-            // execute the preparedstatement
-            preparedStmt.execute();
-
-            connection.close();
         }
         catch (Exception e)
         {
@@ -84,10 +96,12 @@ public class DBUtils {
             System.err.println(e.getMessage());
         }
 
-        DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+
     }
 
-
+    /**
+     the client taste function will be use to send a client info imto the databse before a taste
+     */
     public static  void clienttaste (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer tel,Integer N_gadget,String status)
     {
 
@@ -97,9 +111,7 @@ public class DBUtils {
             ResultSet resultSet = statement.executeQuery( "select * from client_taste");
 
 
-            while(resultSet.next()){
-                System.out.println(resultSet.getString("NIC"));
-            }
+
             // create a sql date object so we can use it in our INSERT statement
             Calendar calendar = Calendar.getInstance();
             java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
@@ -137,7 +149,9 @@ public class DBUtils {
 
     }
 
-
+    /**
+     the create clinic will help us to create a clinic in the database
+     */
     public static  void createclinic (ActionEvent actionEvent,Integer id,String name,Integer qty_vacc,Integer qty_taste,String hospital)
     {
 
@@ -186,7 +200,9 @@ public class DBUtils {
 
     }
 
-
+    /**
+     the signupaddmin will help us to create an admin into the database
+     */
     public static  void signUpAdmin(ActionEvent actionEvent,String admin_mat,String admin_name,String pwd)  {
         Connection connection=null;
         PreparedStatement psInsert=null;
@@ -227,9 +243,9 @@ public class DBUtils {
 
     }
 
-
-
-
+    /**
+     the logInUser permit the admin to log in into the administrator setting
+     */
     public static void logInUser(ActionEvent actionEvent,String admin_mat,String pwd) throws SQLException, IOException {
         Connection connection=null;
         PreparedStatement psInsert=null;
