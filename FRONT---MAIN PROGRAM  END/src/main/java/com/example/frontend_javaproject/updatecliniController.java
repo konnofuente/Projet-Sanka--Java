@@ -28,6 +28,9 @@ public class updatecliniController implements Initializable {
 
     @FXML private Button btnadd;
 
+    @FXML
+    private Button btnreturn;
+
     @FXML private Button btndelete;
 
     @FXML private Button btnrefresh;
@@ -107,6 +110,13 @@ public class updatecliniController implements Initializable {
 
 
                 refresh();
+            }
+        });
+
+        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
             }
         });
 

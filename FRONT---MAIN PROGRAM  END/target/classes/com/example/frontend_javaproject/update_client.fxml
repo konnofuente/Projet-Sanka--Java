@@ -11,7 +11,10 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.updateclientcontroller">
    <children>
-      <AnchorPane prefHeight="565.0" prefWidth="158.0" />
+      <AnchorPane prefHeight="565.0" prefWidth="158.0">
+         <children>
+            <Button fx:id="btnreturn" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" text="RETURN" />
+         </children></AnchorPane>
       <AnchorPane prefHeight="565.0" prefWidth="557.0">
          <children>
             <Button fx:id="btnadd" layoutX="23.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="ADD" />

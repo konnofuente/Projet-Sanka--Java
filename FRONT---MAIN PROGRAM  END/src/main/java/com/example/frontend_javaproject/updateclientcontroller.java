@@ -32,6 +32,9 @@ public class updateclientcontroller implements Initializable {
     private Button btnrefresh;
 
     @FXML
+    private Button btnreturn;
+
+    @FXML
     private Button btnprint;
 
     @FXML
@@ -121,6 +124,19 @@ public class updateclientcontroller implements Initializable {
             }
         });
 
+        btnrefresh.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                refreshTable();
+            }
+        });
+
+        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
+            }
+        });
     }
     /**
      * this are the function that will be use in the progra we have the
@@ -169,6 +185,10 @@ public class updateclientcontroller implements Initializable {
         dateCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Date>("dateCol"));
 
 
+    }
+
+    @FXML private void research(){
+        
     }
 
 

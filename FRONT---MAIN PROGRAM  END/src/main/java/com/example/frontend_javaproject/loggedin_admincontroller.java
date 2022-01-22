@@ -42,14 +42,14 @@ public class loggedin_admincontroller implements Initializable {
         btn_clinic.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"menu_clinic.fxml","MENU CLINIC");
-            }
+                DBUtils.changeover(actionEvent,"update_clinic.fxml","MENU CLINIC");
+        }
         });
 
          btn_client.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent actionEvent) {
-                 DBUtils.changeover(actionEvent,"update_clinic.fxml","CLINIC");
+                 DBUtils.changeover(actionEvent,"update_client.fxml","CLINIC");
              }
          });
 
