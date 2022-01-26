@@ -56,11 +56,12 @@ public class updateclientcontroller implements Initializable {
 
     Date date=new Date();
 
-    String query=null;
+    /**String query=null;
     Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
     PreparedStatement preparedStatement =null;
     ResultSet resultSet =null;
     Client client =null;
+     */
     /**
      * the client list hold the data from the client class to the
      * */
@@ -109,6 +110,12 @@ public class updateclientcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
 
                 try {
+                    DBUtils.deleteDB(clientTable);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                /**  try {
                     client=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
                     query="DELETE FROM client_vaccine WHERE NIC ="+client.getNicCol();// a Query is made inorder to delete it by using it nic
                     preparedStatement=connection.prepareStatement(query);
@@ -119,7 +126,7 @@ public class updateclientcontroller implements Initializable {
                     alert.show();
                 } catch (SQLException e) {
                     e.printStackTrace();
-                }
+                }*/
 
             }
         });
@@ -148,6 +155,12 @@ public class updateclientcontroller implements Initializable {
     @FXML private void refreshTable(){
 
         try {
+            String query=null;
+            Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+            PreparedStatement preparedStatement =null;
+            ResultSet resultSet =null;
+            Client client =null;
+
            // connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
             clientlist.clear();
             query = "SELECT * FROM client_vaccine";
@@ -186,6 +199,8 @@ public class updateclientcontroller implements Initializable {
 
 
     }
+
+
 
     @FXML private void research(){
         

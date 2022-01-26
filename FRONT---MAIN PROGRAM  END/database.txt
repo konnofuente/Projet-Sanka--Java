@@ -1,0 +1,49 @@
+CREATE TABLE `sanka`.`administrator`
+ (
+  `admin_mat` VARCHAR(45) NOT NULL,
+ 
+ `admin_name` VARCHAR(45) NULL,
+ 
+ `admin_password` VARCHAR(45) NULL,
+ 
+ PRIMARY KEY (`admin_mat`));
+
+
+
+CREATE TABLE `sanka`.`clinic`
+ (
+  `idclinic` INT NOT NULL,
+ 
+ `name` VARCHAR(45) NULL,
+  `qty_vacc`
+ INT NULL,
+  `qty_taste` INT NULL,
+ 
+ `hospital` VARCHAR(45) NULL,
+  
+`creation_date` DATE NULL,
+ 
+ PRIMARY KEY (`idclinic`));
+
+
+CREATE TABLE `sanka`.`client_taste` 
+(
+  `NIC` INT NOT NULL,
+ 
+ `name` VARCHAR(45) NULL,
+ 
+ `nationality` VARCHAR(45) NULL,
+ 
+ `tel_number` INT NULL,
+ 
+ `gadget_number` INT NULL,
+  
+`status` VARCHAR(45) NULL,
+ 
+
+ `date_taste` DATE NULL,
+  PRIMARY KEY (`NIC`));
+
+
+
+

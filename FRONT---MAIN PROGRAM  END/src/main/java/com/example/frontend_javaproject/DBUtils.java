@@ -6,13 +6,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
-import java.util.InputMismatchException;
 
 public class DBUtils {
 
@@ -222,7 +221,7 @@ public class DBUtils {
             }
             else
             {
-                String query = " insert into administrator (admin_mat,admin_name,pwd)" + "values (?,?,?)";
+                String query = " insert into administrator (admin_mat,admin_name,admin_password)" + "values (?,?,?)";
 
                 psInsert=connection.prepareStatement(query) ;
                 psInsert.setString(1,admin_mat);
@@ -251,6 +250,8 @@ public class DBUtils {
         PreparedStatement psInsert=null;
         PreparedStatement checkUserExist=null;
         ResultSet resultSet=null;
+
+
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
             checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat =?");
@@ -263,7 +264,7 @@ public class DBUtils {
                 alert.show();
             } else {
                 while (resultSet.next()) {
-                    String retrievepwd = resultSet.getString("pwd");
+                    String retrievepwd = resultSet.getString("admin_password");
                     String retrivename = resultSet.getString("admin_name");
                     if (retrievepwd.equals(pwd)) {
                         Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
@@ -297,4 +298,25 @@ public class DBUtils {
 }
 
 
+
+
+    public static void deleteDB(TableView<Client> clientTable) throws SQLException {
+        String query=null;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        PreparedStatement preparedStatement =null;
+        ResultSet resultSet =null;
+        Client client =null;
+
+        try {
+            client=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+            query="DELETE FROM client_vaccine WHERE NIC ="+client.getNicCol();// a Query is made inorder to delete it by using it nic
+            preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("The Client chosed was succesfully deleted !!!!!!!!!");
+            alert.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
