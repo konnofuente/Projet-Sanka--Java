@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -31,8 +30,7 @@ public class updateclientcontroller implements Initializable {
     @FXML
     private Button btnrefresh;
 
-    @FXML
-    private Button btnreturn;
+
 
     @FXML
     private Button btnprint;
@@ -110,7 +108,7 @@ public class updateclientcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
 
                 try {
-                    DBUtils.deleteDB(clientTable);
+                    DBUtils.deleteDB_client(clientTable);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -138,12 +136,7 @@ public class updateclientcontroller implements Initializable {
             }
         });
 
-        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
-            }
-        });
+
     }
     /**
      * this are the function that will be use in the progra we have the

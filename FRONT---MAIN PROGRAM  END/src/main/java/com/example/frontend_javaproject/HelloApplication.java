@@ -12,10 +12,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("slider_Menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainpage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        //stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
+
         stage.setTitle("Welcome");
+       // stage.setScene(scene);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

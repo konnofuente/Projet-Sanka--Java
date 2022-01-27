@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -136,7 +136,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
-          <line>254</line>
+          <line>265</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

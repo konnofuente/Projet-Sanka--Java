@@ -16,14 +16,9 @@ import java.util.Calendar;
 public class DBUtils {
 
 
-    private static ActionEvent actionEvent;
-    private static Integer cni;
-    private static String name;
-    private static String nationality;
-    private static Integer phone;
-    private static String status;
 
-    /**
+
+    /**sdsddzxcckvvlvlvkvkkkkfffddssaaaassdddddddd
      the changover permit the tranfer from one window to another
      */
     public static void changeover(ActionEvent event, String fxml,String title){
@@ -38,6 +33,22 @@ public class DBUtils {
         Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(new Scene(root,800,550));
+        stage.show();
+
+    }
+
+    public static void changehigh(ActionEvent event, String fxml,String title){
+        Parent root=null;
+
+        try{
+            FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
+            root =loader.load();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root,1000,600));
         stage.show();
 
     }
@@ -270,7 +281,7 @@ public class DBUtils {
                         Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setContentText("log in successfull Mr " +retrivename+".");
                         alert.show();
-                        changeover(actionEvent, "logged_admin.fxml","ADMINISTRATION");
+                        changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
 
                     } else{
                         System.out.println("password did not match");
@@ -300,7 +311,7 @@ public class DBUtils {
 
 
 
-    public static void deleteDB(TableView<Client> clientTable) throws SQLException {
+    public static void deleteDB_client(TableView<Client> clientTable) throws SQLException {
         String query=null;
         Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
         PreparedStatement preparedStatement =null;
@@ -319,4 +330,41 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
+
+
+    public static void deleteDB_clinic(TableView<Clinic> clinicTable) throws SQLException {
+        String query=null;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        PreparedStatement preparedStatement =null;
+        ResultSet resultSet =null;
+        Clinic clinic =null;
+
+        try {
+            clinic = clinicTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+            query="DELETE FROM clinic WHERE idclinic ="+clinic.getId();// a Query is made inorder to delete it by using it nic
+            preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("The Clinic chosed was succesfully deleted !!!!!!!!!");
+            alert.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

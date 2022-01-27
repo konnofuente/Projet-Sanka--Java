@@ -28,8 +28,7 @@ public class updatecliniController implements Initializable {
 
     @FXML private Button btnadd;
 
-    @FXML
-    private Button btnreturn;
+
 
     @FXML private Button btndelete;
 
@@ -51,11 +50,11 @@ public class updatecliniController implements Initializable {
 
     ObservableList<Clinic> cliniclist = FXCollections.observableArrayList();
 
-    Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
+    /**Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
     PreparedStatement preparedStatement=null;
     ResultSet resultSet=null;
     String query=null;
-    Clinic clinic=null;
+    Clinic clinic=null;*/
 
     public updatecliniController() throws SQLException {
     }
@@ -95,7 +94,13 @@ public class updatecliniController implements Initializable {
         btndelete.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+
                 try {
+                    DBUtils.deleteDB_clinic(clinicTable);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                /** try {
                     clinic = clinicTable.getSelectionModel().getSelectedItem();
                     query = "DELETE FROM clinic WHERE idclinic =" + clinic.getId();
                     preparedStatement = connection.prepareStatement(query);
@@ -106,27 +111,28 @@ public class updatecliniController implements Initializable {
 
                 }catch (SQLException e){
                     e.printStackTrace();
-                }
+                }*/
 
 
                 refresh();
             }
         });
 
-        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
-            }
-        });
+
 
     }
 
 
 
-    private void refresh()
-    {
+    private void refresh()  {
         try{
+
+            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            PreparedStatement preparedStatement=null;
+            ResultSet resultSet=null;
+            String query=null;
+            Clinic clinic=null;
+
             cliniclist.clear();
         query="SELECT * FROM clinic";
         preparedStatement = connection.prepareStatement(query);
