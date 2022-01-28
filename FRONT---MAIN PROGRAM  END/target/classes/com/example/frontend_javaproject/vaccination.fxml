@@ -91,6 +91,12 @@
                </font>
             </Label>
             <TextField fx:id="tfproffesion" layoutX="212.0" layoutY="358.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
+            <Label layoutX="89.0" layoutY="406.0" text="AGE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfage" layoutX="212.0" layoutY="402.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Nationality" />
          </children></AnchorPane>
    </children>
 </HBox>

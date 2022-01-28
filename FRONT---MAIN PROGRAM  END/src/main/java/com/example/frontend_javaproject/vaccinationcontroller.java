@@ -1,6 +1,5 @@
 package com.example.frontend_javaproject;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -28,6 +27,8 @@ public class vaccinationcontroller implements Initializable {
 
     @FXML private TextField tfproffesion;
 
+    @FXML private TextField tfage;
+
 
 
     @Override
@@ -36,18 +37,16 @@ public class vaccinationcontroller implements Initializable {
         btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
+               // DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
+                DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+                reset();
             }
         });
 
         btnreset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                tfnic.clear();
-                tfname.clear();
-                tftel.clear();
-                tfnationality.clear();
-                tfproffesion.clear();
+               reset();
             }
         });
 
@@ -57,5 +56,13 @@ public class vaccinationcontroller implements Initializable {
                 DBUtils.changeover(actionEvent,"2servicepage.fxml","Service Page");
             }
         });
+    }
+
+    public void reset(){
+        tfnic.clear();
+        tfname.clear();
+        tftel.clear();
+        tfnationality.clear();
+        tfproffesion.clear();
     }
 }

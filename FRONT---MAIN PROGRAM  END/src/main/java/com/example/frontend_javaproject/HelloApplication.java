@@ -10,11 +10,23 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    double x,y;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainpage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainpage2.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.initStyle(StageStyle.UNDECORATED);
+
+        scene.setOnMousePressed(event ->{
+            x=event.getSceneX();
+            y=event.getSceneY();
+        });
+
+        scene.setOnMouseDragged(event ->{
+            stage.setX(event.getScreenX()-x);
+            stage.setY(event.getScreenY()-y);
+            y=event.getSceneY();
+        });
 
         stage.setTitle("Welcome");
        // stage.setScene(scene);
