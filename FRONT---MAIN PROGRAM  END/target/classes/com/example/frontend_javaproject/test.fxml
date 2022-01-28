@@ -49,43 +49,38 @@
          </children></AnchorPane>
       <AnchorPane prefHeight="550.0" prefWidth="570.0">
          <children>
-            <Label layoutX="75.0" layoutY="153.0" prefHeight="27.0" prefWidth="57.0" text="NAME" textAlignment="CENTER">
+            <Label layoutX="56.0" layoutY="127.0" prefHeight="27.0" prefWidth="57.0" text="NAME" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="74.0" layoutY="201.0" prefHeight="27.0" prefWidth="120.0" text="NATIONALITY">
+            <Label layoutX="55.0" layoutY="175.0" prefHeight="27.0" prefWidth="120.0" text="NATIONALITY">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="76.0" layoutY="109.0" prefHeight="27.0" prefWidth="107.0" text="NIC NUMBER">
+            <Label layoutX="57.0" layoutY="83.0" prefHeight="27.0" prefWidth="107.0" text="NIC NUMBER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="75.0" layoutY="246.0" text="PHONE NUMBER">
+            <Label layoutX="56.0" layoutY="220.0" text="PHONE NUMBER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <TextField layoutX="190.0" layoutY="79.0" prefHeight="40.0" prefWidth="241.0" style="-fx-background-color: arsh;" />
-            <TextField fx:id="tfname" layoutX="232.0" layoutY="153.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField fx:id="tfnationality" layoutX="231.0" layoutY="201.0" prefHeight="27.0" prefWidth="241.0" />
-            <TextField fx:id="tftel" layoutX="231.0" layoutY="242.0" prefHeight="27.0" prefWidth="241.0" />
-            <Label layoutX="109.0" layoutY="40.0" prefHeight="40.0" prefWidth="403.0" text="ENTER CLIENT INFORMATION" textAlignment="CENTER" textFill="#588bae">
+            <TextField layoutX="171.0" layoutY="53.0" prefHeight="40.0" prefWidth="241.0" style="-fx-background-color: arsh;" />
+            <TextField fx:id="tfname" layoutX="213.0" layoutY="127.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter Name" />
+            <TextField fx:id="tfnationality" layoutX="212.0" layoutY="175.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter Nationality" />
+            <TextField fx:id="tftel" layoutX="212.0" layoutY="216.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter Phone Number" />
+            <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="403.0" text="ENTER CLIENT INFORMATION" textAlignment="CENTER" textFill="#588bae">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="tfnic" layoutX="231.0" layoutY="109.0" prefHeight="27.0" prefWidth="241.0" />
-            <Button fx:id="btnexit" layoutX="226.0" layoutY="454.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: #588BAE;" text="EXIT" textFill="#fcf9f9">
+            <TextField fx:id="tfnic" layoutX="212.0" layoutY="83.0" prefHeight="27.0" prefWidth="241.0" promptText="Entre NIC" />
+            <Button fx:id="btnexit" layoutX="223.0" layoutY="496.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: #588BAE;" text="EXIT" textFill="#fcf9f9">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnvaccinate" layoutX="201.0" layoutY="511.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text=".....First Vaccinate !!!" textFill="#3e3eee">
-               <font>
-                  <Font name="System Bold Italic" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnpositive" layoutX="76.0" layoutY="341.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="POSITIVE" textAlignment="RIGHT" textFill="#fcf9f9">
+            <Button fx:id="btnpositive" layoutX="73.0" layoutY="421.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="POSITIVE" textAlignment="RIGHT" textFill="#fcf9f9">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
@@ -97,7 +92,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnnegative" layoutX="327.0" layoutY="341.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="NEGATIVE" textAlignment="RIGHT" textFill="#fcf9f9">
+            <Button fx:id="btnnegative" layoutX="324.0" layoutY="421.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="150.0" style="-fx-background-color: #588BAE;" text="NEGATIVE" textAlignment="RIGHT" textFill="#fcf9f9">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
@@ -109,12 +104,24 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="76.0" layoutY="295.0" text="Gadget Number">
+            <Label layoutX="54.0" layoutY="311.0" text="Gadget Number">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="tfgadget_num" layoutX="232.0" layoutY="291.0" prefHeight="27.0" prefWidth="241.0" />
+            <TextField fx:id="tfgadget_num" layoutX="210.0" layoutY="307.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter Gadget Number" />
+            <Label layoutX="53.0" layoutY="267.0" text="AGE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfage" layoutX="209.0" layoutY="263.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter Age" />
+            <Label layoutX="55.0" layoutY="356.0" text="Profession">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfproffesion" layoutX="211.0" layoutY="352.0" prefHeight="27.0" prefWidth="241.0" promptText="Enter profession" />
          </children></AnchorPane>
    </children>
 </HBox>

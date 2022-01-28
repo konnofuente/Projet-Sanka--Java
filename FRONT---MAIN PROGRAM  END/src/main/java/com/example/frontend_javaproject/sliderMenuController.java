@@ -38,7 +38,14 @@ public class sliderMenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-            // slider.setTranslateX(-170);
+             slider.setTranslateX(-220);
+
+            btnexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    DBUtils.changeover(actionEvent,"admin-login.fxml","WELCOME");
+                }
+            });
 
             btnexit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
@@ -107,6 +114,17 @@ public class sliderMenuController implements Initializable {
         contentArea.getChildren().setAll(root);
     }
 
+    public void clienttasted (ActionEvent actionEvent) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getResource("update_clienttaste.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(root);
+    }
+
+    public void statistic(ActionEvent actionEvent) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getResource("statistic.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(root);
+    }
 
     public void clinic (ActionEvent actionEvent) throws IOException {
         Parent root= FXMLLoader.load(getClass().getResource("update_clinic.fxml"));

@@ -36,9 +36,7 @@ public class signup_admincontroller implements Initializable {
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                tfmat.clear();
-                tfname.clear();
-                tfpwd.clear();
+               reset();
             }
         });
 
@@ -63,7 +61,7 @@ public class signup_admincontroller implements Initializable {
 
                 if(!tfmat.getText().trim().isEmpty() && !tfpwd.getText().trim().isEmpty() ){
                     DBUtils.signUpAdmin(event,tfmat.getText(),tfname.getText(),tfpwd.getText());
-
+                    reset();
                 } else{
                     System.out.println("please enter all information");
                     Alert alert=new Alert(Alert.AlertType.ERROR);
@@ -72,5 +70,10 @@ public class signup_admincontroller implements Initializable {
                 }
             }
         });
+    }
+    public void reset(){
+        tfmat.clear();
+        tfname.clear();
+        tfpwd.clear();
     }
 }

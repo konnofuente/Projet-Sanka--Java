@@ -37,8 +37,13 @@ public class vaccinationcontroller implements Initializable {
         btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+<<<<<<< Updated upstream
                // DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
                 DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+=======
+                DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText(),Integer.parseInt(tfage.getText()));
+               DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+>>>>>>> Stashed changes
                 reset();
             }
         });
@@ -63,6 +68,10 @@ public class vaccinationcontroller implements Initializable {
         tfname.clear();
         tftel.clear();
         tfnationality.clear();
+<<<<<<< Updated upstream
+=======
+        tfage.clear();
+>>>>>>> Stashed changes
         tfproffesion.clear();
     }
 }

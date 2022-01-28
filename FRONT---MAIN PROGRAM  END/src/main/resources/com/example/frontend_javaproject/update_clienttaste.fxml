@@ -10,22 +10,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.updateclientcontroller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.updateclientTaste">
    <children>
       <AnchorPane prefHeight="565.0" prefWidth="18.0" />
       <AnchorPane prefHeight="565.0" prefWidth="687.0">
          <children>
             <Button fx:id="btnadd" layoutX="23.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="ADD" />
             <TableView fx:id="clientTable" layoutX="-2.0" layoutY="202.0" prefHeight="359.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-              <columns>
-                <TableColumn fx:id="nicCol" prefWidth="75.0" text="NIC" />
-                <TableColumn fx:id="nameCol" prefWidth="98.0" text="NAME" />
+               <columns>
+                  <TableColumn fx:id="nicCol" prefWidth="75.0" text="NIC" />
+                  <TableColumn fx:id="nameCol" prefWidth="98.0" text="NAME" />
                   <TableColumn fx:id="nationalityCol" prefWidth="97.0" text="NATIONALITY" />
                   <TableColumn fx:id="phoneCol" prefWidth="97.0" text="PHONE" />
-                  <TableColumn fx:id="ageCol" prefWidth="75.0" text="AGE" />
-                  <TableColumn fx:id="proffesionCol" prefWidth="97.0" text="PROFFESION" />
-                  <TableColumn fx:id="dateCol" prefWidth="110.0" text="DATE" />
-              </columns>
+                  <TableColumn fx:id="gadgetCol" prefWidth="111.33334350585938" text="GADGET NUMBER" />
+                  <TableColumn fx:id="statusCol" prefWidth="75.0" text="STATUS" />
+                  <TableColumn fx:id="dateCol" prefWidth="96.0" text="DATE" />
+               </columns>
             </TableView>
             <Pane layoutY="81.0" prefHeight="4.0" prefWidth="592.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Label layoutX="14.0" layoutY="29.0" text="CLIENT MANAGEMENT">
@@ -42,8 +42,8 @@
                </font>
             </Label>
             <TextField fx:id="tfsearch" layoutX="101.0" layoutY="93.0" prefHeight="29.0" prefWidth="323.0" />
-            <Button fx:id="btnsearch" layoutX="450.0" layoutY="93.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="111.0" text="SEARCH" />
-            <Label layoutX="236.0" layoutY="64.0" text="VACCINATED INFORMATION">
+            <Button fx:id="btnprint1" layoutX="450.0" layoutY="93.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="111.0" text="SEARCH" />
+            <Label layoutX="236.0" layoutY="64.0" text="TEST INFORMATION">
                <font>
                   <Font name="Consolas" size="18.0" />
                </font>

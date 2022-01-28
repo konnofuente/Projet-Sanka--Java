@@ -86,7 +86,7 @@ public class DBUtils {
     /**
     the client info function will be use to send a client info imto the databse
      */
-    public static  void clientinfo (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer phone,String profession)
+    public static  void clientinfo (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer phone,String profession,Integer age)
     {
 
         try {
@@ -111,8 +111,8 @@ public class DBUtils {
                 java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
                 // the mysql insert statement
-                String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion,vac_date)"
-                        + " values (?, ?, ?, ?, ?,?)";
+                String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion, age,vac_date)"
+                        + " values (?, ?, ?, ?, ?,?,?)";
 
                 // create the mysql insert preparedstatement
                 PreparedStatement preparedStmt = connection.prepareStatement(query);
@@ -121,7 +121,8 @@ public class DBUtils {
                 preparedStmt.setString(3, nationality);
                 preparedStmt.setInt(4, phone);
                 preparedStmt.setString(5, profession);
-                preparedStmt.setDate(6, startDate);
+                preparedStmt.setInt(6,age);
+                preparedStmt.setDate(7, startDate);
 
                 // execute the preparedstatement
                 preparedStmt.execute();
@@ -151,7 +152,11 @@ public class DBUtils {
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
             Vaccination_cardController vaccination_cardController=loader.getController();
+<<<<<<< Updated upstream
             vaccination_cardController.setinfo(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+=======
+            vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+>>>>>>> Stashed changes
             Scene scene=new Scene(root,700,480);
             Stage stage =new Stage();
             stage.setScene(scene);
@@ -168,6 +173,38 @@ public class DBUtils {
 
     }
 
+<<<<<<< Updated upstream
+=======
+
+    public static void changeOvercardtest(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,String PgadgetNum,String Ppositive,String Pnegative) {
+        Parent root=null;
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
+
+        Calendar calendar = Calendar.getInstance();
+        java.util.Date starDate=new java.sql.Date(calendar.getTime().getTime());
+        try{
+            FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
+            root =loader.load();
+            Test_cardController test_cardController=loader.getController();
+            test_cardController.setinfotest(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate,PgadgetNum,Ppositive,Pnegative);
+            Scene scene=new Scene(root,700,480);
+            Stage stage =new Stage();
+            stage.setScene(scene);
+
+
+            stage.show();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        // Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
+
+
+    }
+
+>>>>>>> Stashed changes
     /**
      the client taste function will be use to send a client info imto the databse before a taste
      */
@@ -253,7 +290,7 @@ public class DBUtils {
             // execute the preparedstatement
             preparedStmt.execute();
 
-            DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLIENT MANAGEMENT");
+
 
 
             connection.close();
@@ -298,6 +335,9 @@ public class DBUtils {
                 psInsert.setString(2,admin_name);
                 psInsert.setString(3,pwd);
                 psInsert.executeUpdate();
+                Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("The admin "+admin_name+" has been successfully Created!!!!!!");
+                alert.show();
 
                 connection.close();
 
@@ -411,6 +451,29 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
+        String query=null;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        PreparedStatement preparedStatement =null;
+        ResultSet resultSet =null;
+        TClient tclient =null;
+
+        try {
+            tclient=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+            query="DELETE FROM client_taste WHERE NIC ="+tclient.getNicCol();// a Query is made inorder to delete it by using it nic
+            preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("The Client With "+tclient.getNicCol()+" chosed was succesfully deleted !!!!!!!!!");
+            alert.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+>>>>>>> Stashed changes
 }
 
 

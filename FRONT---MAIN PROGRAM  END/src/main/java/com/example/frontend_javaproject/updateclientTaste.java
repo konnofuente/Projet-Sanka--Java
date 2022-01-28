@@ -23,24 +23,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.Date;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class updateclientcontroller implements Initializable {
-
+public class updateclientTaste implements Initializable {
     @FXML
     private Button btnadd;
 
     @FXML
     private Button btnrefresh;
 
-
-
     @FXML
     private Button btnprint;
-
-    @FXML
-    private Button btndelete;
 
     @FXML
     private Button btnsearch;
@@ -48,41 +41,37 @@ public class updateclientcontroller implements Initializable {
     @FXML
     private TextField tfsearch;
 
-    @FXML private TableView<Client> clientTable;
+    @FXML
+    private Button btndelete;
 
-    @FXML private TableColumn<Client, Integer> nicCol;
+    @FXML private TableView<TClient> clientTable;
 
-    @FXML private TableColumn<Client, String> nameCol;
+    @FXML private TableColumn<TClient, Integer> nicCol;
 
-    @FXML private TableColumn<Client, String> nationalityCol;
+    @FXML private TableColumn<TClient, String> nameCol;
 
-    @FXML private TableColumn<Client, Integer> phoneCol;
+    @FXML private TableColumn<TClient, String> nationalityCol;
 
-    @FXML private TableColumn<Client, String> proffesionCol;
+    @FXML private TableColumn<TClient, Integer> phoneCol;
 
-    @FXML private TableColumn<Client, Integer> ageCol;
+    @FXML private TableColumn<TClient, Integer> gadgetCol;
 
-    @FXML private TableColumn<Client, Date> dateCol;
+    @FXML private TableColumn<TClient, String> statusCol;
+
+    @FXML private TableColumn<TClient, Date> dateCol;
 
     Date date=new Date();
 
-    /**String query=null;
-    Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
-    PreparedStatement preparedStatement =null;
-    ResultSet resultSet =null;
-    Client client =null;
-     */
-    /**
-     * the client list hold the data from the client class to the
-     * */
-   ObservableList<Client> clientlist= FXCollections.observableArrayList();
+
+    ObservableList<TClient> clientlist= FXCollections.observableArrayList();
 
 
-    public updateclientcontroller() throws SQLException {
+    public updateclientTaste() throws SQLException {
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
 
 
 
@@ -98,12 +87,12 @@ public class updateclientcontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    Parent parent = FXMLLoader.load(getClass().getResource("vaccination.fxml"));
+                    Parent parent = FXMLLoader.load(getClass().getResource("test.fxml"));
                     Scene scene=new Scene(parent);
                     Stage stage=new Stage();
                     stage.setScene(scene);
                     stage.initStyle(StageStyle.UTILITY);
-                    stage.setTitle("Vaccination");
+
                     stage.show();
 
                 } catch (IOException e) {
@@ -117,7 +106,7 @@ public class updateclientcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
 
                 try {
-                    DBUtils.deleteDB_client(clientTable);
+                    DBUtils.deleteDB_clienttaste(clientTable);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -150,21 +139,21 @@ public class updateclientcontroller implements Initializable {
             ResultSet resultSet =null;
             Client client =null;
 
-           // connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            // connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
             clientlist.clear();
-            query = "SELECT * FROM client_vaccine";
+            query = "SELECT * FROM client_taste";
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
-                clientlist.add(new Client(
+                clientlist.add(new TClient(
                         resultSet.getInt("NIC"),
                         resultSet.getString("name"),
                         resultSet.getString("nationality"),
-                        resultSet.getInt("phone"),
-                        resultSet.getInt("age"),
-                        resultSet.getString("proffesion"),
-                        resultSet.getDate("vac_date")
+                        resultSet.getInt("tel_number"),
+                        resultSet.getInt("gadget_number"),
+                        resultSet.getString("status"),
+                        resultSet.getDate("date_taste")
                 ));
                 clientTable.setItems(clientlist);
 
@@ -174,16 +163,16 @@ public class updateclientcontroller implements Initializable {
         }
 
 
-        nicCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("nicCol"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("nameCol"));
-        nationalityCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("nationalityCol"));
-        phoneCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("phoneCol"));
-        ageCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("ageCol"));
-        proffesionCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("proffesionCol"));
-        dateCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Date>("dateCol"));
+        nicCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,Integer>("nicCol"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,String>("nameCol"));
+        nationalityCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,String>("nationalityCol"));
+        phoneCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,Integer>("phoneCol"));
+        gadgetCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,Integer>("gadgetCol"));
+        statusCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,String>("statusCol"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.TClient,Date>("dateCol"));
 
         //initialise listenner for filtered the list
-        FilteredList<Client> filteredData =new FilteredList<>(clientlist,b ->true);
+        FilteredList<TClient> filteredData =new FilteredList<>(clientlist, b ->true);
 
         tfsearch.textProperty().addListener((observable,oldValue,newValue)->{
             filteredData.setPredicate(client -> {
@@ -200,7 +189,7 @@ public class updateclientcontroller implements Initializable {
                 }else if(client.getNationalityCol().toLowerCase().indexOf(searchKeyword) > -1){
                     return true;//mean we found name
                 }
-                else if(client.getProffesionCol().toLowerCase().indexOf(searchKeyword) > -1){
+                else if(client.getGadgetCol().toString().indexOf(searchKeyword)> -1){
                     return true;//mean we found name
                 }
                 else if(client.getPhoneCol().toString().indexOf(searchKeyword) > -1){
@@ -211,16 +200,15 @@ public class updateclientcontroller implements Initializable {
             });
         });
 
-        SortedList<Client> sortData=new SortedList<>(filteredData);
+        SortedList<TClient> sortData=new SortedList<>(filteredData);
 
         //bind sorted result with table
         sortData.comparatorProperty().bind(clientTable.comparatorProperty());
 
         //apply filtered and sorted data to Table view
         clientTable.setItems(sortData);
+
     }
-
-
 
 
 

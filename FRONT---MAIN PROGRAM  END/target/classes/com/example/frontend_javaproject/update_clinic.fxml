@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -33,9 +34,19 @@
             </Label>
             <Button fx:id="btnrefresh" layoutX="212.0" layoutY="195.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" text="REFRESH" />
             <Button fx:id="btndelete" layoutX="371.0" layoutY="195.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" text="DELETE" />
-            <Label layoutX="34.0" layoutY="132.0" prefHeight="20.0" prefWidth="92.0" text="CLINIC ID">
+            <Label layoutX="34.0" layoutY="111.0" text="SEARCH">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Consolas" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfsearch" layoutX="100.0" layoutY="107.0" prefHeight="29.0" prefWidth="323.0" promptText="Enter Clinic Id">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="256.0" layoutY="46.0" text="CLINIC INFORMATION">
+               <font>
+                  <Font name="Consolas" size="18.0" />
                </font>
             </Label>
          </children>

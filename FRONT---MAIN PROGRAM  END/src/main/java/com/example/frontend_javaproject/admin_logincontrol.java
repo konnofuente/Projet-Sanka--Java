@@ -66,7 +66,11 @@ public class admin_logincontrol implements Initializable {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+<<<<<<< Updated upstream
                     DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
+=======
+                   // DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
+>>>>>>> Stashed changes
                    // DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
 
 

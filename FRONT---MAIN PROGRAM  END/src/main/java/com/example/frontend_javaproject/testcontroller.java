@@ -15,9 +15,11 @@ public class testcontroller implements Initializable {
 
     @FXML private Button btnnegative;
 
-    @FXML private Button btnvaccinate;
+
 
     @FXML private Button btnexit;
+
+    @FXML private Button btnreturn;
 
     @FXML private TextField tfnic ;
 
@@ -26,6 +28,12 @@ public class testcontroller implements Initializable {
     @FXML private TextField tfnationality ;
 
     @FXML private TextField tftel ;
+
+    @FXML private TextField tfage ;
+
+    @FXML private TextField tfproffesion ;
+
+    //@FXML private TextField tfprof;
 
     @FXML private TextField  tfgadget_num;
 
@@ -39,6 +47,7 @@ public class testcontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.clienttaste(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),Integer.parseInt(tfgadget_num.getText()),"Positive");
+                DBUtils.changeOvercardtest(actionEvent,"test_card.fxml","TEST CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText(),tfgadget_num.getText(),"POSITIVE",null);
             }
         });
 
@@ -46,17 +55,22 @@ public class testcontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.clienttaste(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),Integer.parseInt(tfgadget_num.getText()),"Negative");
+                DBUtils.changeOvercardtest(actionEvent,"test_card.fxml","TEST CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText(),tfgadget_num.getText(),null,"NEGATIVE");
             }
         });
 
-        btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"vaccination.fxml","CLIENT MANAGEMENT");
-            }
-        });
+
+
 
         btnexit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+            }
+        });
+
+
+        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");

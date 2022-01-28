@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -21,6 +22,7 @@
                 <TableColumn fx:id="nameCol" prefWidth="98.0" text="NAME" />
                   <TableColumn fx:id="nationalityCol" prefWidth="97.0" text="NATIONALITY" />
                   <TableColumn fx:id="phoneCol" prefWidth="97.0" text="PHONE" />
+                  <TableColumn fx:id="ageCol" prefWidth="75.0" text="AGE" />
                   <TableColumn fx:id="proffesionCol" prefWidth="97.0" text="PROFFESION" />
                   <TableColumn fx:id="dateCol" prefWidth="110.0" text="DATE" />
               </columns>
@@ -34,6 +36,18 @@
             <Button fx:id="btnrefresh" layoutX="137.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="44.0" prefWidth="99.0" text="REFRESH" />
             <Button fx:id="btnprint" layoutX="260.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="PRINT" />
             <Button fx:id="btndelete" layoutX="377.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="DELETE" />
+            <Label layoutX="31.0" layoutY="97.0" text="SEARCH">
+               <font>
+                  <Font name="Consolas" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfsearch" layoutX="101.0" layoutY="93.0" prefHeight="29.0" prefWidth="323.0" />
+            <Button fx:id="btnsearch" layoutX="450.0" layoutY="93.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="111.0" text="SEARCH" />
+            <Label layoutX="236.0" layoutY="64.0" text="VACCINATED INFORMATION">
+               <font>
+                  <Font name="Consolas" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

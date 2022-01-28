@@ -63,7 +63,11 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+<<<<<<< Updated upstream
                               <Button fx:id="btnclient" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#client" prefHeight="58.0" prefWidth="212.0" style="-fx-background-color: transparent;" text="UPDATE" textFill="#fcf9f9">
+=======
+                              <Button fx:id="btnclient" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#client" prefHeight="58.0" prefWidth="212.0" style="-fx-background-color: transparent;" text="VACCINATED" textFill="#fcf9f9">
+>>>>>>> Stashed changes
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -78,6 +82,39 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+<<<<<<< Updated upstream
+=======
+                              <Button fx:id="btnclientTasted" alignment="BOTTOM_LEFT" layoutX="50.0" layoutY="146.0" mnemonicParsing="false" onAction="#clienttasted" prefHeight="58.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="TESTED" textFill="#fcf9f9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="38.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="S_RESIZE" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="btnstatistic" alignment="BOTTOM_LEFT" layoutX="50.0" layoutY="204.0" mnemonicParsing="false" onAction="#statistic" prefHeight="58.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="STATISTICS" textFill="#fcf9f9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="38.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <cursor>
+                                          <Cursor fx:constant="S_RESIZE" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Button>
+>>>>>>> Stashed changes
                               <Button fx:id="btnclinic1" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="204.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="232.0" style="-fx-background-color: #496E86;" text="CLINIC MANAGEMENT" textFill="#fcf9f9">
                                  <font>
                                     <Font name="System Bold" size="15.0" />

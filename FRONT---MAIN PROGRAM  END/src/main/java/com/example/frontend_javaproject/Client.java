@@ -4,25 +4,25 @@ import java.util.Date;
 
 public class Client {
 
-    private int nicCol;
+    private Integer nicCol;
     private String nameCol,nationalityCol;
-    private int phoneCol;
+    private Integer phoneCol,ageCol;
     private String proffesionCol;
     private Date dateCol;
 
 
-    public Client(int nicCol, String nameCol, String nationalityCol, int phoneCol, String proffesionCol, Date dateCol) {
+    public Client(Integer nicCol, String nameCol, String nationalityCol, int phoneCol, int ageCol, String proffesionCol, Date dateCol) {
         this.nicCol = nicCol;
         this.nameCol = nameCol;
         this.nationalityCol = nationalityCol;
         this.phoneCol = phoneCol;
+        this.ageCol = ageCol;
         this.proffesionCol = proffesionCol;
         this.dateCol = dateCol;
     }
 
 
-
-    public int getNicCol() {
+    public Integer getNicCol() {
         return nicCol;
     }
 
@@ -34,8 +34,12 @@ public class Client {
         return nationalityCol;
     }
 
-    public int getPhoneCol() {
+    public Integer getPhoneCol() {
         return phoneCol;
+    }
+
+    public Integer getAgeCol() {
+        return ageCol;
     }
 
     public String getProffesionCol() {
@@ -46,6 +50,31 @@ public class Client {
         return dateCol;
     }
 
+    public void setNicCol(int nicCol) {
+        this.nicCol = nicCol;
+    }
 
+    public void setNameCol(String nameCol) {
+        this.nameCol = nameCol;
+    }
 
+    public void setNationalityCol(String nationalityCol) {
+        this.nationalityCol = nationalityCol;
+    }
+
+    public void setPhoneCol(int phoneCol) {
+        this.phoneCol = phoneCol;
+    }
+
+    public void setAgeCol(int ageCol) {
+        this.ageCol = ageCol;
+    }
+
+    public void setProffesionCol(String proffesionCol) {
+        this.proffesionCol = proffesionCol;
+    }
+
+    public void setDateCol(Date dateCol) {
+        this.dateCol = dateCol;
+    }
 }

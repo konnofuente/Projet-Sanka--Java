@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.statisticController">
+   <children>
+      <AnchorPane prefHeight="440.0" prefWidth="285.0">
+         <children>
+            <Label layoutX="39.0" layoutY="14.0" text="VACCINATION STAT" textFill="#141414">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="49.0" layoutY="90.0" prefHeight="158.0" prefWidth="211.0" style="-fx-background-color: #4198db;">
+               <children>
+                  <Label layoutX="4.0" layoutY="20.0" text="NUMBER OF VACCINATED" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Tvaccinated" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="440.0" prefWidth="327.0">
+         <children>
+            <Label layoutX="108.0" layoutY="14.0" text="TEST STAT" textFill="#0b0b0b">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="62.0" layoutY="89.0" prefHeight="158.0" prefWidth="211.0" style="-fx-background-color: #4198db;">
+               <children>
+                  <Label layoutX="24.0" layoutY="21.0" text="NUMBER OF TASTED" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Ttested" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="281.0" prefHeight="118.0" prefWidth="107.0" style="-fx-background-color: #3ea345;">
+               <children>
+                  <Label layoutX="16.0" layoutY="14.0" text="POSITIVE" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Tpositive" layoutX="40.0" layoutY="49.0" text="1" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="205.0" layoutY="281.0" prefHeight="118.0" prefWidth="107.0" style="-fx-background-color: #c93939;">
+               <children>
+                  <Label layoutX="16.0" layoutY="14.0" text="NEGATIVE" textFill="#f6f3f3">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Tnegative" layoutX="40.0" layoutY="49.0" text="1" textFill="#ede5e5">
+                     <font>
+                        <Font name="Arial" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="-2.0" prefHeight="440.0" prefWidth="4.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
