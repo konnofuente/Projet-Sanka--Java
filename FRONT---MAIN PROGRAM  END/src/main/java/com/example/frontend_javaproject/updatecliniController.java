@@ -198,6 +198,4 @@ public class updatecliniController implements Initializable {
 
     }
 
-
-
 }

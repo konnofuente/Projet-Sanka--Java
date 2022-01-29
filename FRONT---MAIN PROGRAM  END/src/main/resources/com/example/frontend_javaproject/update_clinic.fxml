@@ -15,7 +15,7 @@
       <AnchorPane prefHeight="600.0" prefWidth="41.0" />
       <AnchorPane prefHeight="600.0" prefWidth="709.0">
          <children>
-            <TableView fx:id="clinicTable" layoutY="253.0" prefHeight="347.0" prefWidth="576.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <TableView fx:id="clinicTable" layoutY="253.0" prefHeight="347.0" prefWidth="576.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
               <columns>
                 <TableColumn fx:id="idCol" prefWidth="40.0" text="ID" />
                 <TableColumn fx:id="nameCol" prefWidth="139.0" text="NAME" />

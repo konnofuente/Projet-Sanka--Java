@@ -34,8 +34,7 @@
                </font>
             </Label>
             <Button fx:id="btnrefresh" layoutX="137.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="44.0" prefWidth="99.0" text="REFRESH" />
-            <Button fx:id="btnprint" layoutX="260.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="PRINT" />
-            <Button fx:id="btndelete" layoutX="377.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="DELETE" />
+            <Button fx:id="btndelete" layoutX="259.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="99.0" text="DELETE" />
             <Label layoutX="31.0" layoutY="97.0" text="SEARCH">
                <font>
                   <Font name="Consolas" size="18.0" />

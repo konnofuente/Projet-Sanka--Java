@@ -6,21 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="60.0" layoutY="14.0" prefHeight="400.0" prefWidth="41.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label layoutX="79.0" layoutY="152.0" text="WELCOME MR...">
+      <Label layoutX="41.0" layoutY="152.0" text="WELCOME MR/MRS...">
          <font>
-            <Font name="Consolas" size="50.0" />
+            <Font name="Consolas" size="48.0" />
          </font>
       </Label>
-      <ImageView fitHeight="148.0" fitWidth="122.0" layoutX="429.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="148.0" fitWidth="122.0" layoutX="463.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@database_administrator_100px.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="254.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@manager_hand100px.png" />
          </image>

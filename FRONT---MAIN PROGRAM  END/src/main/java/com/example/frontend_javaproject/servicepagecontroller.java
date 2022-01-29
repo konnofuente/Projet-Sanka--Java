@@ -40,7 +40,8 @@ public class servicepagecontroller implements Initializable {
                 DBUtils.changeover(actionEvent,"test.fxml","Test Operation");
             }
         });
-            btnreturn.setOnAction(new EventHandler<ActionEvent>() {
+
+        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     DBUtils.changeover(actionEvent,"mainpage2.fxml","welcome");

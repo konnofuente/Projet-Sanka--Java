@@ -36,9 +36,6 @@ public class loggedin_admincontroller implements Initializable {
         });
 
 
-
-
-
         btn_clinic.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

@@ -156,7 +156,7 @@ public class DBUtils {
             root =loader.load();
             Vaccination_cardController vaccination_cardController=loader.getController();
             vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
-            Scene scene=new Scene(root,700,480);
+            Scene scene=new Scene(root,1000,600);
             Stage stage =new Stage();
             stage.setScene(scene);
 
@@ -185,7 +185,7 @@ public class DBUtils {
             root =loader.load();
             Test_cardController test_cardController=loader.getController();
             test_cardController.setinfotest(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate,PgadgetNum,Ppositive,Pnegative);
-            Scene scene=new Scene(root,700,480);
+            Scene scene=new Scene(root,1000,600);
             Stage stage =new Stage();
             stage.setScene(scene);
 
@@ -531,6 +531,15 @@ public class DBUtils {
             System.err.println(e.getMessage());
         }
         return value;
+    }
+
+    public static void printTastecard(ActionEvent actionEvent,TableView<Client> clientTable) {
+
+        Client client =null;
+
+        client=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+        DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",client.getNicCol().toString(),client.getNameCol(),client.getAgeCol().toString(),client.getNationalityCol(),client.getProffesionCol(),client.getPhoneCol().toString());
+
     }
 }
 

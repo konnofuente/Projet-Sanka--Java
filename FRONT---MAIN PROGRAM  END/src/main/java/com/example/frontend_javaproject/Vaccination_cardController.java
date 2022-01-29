@@ -38,7 +38,9 @@ public class Vaccination_cardController implements Initializable {
 
     @FXML private Label date;
 
-    @FXML private Button btn_print;
+
+
+
 
     @FXML private AnchorPane vacc_card;
     @Override

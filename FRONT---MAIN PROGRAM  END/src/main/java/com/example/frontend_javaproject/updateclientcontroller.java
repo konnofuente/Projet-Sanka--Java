@@ -132,6 +132,13 @@ public class updateclientcontroller implements Initializable {
             }
         });
 
+        btnprint.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                DBUtils.printTastecard(actionEvent,clientTable);
+            }
+        });
+
 
     }
     /**
@@ -219,9 +226,5 @@ public class updateclientcontroller implements Initializable {
         //apply filtered and sorted data to Table view
         clientTable.setItems(sortData);
     }
-
-
-
-
 
 }

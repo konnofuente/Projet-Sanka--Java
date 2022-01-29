@@ -62,8 +62,6 @@ public class testcontroller implements Initializable {
         });
 
 
-
-
         btnexit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

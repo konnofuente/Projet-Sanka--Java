@@ -5,15 +5,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.Test_cardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.Test_cardController">
    <children>
-      <AnchorPane fx:id="vacc_card" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: WHITE;">
+      <AnchorPane fx:id="vacc_card" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" text="REPLUBLIQUE DU CAMERRON" />
-            <Label layoutX="36.0" layoutY="31.0" text="Paix-Travail-Patrie" />
-            <Label layoutX="425.0" layoutY="14.0" text="REPLUBLIQUE OF CAMERRON" />
-            <Label layoutX="441.0" layoutY="31.0" text="Peace-Work-FatherLand" />
-            <Pane layoutX="194.0" layoutY="74.0" prefHeight="52.0" prefWidth="213.0" style="-fx-background-color: #878787;">
+            <Label layoutX="184.0" layoutY="102.0" text="REPLUBLIQUE DU CAMERRON" />
+            <Label layoutX="206.0" layoutY="119.0" text="Paix-Travail-Patrie" />
+            <Label layoutX="595.0" layoutY="102.0" text="REPLUBLIQUE OF CAMERRON" />
+            <Label layoutX="611.0" layoutY="119.0" text="Peace-Work-FatherLand" />
+            <Pane layoutX="364.0" layoutY="162.0" prefHeight="52.0" prefWidth="213.0" style="-fx-background-color: #878787;">
                <children>
                   <Label layoutX="41.0" layoutY="6.0" text="CARTE DE TEST COVID19">
                      <font>
@@ -27,106 +27,106 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="196.0" layoutY="133.0" text="CE:" />
-            <Label fx:id="gadgetNum" layoutX="221.0" layoutY="133.0" text="00932" textFill="#ee0c0c">
+            <Label layoutX="366.0" layoutY="221.0" text="CE:" />
+            <Label fx:id="gadgetNum" layoutX="391.0" layoutY="221.0" text="00932" textFill="#ee0c0c">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="170.0" text="NUMERO IDENTIFICATION">
+            <Label layoutX="205.0" layoutY="258.0" text="NUMERO IDENTIFICATION">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="187.0" text="IDENTIFICATION NUMBER" />
-            <Pane layoutX="193.0" layoutY="194.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="idclient" layoutX="218.0" layoutY="170.0" text="IDCLIENT">
+            <Label layoutX="205.0" layoutY="275.0" text="IDENTIFICATION NUMBER" />
+            <Pane layoutX="363.0" layoutY="282.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="idclient" layoutX="388.0" layoutY="258.0" text="IDCLIENT">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="211.0" text="NOM ET PRENOM">
+            <Label layoutX="204.0" layoutY="299.0" text="NOM ET PRENOM">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="228.0" text="NAME AND SURNAME" />
-            <Pane layoutX="192.0" layoutY="235.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="name" layoutX="217.0" layoutY="211.0" text="NAME">
+            <Label layoutX="204.0" layoutY="316.0" text="NAME AND SURNAME" />
+            <Pane layoutX="362.0" layoutY="323.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="name" layoutX="387.0" layoutY="299.0" text="NAME">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="245.0" text="AGE">
+            <Label layoutX="204.0" layoutY="333.0" text="AGE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="262.0" text="AGE" />
-            <Pane layoutX="192.0" layoutY="269.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="age" layoutX="217.0" layoutY="245.0" text="AGE">
+            <Label layoutX="204.0" layoutY="350.0" text="AGE" />
+            <Pane layoutX="362.0" layoutY="357.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="age" layoutX="387.0" layoutY="333.0" text="AGE">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="279.0" text="NATIONALITE">
+            <Label layoutX="203.0" layoutY="367.0" text="NATIONALITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="296.0" text="NATIONALIY" />
-            <Pane layoutX="191.0" layoutY="303.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="nationality" layoutX="216.0" layoutY="279.0" text="NATIONALITY">
+            <Label layoutX="203.0" layoutY="384.0" text="NATIONALIY" />
+            <Pane layoutX="361.0" layoutY="391.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="nationality" layoutX="386.0" layoutY="367.0" text="NATIONALITY">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="313.0" text="PROFFESSION">
+            <Label layoutX="203.0" layoutY="401.0" text="PROFFESSION">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="330.0" text="PROFFESION" />
-            <Pane layoutX="191.0" layoutY="337.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="proffesion" layoutX="216.0" layoutY="313.0" text="PROFFESION">
+            <Label layoutX="203.0" layoutY="418.0" text="PROFFESION" />
+            <Pane layoutX="361.0" layoutY="425.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="proffesion" layoutX="386.0" layoutY="401.0" text="PROFFESION">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="352.0" text="TEL">
+            <Label layoutX="203.0" layoutY="440.0" text="TEL">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="369.0" text="TEL" />
-            <Pane layoutX="191.0" layoutY="376.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
-            <Label fx:id="tel" layoutX="216.0" layoutY="352.0" text="TEL">
+            <Label layoutX="203.0" layoutY="457.0" text="TEL" />
+            <Pane layoutX="361.0" layoutY="464.0" prefHeight="3.0" prefWidth="372.0" style="-fx-background-color: #191E22;" />
+            <Label fx:id="tel" layoutX="386.0" layoutY="440.0" text="TEL">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="65.0" layoutY="81.0" prefHeight="32.0" prefWidth="72.0" rotate="-24.0" text="STAMP" textFill="#f83838">
+            <Label layoutX="235.0" layoutY="169.0" prefHeight="32.0" prefWidth="72.0" rotate="-24.0" text="STAMP" textFill="#f83838">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="date" layoutX="367.0" layoutY="135.0" text="date" />
-            <Label layoutX="332.0" layoutY="135.0" text="DATE:">
+            <Label fx:id="date" layoutX="537.0" layoutY="223.0" text="date" />
+            <Label layoutX="502.0" layoutY="223.0" text="DATE:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="positive" layoutX="432.0" layoutY="97.0" prefHeight="42.0" prefWidth="183.0" text="POSITIVE" textFill="#5ab557">
+            <Label fx:id="positive" layoutX="602.0" layoutY="185.0" prefHeight="42.0" prefWidth="183.0" text="POSITIVE" textFill="#5ab557">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="negative" layoutX="434.0" layoutY="98.0" text="NEGATIVE" textFill="#e40d0d">
+            <Label fx:id="negative" layoutX="604.0" layoutY="186.0" text="NEGATIVE" textFill="#e40d0d">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="idclient1" layoutX="483.0" layoutY="82.0" text="STATUS:">
+            <Label fx:id="idclient1" layoutX="653.0" layoutY="170.0" text="STATUS:">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>

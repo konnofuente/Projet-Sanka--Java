@@ -49,6 +49,7 @@ public class create_cliniccontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.createclinic(actionEvent,Integer.parseInt(tfid.getText()),tfname.getText(),Integer.parseInt(tfvacc.getText()),Integer.parseInt(tftaste.getText()),tfhospital.getText());
+                reset();
             }
         });
 
@@ -66,5 +67,14 @@ public class create_cliniccontroller implements Initializable {
                 DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLINIC MANAGEMENT");
             }
         });
+    }
+
+    private  void reset(){
+        tfhospital.clear();
+        tfname.clear();
+        tfid.clear();
+        tftaste.clear();
+        tftown.clear();
+        tfvacc.clear();
     }
 }
