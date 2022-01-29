@@ -1,5 +1,6 @@
 package com.example.frontend_javaproject;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -27,8 +28,6 @@ public class vaccinationcontroller implements Initializable {
 
     @FXML private TextField tfproffesion;
 
-    @FXML private TextField tfage;
-
 
 
     @Override
@@ -37,6 +36,7 @@ public class vaccinationcontroller implements Initializable {
         btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText(),Integer.parseInt(tfage.getText()));
                DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
@@ -50,13 +50,20 @@ public class vaccinationcontroller implements Initializable {
 >>>>>>> Stashed changes
 >>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
                 reset();
+=======
+                DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
+>>>>>>> parent of 0cec7d8 (before blaise)
             }
         });
 
         btnreset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-               reset();
+                tfnic.clear();
+                tfname.clear();
+                tftel.clear();
+                tfnationality.clear();
+                tfproffesion.clear();
             }
         });
 
@@ -67,6 +74,7 @@ public class vaccinationcontroller implements Initializable {
             }
         });
     }
+<<<<<<< HEAD
 
     public void reset(){
         tfnic.clear();
@@ -83,4 +91,6 @@ public class vaccinationcontroller implements Initializable {
 >>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
         tfproffesion.clear();
     }
+=======
+>>>>>>> parent of 0cec7d8 (before blaise)
 }

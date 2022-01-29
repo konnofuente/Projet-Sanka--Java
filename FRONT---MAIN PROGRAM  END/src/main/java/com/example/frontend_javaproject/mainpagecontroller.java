@@ -22,9 +22,6 @@ public class mainpagecontroller implements Initializable {
     @FXML
     private Button btn_service;
 
-    @FXML
-    private Button btn_close;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,18 +37,9 @@ public class mainpagecontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                DBUtils.changeover(actionEvent, "2servicepage.fxml","SERVICES");
-
             }
         });
-        btn_close.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.exit();
 
-            }
-        });
 
     }
-
-
 }

@@ -41,7 +41,7 @@ public class admin_logincontrol implements Initializable {
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"mainpage2.fxml","WELCOME TO MAIN PAGE");
+                DBUtils.changeover(actionEvent,"mainpage.fxml","WELCOME TO MAIN PAGE");
             }
         });
 
@@ -60,12 +60,12 @@ public class admin_logincontrol implements Initializable {
 
                     try {
                         DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
-
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+<<<<<<< HEAD
 <<<<<<< HEAD
                    // DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
 =======
@@ -75,6 +75,8 @@ public class admin_logincontrol implements Initializable {
                    // DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
 >>>>>>> Stashed changes
 >>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
+=======
+>>>>>>> parent of 0cec7d8 (before blaise)
                    // DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
 
 

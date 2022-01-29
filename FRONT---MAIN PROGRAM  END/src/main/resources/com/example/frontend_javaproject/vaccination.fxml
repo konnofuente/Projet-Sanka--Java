@@ -89,6 +89,7 @@
 =======
 <<<<<<< Updated upstream
             <TextField fx:id="tfproffesion" layoutX="212.0" layoutY="358.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
+<<<<<<< HEAD
             <Label layoutX="89.0" layoutY="406.0" text="AGE">
 =======
             <TextField fx:id="tfproffesion" layoutX="211.0" layoutY="400.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
@@ -108,6 +109,8 @@
             <TextField fx:id="tfage" layoutX="211.0" layoutY="353.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Age" />
 >>>>>>> Stashed changes
 >>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
+=======
+>>>>>>> parent of 0cec7d8 (before blaise)
          </children></AnchorPane>
    </children>
 </HBox>

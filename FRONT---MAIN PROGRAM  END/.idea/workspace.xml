@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -138,6 +138,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <line>357</line>
 =======
 <<<<<<< Updated upstream
@@ -146,6 +147,9 @@
           <line>357</line>
 >>>>>>> Stashed changes
 >>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
+=======
+          <line>265</line>
+>>>>>>> parent of 0cec7d8 (before blaise)
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
