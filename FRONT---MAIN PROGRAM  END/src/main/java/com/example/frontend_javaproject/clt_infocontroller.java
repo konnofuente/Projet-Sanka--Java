@@ -1,4 +1,4 @@
-package com.example.frontend_javaproject;
+/**package com.example.frontend_javaproject;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,6 +22,8 @@ public class clt_infocontroller implements Initializable {
 
         @FXML private TextField txtnty;
 
+        @FXML private TextField age;
+
         @FXML private TextField txtphone;
 
         @FXML private TextField txtstatus;
@@ -41,3 +43,4 @@ public class clt_infocontroller implements Initializable {
                 });
         }
 }
+*/

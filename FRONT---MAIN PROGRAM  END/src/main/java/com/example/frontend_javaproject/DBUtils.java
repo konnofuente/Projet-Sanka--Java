@@ -8,36 +8,77 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class DBUtils {
 
 
-    private static ActionEvent actionEvent;
-    private static Integer cni;
-    private static String name;
-    private static String nationality;
-    private static Integer phone;
-    private static String status;
+    public static void exit() {
+        System.exit(0);
+    }
 
-    /**
+
+
+    /**sdsddzxcckvvlvlvkvkkkkfffddssaaaassdddddddd
      the changover permit the tranfer from one window to another
      */
-    public static void changeover(ActionEvent event, String fxml,String title){
+    public static void changeover(ActionEvent actionevent, String fxml,String title){
         Parent root=null;
-
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
         try{
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
         }catch (IOException e){
             e.printStackTrace();
         }
-        Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
+
+        Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(new Scene(root,800,550));
+        root.setOnMousePressed(event ->{
+            x.set(event.getSceneX());
+            y.set(event.getSceneY());
+        });
+
+        root.setOnMouseDragged(event ->{
+            stage.setX(event.getScreenX()- x.get());
+            stage.setY(event.getScreenY()- y.get());
+        });
+
+        stage.show();
+
+    }
+
+    public static void changehigh(ActionEvent actionevent, String fxml,String title){
+        Parent root=null;
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
+        try{
+            FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
+            root =loader.load();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root,1000,600));
+        root.setOnMousePressed(event ->{
+            x.set(event.getSceneX());
+            y.set(event.getSceneY());
+        });
+
+        root.setOnMouseDragged(event ->{
+            stage.setX(event.getScreenX()- x.get());
+            stage.setY(event.getScreenY()- y.get());
+        });
+
         stage.show();
 
     }
@@ -45,7 +86,7 @@ public class DBUtils {
     /**
     the client info function will be use to send a client info imto the databse
      */
-    public static  void clientinfo (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer phone,String profession)
+    public static  void clientinfo (ActionEvent actionEvent,Integer nic,String name,String nationality,Integer phone,String profession,Integer age)
     {
 
         try {
@@ -70,8 +111,8 @@ public class DBUtils {
                 java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
                 // the mysql insert statement
-                String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion,vac_date)"
-                        + " values (?, ?, ?, ?, ?,?)";
+                String query = " insert into client_vaccine (NIC, name, nationality, phone, proffesion, age,vac_date)"
+                        + " values (?, ?, ?, ?, ?,?,?)";
 
                 // create the mysql insert preparedstatement
                 PreparedStatement preparedStmt = connection.prepareStatement(query);
@@ -80,13 +121,15 @@ public class DBUtils {
                 preparedStmt.setString(3, nationality);
                 preparedStmt.setInt(4, phone);
                 preparedStmt.setString(5, profession);
-                preparedStmt.setDate(6, startDate);
+                preparedStmt.setInt(6,age);
+                preparedStmt.setDate(7, startDate);
 
                 // execute the preparedstatement
                 preparedStmt.execute();
 
                 connection.close();
-                DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+                //DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+
             }
         }
         catch (Exception e)
@@ -94,6 +137,63 @@ public class DBUtils {
             System.err.println("Got an exception!");
             System.err.println(e.getMessage());
         }
+
+
+    }
+
+    public static void changeOvercard(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel) {
+        Parent root=null;
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
+
+        Calendar calendar = Calendar.getInstance();
+        java.util.Date starDate=new java.sql.Date(calendar.getTime().getTime());
+        try{
+            FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
+            root =loader.load();
+            Vaccination_cardController vaccination_cardController=loader.getController();
+            vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+            Scene scene=new Scene(root,700,480);
+            Stage stage =new Stage();
+            stage.setScene(scene);
+
+
+            stage.show();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+       // Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
+
+
+    }
+
+
+    public static void changeOvercardtest(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,String PgadgetNum,String Ppositive,String Pnegative) {
+        Parent root=null;
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
+
+        Calendar calendar = Calendar.getInstance();
+        java.util.Date starDate=new java.sql.Date(calendar.getTime().getTime());
+        try{
+            FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
+            root =loader.load();
+            Test_cardController test_cardController=loader.getController();
+            test_cardController.setinfotest(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate,PgadgetNum,Ppositive,Pnegative);
+            Scene scene=new Scene(root,700,480);
+            Stage stage =new Stage();
+            stage.setScene(scene);
+
+
+            stage.show();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        // Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
 
 
     }
@@ -183,7 +283,7 @@ public class DBUtils {
             // execute the preparedstatement
             preparedStmt.execute();
 
-            DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLIENT MANAGEMENT");
+
 
 
             connection.close();
@@ -228,6 +328,9 @@ public class DBUtils {
                 psInsert.setString(2,admin_name);
                 psInsert.setString(3,pwd);
                 psInsert.executeUpdate();
+                Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("The admin "+admin_name+" has been successfully Created!!!!!!");
+                alert.show();
 
                 connection.close();
 
@@ -270,7 +373,7 @@ public class DBUtils {
                         Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setContentText("log in successfull Mr " +retrivename+".");
                         alert.show();
-                        changeover(actionEvent, "logged_admin.fxml","ADMINISTRATION");
+                        changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
 
                     } else{
                         System.out.println("password did not match");
@@ -300,7 +403,7 @@ public class DBUtils {
 
 
 
-    public static void deleteDB(TableView<Client> clientTable) throws SQLException {
+    public static void deleteDB_client(TableView<Client> clientTable) throws SQLException {
         String query=null;
         Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
         PreparedStatement preparedStatement =null;
@@ -319,4 +422,61 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
+
+
+    public static void deleteDB_clinic(TableView<Clinic> clinicTable) throws SQLException {
+        String query=null;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        PreparedStatement preparedStatement =null;
+        ResultSet resultSet =null;
+        Clinic clinic =null;
+
+        try {
+            clinic = clinicTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+            query="DELETE FROM clinic WHERE idclinic ="+clinic.getId();// a Query is made inorder to delete it by using it nic
+            preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("The Clinic chosed was succesfully deleted !!!!!!!!!");
+            alert.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
+        String query=null;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        PreparedStatement preparedStatement =null;
+        ResultSet resultSet =null;
+        TClient tclient =null;
+
+        try {
+            tclient=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
+            query="DELETE FROM client_taste WHERE NIC ="+tclient.getNicCol();// a Query is made inorder to delete it by using it nic
+            preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("The Client With "+tclient.getNicCol()+" chosed was succesfully deleted !!!!!!!!!");
+            alert.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

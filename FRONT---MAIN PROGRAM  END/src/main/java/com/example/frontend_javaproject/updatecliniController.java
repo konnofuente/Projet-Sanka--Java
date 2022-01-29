@@ -2,6 +2,8 @@ package com.example.frontend_javaproject;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,10 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -28,8 +27,7 @@ public class updatecliniController implements Initializable {
 
     @FXML private Button btnadd;
 
-    @FXML
-    private Button btnreturn;
+
 
     @FXML private Button btndelete;
 
@@ -49,13 +47,16 @@ public class updatecliniController implements Initializable {
 
     @FXML private TableColumn<Clinic, Date> dateCol;
 
+    @FXML
+    private TextField tfsearch;
+
     ObservableList<Clinic> cliniclist = FXCollections.observableArrayList();
 
-    Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
+    /**Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
     PreparedStatement preparedStatement=null;
     ResultSet resultSet=null;
     String query=null;
-    Clinic clinic=null;
+    Clinic clinic=null;*/
 
     public updatecliniController() throws SQLException {
     }
@@ -63,7 +64,7 @@ public class updatecliniController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LoadData();
+
         refresh();
 
         btnrefresh.setOnAction(new EventHandler<ActionEvent>() {
@@ -95,38 +96,32 @@ public class updatecliniController implements Initializable {
         btndelete.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                try {
-                    clinic = clinicTable.getSelectionModel().getSelectedItem();
-                    query = "DELETE FROM clinic WHERE idclinic =" + clinic.getId();
-                    preparedStatement = connection.prepareStatement(query);
-                    preparedStatement.execute();
-                    Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText("The clinic chosed was succesfully deleted !!!!!!!!!");
-                    alert.show();
 
-                }catch (SQLException e){
+                try {
+                    DBUtils.deleteDB_clinic(clinicTable);
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
-
 
                 refresh();
             }
         });
 
-        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
-            }
-        });
+
 
     }
 
 
 
-    private void refresh()
-    {
+    private void refresh()  {
         try{
+
+            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            PreparedStatement preparedStatement=null;
+            ResultSet resultSet=null;
+            String query=null;
+            Clinic clinic=null;
+
             cliniclist.clear();
         query="SELECT * FROM clinic";
         preparedStatement = connection.prepareStatement(query);
@@ -147,16 +142,41 @@ public class updatecliniController implements Initializable {
         }catch (SQLException e){
             e.printStackTrace();
         }
-    }
 
-
-    private void LoadData()
-    {
         idCol.setCellValueFactory(new PropertyValueFactory<Clinic,Integer>("id"));
         nameCol.setCellValueFactory(new PropertyValueFactory<Clinic,String>("name"));
         qtyvaccCol.setCellValueFactory(new PropertyValueFactory<Clinic,Integer>("qtyvacc"));
         qtytasteCol.setCellValueFactory(new PropertyValueFactory<Clinic,Integer>("qtytaste"));
         hospitalCol.setCellValueFactory(new PropertyValueFactory<Clinic,String>("hospital"));
         dateCol.setCellValueFactory(new PropertyValueFactory<Clinic,Date>("date"));
+
+        FilteredList<Clinic> filteredData =new FilteredList<>(cliniclist, b ->true);
+
+        tfsearch.textProperty().addListener((observable,oldValue,newValue)->{
+            filteredData.setPredicate(clinic -> {
+                if (newValue.isEmpty() || newValue.isBlank() || newValue == null) {
+                    return true;
+                }
+                String searchKeyword = newValue.toLowerCase();
+
+                if(clinic.getId().toString().indexOf(searchKeyword)> -1) {
+                    return true;//mean we found id
+                }
+                else
+                    return false;//no match found
+            });
+        });
+
+        SortedList<Clinic> sortData=new SortedList<>(filteredData);
+
+        //bind sorted result with table
+        sortData.comparatorProperty().bind(clinicTable.comparatorProperty());
+
+        //apply filtered and sorted data to Table view
+        clinicTable.setItems(sortData);
+
     }
+
+
+
 }

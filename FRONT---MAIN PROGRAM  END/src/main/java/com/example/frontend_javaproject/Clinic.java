@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Clinic {
 
-    int id;
+    Integer id;
     String name;
     int qtyvacc,qtytaste;
     String hospital;
@@ -19,7 +19,7 @@ public class Clinic {
         this.date = date;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

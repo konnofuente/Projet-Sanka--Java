@@ -2,10 +2,12 @@ package com.example.frontend_javaproject;
 
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -29,10 +31,21 @@ public class sliderMenuController implements Initializable {
     @FXML
     private StackPane contentArea;
 
+    @FXML private Button btnexit;
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-            // slider.setTranslateX(-170);
+             slider.setTranslateX(-220);
+
+            btnexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    DBUtils.changeover(actionEvent,"admin-login.fxml","WELCOME");
+                }
+            });
 
             menu.setOnMouseClicked(event ->{
                 TranslateTransition slide =new TranslateTransition();
@@ -42,7 +55,7 @@ public class sliderMenuController implements Initializable {
                 slide.setToX(0);
                 slide.play();
 
-                slider.setTranslateX(-200);
+                slider.setTranslateX(-220);
 
                 slide.setOnFinished((ActionEvent e)->{
                     menu.setVisible(false);
@@ -57,7 +70,7 @@ public class sliderMenuController implements Initializable {
             slide.setDuration(Duration.seconds(0.5));
             slide.setNode(slider);
 
-            slide.setToX(-200);
+            slide.setToX(-220);
             slide.play();
 
             slider.setTranslateX(0);
@@ -69,7 +82,7 @@ public class sliderMenuController implements Initializable {
         });
 
         try{
-            Parent root= FXMLLoader.load(getClass().getResource("signup_admin.fxml"));
+            Parent root= FXMLLoader.load(getClass().getResource("welcomeAdmin.fxml"));
             contentArea.getChildren().removeAll();
             contentArea.getChildren().setAll(root);
         } catch (IOException e) {
@@ -82,8 +95,8 @@ public class sliderMenuController implements Initializable {
        System.exit(0);
     }
 
-    public void login (ActionEvent actionEvent) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("logged_admin.fxml"));
+    public void dashboard (ActionEvent actionEvent) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getResource("welcomeAdmin.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
     }
@@ -94,9 +107,20 @@ public class sliderMenuController implements Initializable {
         contentArea.getChildren().setAll(root);
     }
 
+    public void clienttasted (ActionEvent actionEvent) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getResource("update_clienttaste.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(root);
+    }
+
+    public void statistic(ActionEvent actionEvent) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getResource("statistic.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(root);
+    }
 
     public void clinic (ActionEvent actionEvent) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("update_client.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("update_clinic.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
     }

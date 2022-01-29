@@ -2,6 +2,8 @@ package com.example.frontend_javaproject;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,10 +11,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,6 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.Date;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class updateclientcontroller implements Initializable {
@@ -31,14 +34,19 @@ public class updateclientcontroller implements Initializable {
     @FXML
     private Button btnrefresh;
 
-    @FXML
-    private Button btnreturn;
+
 
     @FXML
     private Button btnprint;
 
     @FXML
     private Button btndelete;
+
+    @FXML
+    private Button btnsearch;
+
+    @FXML
+    private TextField tfsearch;
 
     @FXML private TableView<Client> clientTable;
 
@@ -51,6 +59,8 @@ public class updateclientcontroller implements Initializable {
     @FXML private TableColumn<Client, Integer> phoneCol;
 
     @FXML private TableColumn<Client, String> proffesionCol;
+
+    @FXML private TableColumn<Client, Integer> ageCol;
 
     @FXML private TableColumn<Client, Date> dateCol;
 
@@ -76,12 +86,9 @@ public class updateclientcontroller implements Initializable {
 
 
 
-        try {
-            Loaddata(); // this function help us to take the infor from the client class and load it to our clientTableview
+
             refreshTable(); // this function help us to refreash the table
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
 
         /**
          * btnadd permit use to open the vaccination winddow inorder to
@@ -110,23 +117,10 @@ public class updateclientcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
 
                 try {
-                    DBUtils.deleteDB(clientTable);
+                    DBUtils.deleteDB_client(clientTable);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-
-                /**  try {
-                    client=clientTable.getSelectionModel().getSelectedItem(); // here the client will work with the row that was selected
-                    query="DELETE FROM client_vaccine WHERE NIC ="+client.getNicCol();// a Query is made inorder to delete it by using it nic
-                    preparedStatement=connection.prepareStatement(query);
-                    preparedStatement.execute();
-                    refreshTable();// then we refresh back the table
-                    Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText("The Client chosed was succesfully deleted !!!!!!!!!");
-                    alert.show();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }*/
 
             }
         });
@@ -138,12 +132,7 @@ public class updateclientcontroller implements Initializable {
             }
         });
 
-        btnreturn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"logged_admin.fxml","ADMINISTRATOR");
-            }
-        });
+
     }
     /**
      * this are the function that will be use in the progra we have the
@@ -173,6 +162,7 @@ public class updateclientcontroller implements Initializable {
                         resultSet.getString("name"),
                         resultSet.getString("nationality"),
                         resultSet.getInt("phone"),
+                        resultSet.getInt("age"),
                         resultSet.getString("proffesion"),
                         resultSet.getDate("vac_date")
                 ));
@@ -184,27 +174,53 @@ public class updateclientcontroller implements Initializable {
         }
 
 
-    }
-
-    private void Loaddata() throws SQLException {
-
-
-
         nicCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("nicCol"));
-         nameCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("nameCol"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("nameCol"));
         nationalityCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("nationalityCol"));
         phoneCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("phoneCol"));
+        ageCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Integer>("ageCol"));
         proffesionCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,String>("proffesionCol"));
         dateCol.setCellValueFactory(new PropertyValueFactory<com.example.frontend_javaproject.Client,Date>("dateCol"));
 
+        //initialise listenner for filtered the list
+        FilteredList<Client> filteredData =new FilteredList<>(clientlist,b ->true);
 
+        tfsearch.textProperty().addListener((observable,oldValue,newValue)->{
+            filteredData.setPredicate(client -> {
+                if (newValue.isEmpty() || newValue.isBlank() || newValue == null) {
+                    return true;
+                }
+                String searchKeyword = newValue.toLowerCase();
+
+                if(client.getNicCol().toString().indexOf(searchKeyword)> -1){
+                    return true;//mean we found id
+
+                }else if(client.getNameCol().toLowerCase().indexOf(searchKeyword) > -1){
+                    return true;//mean we found name
+                }else if(client.getNationalityCol().toLowerCase().indexOf(searchKeyword) > -1){
+                    return true;//mean we found name
+                }
+                else if(client.getProffesionCol().toLowerCase().indexOf(searchKeyword) > -1){
+                    return true;//mean we found name
+                }
+                else if(client.getPhoneCol().toString().indexOf(searchKeyword) > -1){
+                    return true;//mean we found name
+                }
+                else
+                    return false;//no match found
+            });
+        });
+
+        SortedList<Client> sortData=new SortedList<>(filteredData);
+
+        //bind sorted result with table
+        sortData.comparatorProperty().bind(clientTable.comparatorProperty());
+
+        //apply filtered and sorted data to Table view
+        clientTable.setItems(sortData);
     }
 
 
-
-    @FXML private void research(){
-        
-    }
 
 
 

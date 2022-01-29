@@ -41,7 +41,7 @@ public class admin_logincontrol implements Initializable {
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"mainpage.fxml","WELCOME TO MAIN PAGE");
+                DBUtils.changeover(actionEvent,"mainpage2.fxml","WELCOME TO MAIN PAGE");
             }
         });
 
@@ -60,11 +60,13 @@ public class admin_logincontrol implements Initializable {
 
                     try {
                         DBUtils.logInUser(actionEvent,tfadmin_mat.getText(),tfadmin_pwd.getText());
+
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                   // DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
                    // DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
 
 
