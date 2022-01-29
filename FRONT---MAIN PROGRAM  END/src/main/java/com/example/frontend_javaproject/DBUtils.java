@@ -152,7 +152,15 @@ public class DBUtils {
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
             Vaccination_cardController vaccination_cardController=loader.getController();
+<<<<<<< HEAD
             vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+=======
+<<<<<<< Updated upstream
+            vaccination_cardController.setinfo(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+=======
+            vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
             Scene scene=new Scene(root,700,480);
             Stage stage =new Stage();
             stage.setScene(scene);
@@ -169,6 +177,11 @@ public class DBUtils {
 
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
     public static void changeOvercardtest(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,String PgadgetNum,String Ppositive,String Pnegative) {
         Parent root=null;
@@ -198,6 +211,10 @@ public class DBUtils {
 
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
     /**
      the client taste function will be use to send a client info imto the databse before a taste
      */
@@ -444,6 +461,11 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
     public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
         String query=null;
@@ -464,6 +486,10 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 }
 
 

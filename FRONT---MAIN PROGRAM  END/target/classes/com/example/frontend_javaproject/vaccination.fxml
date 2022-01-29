@@ -83,13 +83,31 @@
                   <Font size="14.0" />
                </font>
             </Label>
+<<<<<<< HEAD
             <TextField fx:id="tfproffesion" layoutX="211.0" layoutY="400.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
             <Label layoutX="88.0" layoutY="357.0" text="AGE">
+=======
+<<<<<<< Updated upstream
+            <TextField fx:id="tfproffesion" layoutX="212.0" layoutY="358.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
+            <Label layoutX="89.0" layoutY="406.0" text="AGE">
+=======
+            <TextField fx:id="tfproffesion" layoutX="211.0" layoutY="400.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Phone Number" />
+            <Label layoutX="88.0" layoutY="357.0" text="AGE">
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+<<<<<<< HEAD
             <TextField fx:id="tfage" layoutX="211.0" layoutY="353.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Age" />
+=======
+<<<<<<< Updated upstream
+            <TextField fx:id="tfage" layoutX="212.0" layoutY="402.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Nationality" />
+=======
+            <TextField fx:id="tfage" layoutX="211.0" layoutY="353.0" prefHeight="28.0" prefWidth="253.0" promptText="Enter Age" />
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
          </children></AnchorPane>
    </children>
 </HBox>

@@ -46,6 +46,16 @@ public class sliderMenuController implements Initializable {
                     DBUtils.changeover(actionEvent,"admin-login.fxml","WELCOME");
                 }
             });
+<<<<<<< HEAD
+=======
+
+            btnexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    DBUtils.changeover(actionEvent,"admin-login.fxml","WELCOME");
+                }
+            });
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
             menu.setOnMouseClicked(event ->{
                 TranslateTransition slide =new TranslateTransition();

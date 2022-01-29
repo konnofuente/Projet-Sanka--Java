@@ -137,7 +137,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
+<<<<<<< HEAD
           <line>357</line>
+=======
+<<<<<<< Updated upstream
+          <line>324</line>
+=======
+          <line>357</line>
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -37,8 +37,18 @@ public class vaccinationcontroller implements Initializable {
         btnvaccinate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+<<<<<<< HEAD
                 DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText(),Integer.parseInt(tfage.getText()));
                DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+=======
+<<<<<<< Updated upstream
+               // DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText());
+                DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+=======
+                DBUtils.clientinfo(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),tfproffesion.getText(),Integer.parseInt(tfage.getText()));
+               DBUtils.changeOvercard(actionEvent,"vaccination_card.fxml","VACCINATION CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText());
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
                 reset();
             }
         });
@@ -63,7 +73,14 @@ public class vaccinationcontroller implements Initializable {
         tfname.clear();
         tftel.clear();
         tfnationality.clear();
+<<<<<<< HEAD
         tfage.clear();
+=======
+<<<<<<< Updated upstream
+=======
+        tfage.clear();
+>>>>>>> Stashed changes
+>>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
         tfproffesion.clear();
     }
 }
