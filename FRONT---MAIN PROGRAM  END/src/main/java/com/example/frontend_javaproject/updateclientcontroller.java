@@ -144,8 +144,6 @@ public class updateclientcontroller implements Initializable {
     /**
      * this are the function that will be use in the progra we have the
      * REFRESHTABLE: It permit use to refresh the table view of our program
-     *
-     * LOADDATA: it load data from the client class to the TableView to the program
      * */
 
     @FXML private void refreshTable(){

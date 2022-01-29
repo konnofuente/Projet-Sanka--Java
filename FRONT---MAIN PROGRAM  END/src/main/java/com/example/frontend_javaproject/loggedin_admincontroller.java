@@ -19,8 +19,6 @@ public class loggedin_admincontroller implements Initializable {
 
     @FXML private Button btn_clinic;
 
-
-
     @FXML private Button btn_stock;
 
     @FXML private Button btn_return;

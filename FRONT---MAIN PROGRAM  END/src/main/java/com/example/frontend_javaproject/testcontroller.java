@@ -41,7 +41,6 @@ public class testcontroller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-        //Integer.parseInt(txtcni.getText())
 
         btnpositive.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -61,14 +60,12 @@ public class testcontroller implements Initializable {
             }
         });
 
-
         btnexit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
             }
         });
-
 
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override

@@ -73,11 +73,7 @@ public class updateclientTaste implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-
-
-
-            refreshTable(); // this function help us to refreash the table
-
+        refreshTable(); // this function help us to refreash the table
 
         /**
          * btnadd permit use to open the vaccination winddow inorder to
@@ -120,8 +116,6 @@ public class updateclientTaste implements Initializable {
                 refreshTable();
             }
         });
-
-
 
     }
     /**

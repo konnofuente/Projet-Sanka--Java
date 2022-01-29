@@ -38,7 +38,7 @@ public class sliderMenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-             slider.setTranslateX(-220);
+
 
             btnexit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override

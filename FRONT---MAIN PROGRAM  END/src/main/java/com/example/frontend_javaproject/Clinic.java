@@ -2,6 +2,9 @@ package com.example.frontend_javaproject;
 
 import java.util.Date;
 
+/**
+ * this class is what define a clinic in the databse
+ */
 public class Clinic {
 
     Integer id;

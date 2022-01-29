@@ -28,7 +28,7 @@ public class admin_logincontrol implements Initializable {
     @FXML private TextField tfadmin_pwd;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        //the button that reset the textfield
         btn_reset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -38,6 +38,7 @@ public class admin_logincontrol implements Initializable {
             }
         });
 
+        //return to the mainpage2
         btnreturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -45,7 +46,7 @@ public class admin_logincontrol implements Initializable {
             }
         });
 
-
+        //permit us to login
         btnlogin_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -66,14 +67,12 @@ public class admin_logincontrol implements Initializable {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                   // DBUtils.changehigh(actionEvent, "sliderAdmin_Menu.fxml","ADMINISTRATION");
-                   // DBUtils.changeover(actionEvent, "logged_admin.fxml", "ADMINISTRATION");
-
 
                 }
             }
         });
 
+        //goes to the page that permit us to add admin
         btnadd_admin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

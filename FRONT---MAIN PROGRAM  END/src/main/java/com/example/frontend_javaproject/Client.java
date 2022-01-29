@@ -2,6 +2,9 @@ package com.example.frontend_javaproject;
 
 import java.util.Date;
 
+/**
+ * this is the class that store a client that is to be vaccinated
+ */
 public class Client {
 
     private Integer nicCol;

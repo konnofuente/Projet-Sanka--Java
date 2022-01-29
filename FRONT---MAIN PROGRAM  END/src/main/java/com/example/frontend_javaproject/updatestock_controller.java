@@ -34,6 +34,5 @@ public class updatestock_controller implements Initializable {
             }
         });
 
-
     }
 }

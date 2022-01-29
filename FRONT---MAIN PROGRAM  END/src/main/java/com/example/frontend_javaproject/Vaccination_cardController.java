@@ -40,8 +40,6 @@ public class Vaccination_cardController implements Initializable {
 
 
 
-
-
     @FXML private AnchorPane vacc_card;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,9 +47,6 @@ public class Vaccination_cardController implements Initializable {
 
 
     }
-    //Method to print a Anchor
-
-
 
 
     public  void setinfovaccination(String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,Date Pdate)

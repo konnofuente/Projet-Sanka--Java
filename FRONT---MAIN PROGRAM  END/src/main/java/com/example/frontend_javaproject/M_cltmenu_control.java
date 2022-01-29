@@ -44,6 +44,7 @@ public class M_cltmenu_control implements Initializable {
 
         });
 
+
         btnclt_modifie.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

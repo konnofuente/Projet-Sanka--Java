@@ -40,14 +40,13 @@ public class mainpagecontroller implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                DBUtils.changeover(actionEvent, "2servicepage.fxml","SERVICES");
-
             }
         });
+
         btn_close.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.exit();
-
             }
         });
 

@@ -16,15 +16,19 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class DBUtils {
 
+    /**
+     */
 
+    /**
+     * THE EXIT FUNCTION THAT WILL BE USE TO  EXIT THE SYSTEM
+     */
     public static void exit() {
         System.exit(0);
     }
 
-
-
-    /**sdsddzxcckvvlvlvkvkkkkfffddssaaaassdddddddd
-     the changover permit the tranfer from one window to another
+    /**
+     * CHANGEOVER FUNCTION IS THE FUNCTION THAT LEAD TO THE INTERCHANGE OF SCENE(INTERPHASES)
+     * FROM WANT TO ANTHER WITH PARAMATER AS FOLLOW
      */
     public static void changeover(ActionEvent actionevent, String fxml,String title){
         Parent root=null;
@@ -54,6 +58,9 @@ public class DBUtils {
 
     }
 
+    /**
+     * CHANGEHIGH DOES THE THE JOB AS CHANGEOVER BUT WITH ANS INCREASE IN SIZE OF THE SCENE
+     */
     public static void changehigh(ActionEvent actionevent, String fxml,String title){
         Parent root=null;
         AtomicReference<Double> x = new AtomicReference<>((double) 0);
@@ -80,7 +87,6 @@ public class DBUtils {
         });
 
         stage.show();
-
     }
 
     /**
@@ -97,16 +103,15 @@ public class DBUtils {
             checkUserExist = connection.prepareStatement("SELECT * FROM client_vaccine WHERE NIC=?");
             checkUserExist.setInt(1, nic);
             resultSet = checkUserExist.executeQuery();
-
+                //THIS IF CONDITION CHECK IF THE USER IS FOUND IN THE DATABASE
             if (resultSet.isBeforeFirst()) {
                 System.out.println("client already Exist");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("You cannot Vaccinate some who is Already vaccinated !!!!!!!!!");
                 alert.show();
             } else
-            {
 
-                // create a sql date object so we can use it in our INSERT statement
+            {//WE USE THE CALANDER FUNCTION ONORDER TO GET THE REAL TIME DATE OF THE VACCINATION
                 Calendar calendar = Calendar.getInstance();
                 java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
@@ -144,6 +149,10 @@ public class DBUtils {
 
     }
 
+    /**
+     * CHANGEOVERCARD IS THE FUNCTION THAT CARRY THE INFORMATION OF A CLIENT WHEN VACCINATED AND
+     * TRANSFER IT TO A SCENE THAT WILL BE USE TO GENERATE A VACCINATION CARD
+     */
     public static void changeOvercard(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel) {
         Parent root=null;
         AtomicReference<Double> x = new AtomicReference<>((double) 0);
@@ -166,13 +175,12 @@ public class DBUtils {
         }catch (IOException e){
             e.printStackTrace();
         }
-
-       // Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
-
-
     }
 
-
+    /**
+     * CHANGEOVERCARDTEST IS THE FUNCTION THAT CARRY THE INFORMATION OF A CLIENT WHEN TASTED AND
+     * TRANSFER IT TO A SCENE THAT WILL BE USE TO GENERATE A TEST CARD
+     */
     public static void changeOvercardtest(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,String PgadgetNum,String Ppositive,String Pnegative) {
         Parent root=null;
         AtomicReference<Double> x = new AtomicReference<>((double) 0);
@@ -195,10 +203,6 @@ public class DBUtils {
         }catch (IOException e){
             e.printStackTrace();
         }
-
-        // Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
-
-
     }
 
     /**
@@ -407,9 +411,10 @@ public class DBUtils {
     }
 }
 
-
-
-
+    /**
+     * deleteDB_client IS A FUNCTION THAT GOES AND DELETE A CLIENT INTO THE VACCINATED TABLE IN
+     * THE THE DATABASE
+     */
     public static void deleteDB_client(TableView<Client> clientTable) throws SQLException {
         String query=null;
         Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
@@ -430,8 +435,10 @@ public class DBUtils {
         }
     }
 
-
-
+    /**
+     * deleteDB_clinic IS A FUNCTION THAT GOES AND DELETE A CLINIC INTO THE CLINIC TABLE IN
+     *   THE THE DATABASE
+     */
     public static void deleteDB_clinic(TableView<Clinic> clinicTable) throws SQLException {
         String query=null;
         Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
@@ -452,6 +459,10 @@ public class DBUtils {
         }
     }
 
+    /**
+     * deleteDB_clienttaste IS A FUNCTION THAT GOES AND DELETE A CLIENT TASTED INTO THE TASTED TABLE IN
+     *   THE THE DATABASE
+     */
     public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
         String query=null;
         Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
@@ -472,6 +483,10 @@ public class DBUtils {
         }
     }
 
+    /**
+     * updatestock iT WILL GO TO THE DATABASE AND INCREASE THE QUANTITY OF TASTE AND VACCINE AVAILABLE INTO
+     * THE CLINIC TABLE DEPENDING ON THE CLINIC ID
+     */
     public static void updatestock(ActionEvent actionEvent,Integer idclinic,Integer vaccine,Integer taste) {
         Connection connection=null;
         PreparedStatement psInsert=null;
@@ -511,7 +526,14 @@ public class DBUtils {
 
     }
 
+    /**
+     * deleteDB_clienttaste IS A FUNCTION THAT GOES AND DELETE A CLIENT TASTED INTO THE TASTED TABLE IN
+     *   THE THE DATABASE
+     */
 
+    /**
+     * countValue the value of row or item in the database depending on the query
+     */
     public static int CountValue(String query) {
         Connection connection=null;
         PreparedStatement preparedStatement=null;

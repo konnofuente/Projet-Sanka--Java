@@ -52,11 +52,7 @@ public class updatecliniController implements Initializable {
 
     ObservableList<Clinic> cliniclist = FXCollections.observableArrayList();
 
-    /**Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
-    PreparedStatement preparedStatement=null;
-    ResultSet resultSet=null;
-    String query=null;
-    Clinic clinic=null;*/
+
 
     public updatecliniController() throws SQLException {
     }
@@ -93,7 +89,6 @@ public class updatecliniController implements Initializable {
             }
         });
 
-
         btnaddstock.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -113,7 +108,6 @@ public class updatecliniController implements Initializable {
             }
         });
 
-
         btndelete.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -127,8 +121,6 @@ public class updatecliniController implements Initializable {
                 refresh();
             }
         });
-
-
 
     }
 

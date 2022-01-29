@@ -44,7 +44,7 @@ public class create_cliniccontroller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
+        //this is the button will create a clinic in our database
         btnconfirm.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

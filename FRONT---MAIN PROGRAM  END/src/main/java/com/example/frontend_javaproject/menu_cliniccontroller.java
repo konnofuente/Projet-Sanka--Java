@@ -46,6 +46,7 @@ public class menu_cliniccontroller implements Initializable {
             }
         });
 
+
         btncreate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
