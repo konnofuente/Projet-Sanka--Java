@@ -22,7 +22,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="Tvaccinated" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
+                  <Label fx:id="Vaccinated" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
                      <font>
                         <Font name="Arial" size="48.0" />
                      </font>
@@ -45,7 +45,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="Ttested" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
+                  <Label fx:id="Tested" layoutX="92.0" layoutY="63.0" text="1" textFill="#f6f3f3">
                      <font>
                         <Font name="Arial" size="48.0" />
                      </font>
@@ -59,7 +59,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="Tpositive" layoutX="40.0" layoutY="49.0" text="1" textFill="#f6f3f3">
+                  <Label fx:id="Positive" layoutX="40.0" layoutY="49.0" text="1" textFill="#f6f3f3">
                      <font>
                         <Font name="Arial" size="48.0" />
                      </font>
@@ -73,7 +73,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="Tnegative" layoutX="40.0" layoutY="49.0" text="1" textFill="#ede5e5">
+                  <Label fx:id="Negative" layoutX="40.0" layoutY="49.0" text="1" textFill="#ede5e5">
                      <font>
                         <Font name="Arial" size="48.0" />
                      </font>

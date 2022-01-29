@@ -48,6 +48,7 @@ public class testcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 DBUtils.clienttaste(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),Integer.parseInt(tfgadget_num.getText()),"Positive");
                 DBUtils.changeOvercardtest(actionEvent,"test_card.fxml","TEST CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText(),tfgadget_num.getText(),"POSITIVE",null);
+                reset();
             }
         });
 
@@ -56,6 +57,7 @@ public class testcontroller implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 DBUtils.clienttaste(actionEvent,Integer.parseInt(tfnic.getText()),tfname.getText(),tfnationality.getText(),Integer.parseInt(tftel.getText()),Integer.parseInt(tfgadget_num.getText()),"Negative");
                 DBUtils.changeOvercardtest(actionEvent,"test_card.fxml","TEST CARD",tfnic.getText(),tfname.getText(),tfage.getText(),tfnationality.getText(),tfproffesion.getText(),tftel.getText(),tfgadget_num.getText(),null,"NEGATIVE");
+                reset();
             }
         });
 
@@ -77,5 +79,14 @@ public class testcontroller implements Initializable {
             }
         });
 
+    }
+
+    private void reset(){
+        tfnic.clear();
+        tfnationality.clear();
+        tfname.clear();
+        tfproffesion.clear();
+        tfgadget_num.clear();
+        tftel.clear();
     }
 }

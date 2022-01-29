@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,16 +13,27 @@ import java.util.ResourceBundle;
 public class updatestock_controller implements Initializable {
 
     @FXML
-    private Button btncancel;
+    private Button btnupdate;
+
+    @FXML
+    private TextField idclinic;
+
+    @FXML
+    private TextField vaccine;
+
+    @FXML
+    private TextField taste;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        btncancel.setOnAction(new EventHandler<ActionEvent>() {
+        btnupdate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DBUtils.changeover(actionEvent,"menu_clinic.fxml","CLINIC MANAGEMENT");
+                DBUtils.updatestock(actionEvent,Integer.parseInt(idclinic.getText()),Integer.parseInt(vaccine.getText()),Integer.parseInt(taste.getText()));
             }
         });
+
 
     }
 }

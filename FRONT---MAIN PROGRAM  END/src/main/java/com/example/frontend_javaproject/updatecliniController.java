@@ -27,7 +27,7 @@ public class updatecliniController implements Initializable {
 
     @FXML private Button btnadd;
 
-
+    @FXML private Button btnaddstock;
 
     @FXML private Button btndelete;
 
@@ -92,6 +92,27 @@ public class updatecliniController implements Initializable {
                 refresh();
             }
         });
+
+
+        btnaddstock.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    Parent parent = FXMLLoader.load(getClass().getResource("updatestock.fxml"));
+                    Scene scene=new Scene(parent);
+                    Stage stage=new Stage();
+                    stage.setScene(scene);
+                    stage.initStyle(StageStyle.UTILITY);
+
+                    stage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                refresh();
+            }
+        });
+
 
         btndelete.setOnAction(new EventHandler<ActionEvent>() {
             @Override

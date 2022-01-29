@@ -137,7 +137,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
-          <line>357</line>
+          <line>364</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -147,7 +147,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java</url>
-          <line>144</line>
+          <line>147</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

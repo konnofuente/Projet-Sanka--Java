@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.*;
@@ -68,6 +67,7 @@ public class DBUtils {
 
         Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
         stage.setTitle(title);
+        stage.setResizable(true);
         stage.setScene(new Scene(root,1000,600));
         root.setOnMousePressed(event ->{
             x.set(event.getSceneX());
@@ -126,6 +126,9 @@ public class DBUtils {
 
                 // execute the preparedstatement
                 preparedStmt.execute();
+                String query2="UPDATE clinic SET qty_vacc=qty_vacc-1 WHERE (idclinic = 1)";
+                PreparedStatement preparedStatement2=connection.prepareStatement(query2);
+                preparedStatement2.execute();
 
                 connection.close();
                 //DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
@@ -219,6 +222,7 @@ public class DBUtils {
             String query = " insert into client_taste (NIC,name,nationality,tel_number,gadget_number,status,date_taste)"
                     + " values (?, ?, ?, ?, ?, ?, ?)";
 
+                    //UPDATE `sanka`.`clinic` SET `qty_vacc` = '3', `qty_taste` = '3' WHERE (`idclinic` = '1');
             // create the mysql insert preparedstatement
             PreparedStatement preparedStmt = connection.prepareStatement(query);
             preparedStmt.setInt (1,nic);
@@ -231,6 +235,9 @@ public class DBUtils {
 
             // execute the preparedstatement
             preparedStmt.execute();
+            String query2="UPDATE clinic SET qty_taste=qty_taste-1 WHERE (idclinic = 1)";
+            PreparedStatement preparedStatement2=connection.prepareStatement(query2);
+            preparedStatement2.execute();
 
             DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
 
@@ -463,6 +470,67 @@ public class DBUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void updatestock(ActionEvent actionEvent,Integer idclinic,Integer vaccine,Integer taste) {
+        Connection connection=null;
+        PreparedStatement psInsert=null;
+        PreparedStatement checkUserExist=null;
+        ResultSet resultSet=null;
+
+        try{
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            checkUserExist= connection.prepareStatement("SELECT * FROM clinic WHERE idclinic=?");
+            checkUserExist.setInt(1,idclinic);
+            resultSet=checkUserExist.executeQuery();
+            if(!resultSet.isBeforeFirst()){
+                System.out.println("Clinic does not Exist");
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("You cannot increase a stock of a clinic that does not exist\n Re-enter a corrrect Id");
+                alert.show();
+            }
+            else
+            {
+                String query = " UPDATE clinic SET qty_vacc=qty_vacc +"+vaccine+" , qty_taste=qty_taste + "+taste+" WHERE (idclinic = "+idclinic+")";
+                PreparedStatement preparedStatement=connection.prepareStatement(query);
+                preparedStatement.execute();
+
+                Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("The Clinic With ID "+idclinic+" has been successfully Editted!!!!!!");
+                alert.show();
+
+                connection.close();
+
+
+            }
+        } catch (Exception e)
+        {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
+
+    }
+
+
+    public static int CountValue(String query) {
+        Connection connection=null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet=null;
+        int value = 0;
+        try{
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            preparedStatement=connection.prepareStatement(query);
+            resultSet=preparedStatement.executeQuery();
+            while(resultSet.next()){
+                value++;
+            }
+
+        } catch (Exception e)
+        {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
+        return value;
     }
 }
 
