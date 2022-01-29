@@ -76,17 +76,8 @@ public class Vaccination_cardController implements Initializable {
     }
 
 
-<<<<<<< HEAD
 
     public  void setinfovaccination(String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,Date Pdate)
-=======
-<<<<<<< Updated upstream
-    public  void setinfo(String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,Date Pdate)
-=======
-
-    public  void setinfovaccination(String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,Date Pdate)
->>>>>>> Stashed changes
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
     {
         idclient.setText(Pidclient);
         name.setText(Pname);

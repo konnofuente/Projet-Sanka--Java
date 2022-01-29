@@ -8,47 +8,77 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class DBUtils {
 
+
+    public static void exit() {
+        System.exit(0);
+    }
 
 
 
     /**sdsddzxcckvvlvlvkvkkkkfffddssaaaassdddddddd
      the changover permit the tranfer from one window to another
      */
-    public static void changeover(ActionEvent event, String fxml,String title){
+    public static void changeover(ActionEvent actionevent, String fxml,String title){
         Parent root=null;
-
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
         try{
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
         }catch (IOException e){
             e.printStackTrace();
         }
-        Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
+
+        Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(new Scene(root,800,550));
+        root.setOnMousePressed(event ->{
+            x.set(event.getSceneX());
+            y.set(event.getSceneY());
+        });
+
+        root.setOnMouseDragged(event ->{
+            stage.setX(event.getScreenX()- x.get());
+            stage.setY(event.getScreenY()- y.get());
+        });
+
         stage.show();
 
     }
 
-    public static void changehigh(ActionEvent event, String fxml,String title){
+    public static void changehigh(ActionEvent actionevent, String fxml,String title){
         Parent root=null;
-
+        AtomicReference<Double> x = new AtomicReference<>((double) 0);
+        AtomicReference<Double> y = new AtomicReference<>((double) 0);
         try{
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
         }catch (IOException e){
             e.printStackTrace();
         }
-        Stage stage =(Stage)((Node) event.getSource()).getScene().getWindow();
+
+        Stage stage =(Stage)((Node) actionevent.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(new Scene(root,1000,600));
+        root.setOnMousePressed(event ->{
+            x.set(event.getSceneX());
+            y.set(event.getSceneY());
+        });
+
+        root.setOnMouseDragged(event ->{
+            stage.setX(event.getScreenX()- x.get());
+            stage.setY(event.getScreenY()- y.get());
+        });
+
         stage.show();
 
     }
@@ -98,7 +128,8 @@ public class DBUtils {
                 preparedStmt.execute();
 
                 connection.close();
-                DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+                //DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+
             }
         }
         catch (Exception e)
@@ -110,7 +141,6 @@ public class DBUtils {
 
     }
 
-<<<<<<< HEAD
     public static void changeOvercard(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel) {
         Parent root=null;
         AtomicReference<Double> x = new AtomicReference<>((double) 0);
@@ -122,15 +152,7 @@ public class DBUtils {
             FXMLLoader loader= new FXMLLoader(DBUtils.class.getResource(fxml));
             root =loader.load();
             Vaccination_cardController vaccination_cardController=loader.getController();
-<<<<<<< HEAD
             vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
-=======
-<<<<<<< Updated upstream
-            vaccination_cardController.setinfo(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
-=======
-            vaccination_cardController.setinfovaccination(Pidclient,Pname,Page,Pnationality,Pproffesion,Ptel,starDate);
->>>>>>> Stashed changes
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
             Scene scene=new Scene(root,700,480);
             Stage stage =new Stage();
             stage.setScene(scene);
@@ -147,11 +169,6 @@ public class DBUtils {
 
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
     public static void changeOvercardtest(ActionEvent actionevent, String fxml, String title, String Pidclient, String Pname, String Page, String Pnationality, String Pproffesion, String Ptel,String PgadgetNum,String Ppositive,String Pnegative) {
         Parent root=null;
@@ -181,12 +198,6 @@ public class DBUtils {
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
-=======
->>>>>>> parent of 0cec7d8 (before blaise)
     /**
      the client taste function will be use to send a client info imto the databse before a taste
      */
@@ -433,11 +444,6 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
     public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
         String query=null;
@@ -458,10 +464,6 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 }
 
 

@@ -100,28 +100,8 @@ public class updatecliniController implements Initializable {
                 try {
                     DBUtils.deleteDB_clinic(clinicTable);
                 } catch (SQLException e) {
-<<<<<<< HEAD
                     e.printStackTrace();
                 }
-=======
-<<<<<<< Updated upstream
-                    e.printStackTrace();
-                }
-                /** try {
-                    clinic = clinicTable.getSelectionModel().getSelectedItem();
-                    query = "DELETE FROM clinic WHERE idclinic =" + clinic.getId();
-                    preparedStatement = connection.prepareStatement(query);
-                    preparedStatement.execute();
-                    Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText("The clinic chosed was succesfully deleted !!!!!!!!!");
-                    alert.show();
-
-                }catch (SQLException e){
-=======
->>>>>>> Stashed changes
-                    e.printStackTrace();
-                }*/
->>>>>>> 162d297c6ea7460c30fec7a649bb8ed136d3a261
 
                 refresh();
             }
