@@ -39,7 +39,7 @@ public class mainpagecontroller implements Initializable {
         btn_service.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-               DBUtils.changeover(actionEvent, "2servicepage.fxml","SERVICES");
+               DBUtils.changeover(actionEvent, ".fxml","SERVICES");
             }
         });
 

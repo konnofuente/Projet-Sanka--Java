@@ -5,56 +5,42 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontend_javaproject.servicepagecontroller">
    <children>
-      <Pane layoutY="-8.0" prefHeight="36.0" prefWidth="770.0" />
-      <AnchorPane layoutX="10.0" layoutY="28.0" prefHeight="548.0" prefWidth="100.0" style="-fx-background-color: #85C7F2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="28.0" />
-      <AnchorPane layoutX="102.0" layoutY="28.0" prefHeight="548.0" prefWidth="668.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
-         <children>
-            <Button fx:id="btntest" layoutX="225.0" layoutY="297.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #194E72;" text="TEST" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnvaccinate" layoutX="222.0" layoutY="370.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="156.0" style="-fx-background-color: #194E72;" text="VACCINATION" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label layoutX="115.0" layoutY="14.0" prefHeight="27.0" prefWidth="369.0" text="CHOOSE AN OPERATION TO CARRY OUT" textAlignment="CENTER" textFill="#194e72">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="197.0" layoutY="491.0" prefHeight="17.0" prefWidth="207.0" text="Protect the world with a face Mask" textFill="#194e72">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="12.0" />
-               </font>
-            </Label>
-            <Button fx:id="btnreturn" layoutX="259.0" layoutY="446.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #194E72;" text="EXIT" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
-            <AnchorPane layoutX="471.0" layoutY="-20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #85C7F2;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <ImageView fitHeight="188.0" fitWidth="190.0" layoutX="206.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@syringe.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Button fx:id="btn_close" layoutX="769.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" style="-fx-background-color: transperent;" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="-3.0">
-         <graphic>
-            <ImageView fitHeight="19.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@close_window_30px.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <AnchorPane layoutX="-6.0" layoutY="-1.0" prefHeight="550.0" prefWidth="94.0" style="-fx-background-color: #85C7F2;" />
+      <AnchorPane layoutX="705.0" prefHeight="550.0" prefWidth="94.0" style="-fx-background-color: #85C7F2;" />
+      <ImageView fitHeight="243.0" fitWidth="204.0" layoutX="273.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@syringe.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="34.0" prefHeight="27.0" prefWidth="390.0" text="CHOOSE AN OPERATION BELOW" textAlignment="CENTER" textFill="#194e72">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btntest" layoutX="265.0" layoutY="304.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="219.0" style="-fx-background-color: #194E72;" text="TEST" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="262.0" layoutY="512.0" text="PROTECT THE WORLD WITH A FACE MASK">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnvaccinate" layoutX="264.0" layoutY="379.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="219.0" style="-fx-background-color: #194E72;" text="VACCINATION" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreturn" layoutX="319.0" layoutY="449.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #194E72;" text="EXIT" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

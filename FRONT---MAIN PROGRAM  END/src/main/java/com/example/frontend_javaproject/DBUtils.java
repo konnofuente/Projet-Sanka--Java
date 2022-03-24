@@ -96,7 +96,7 @@ public class DBUtils {
     {
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "1234");
             Statement statement = connection.createStatement();
             PreparedStatement checkUserExist = null;
             ResultSet resultSet=null;
@@ -212,7 +212,7 @@ public class DBUtils {
     {
 
         try {
-            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery( "select * from client_taste");
 
@@ -266,7 +266,7 @@ public class DBUtils {
     {
 
         try {
-            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Connection connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery( "select * from clinic");
 
@@ -320,7 +320,7 @@ public class DBUtils {
         ResultSet resultSet=null;
 
         try{
-            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             checkUserExist= connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat=?");
             checkUserExist.setString(1,admin_mat);
             resultSet=checkUserExist.executeQuery();
@@ -367,7 +367,7 @@ public class DBUtils {
 
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root", "1234");
             checkUserExist = connection.prepareStatement("SELECT * FROM administrator WHERE admin_mat =?");
             checkUserExist.setString(1, admin_mat);
             resultSet = checkUserExist.executeQuery();
@@ -417,7 +417,7 @@ public class DBUtils {
      */
     public static void deleteDB_client(TableView<Client> clientTable) throws SQLException {
         String query=null;
-        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );;
         PreparedStatement preparedStatement =null;
         ResultSet resultSet =null;
         Client client =null;
@@ -441,7 +441,7 @@ public class DBUtils {
      */
     public static void deleteDB_clinic(TableView<Clinic> clinicTable) throws SQLException {
         String query=null;
-        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );;
         PreparedStatement preparedStatement =null;
         ResultSet resultSet =null;
         Clinic clinic =null;
@@ -465,7 +465,7 @@ public class DBUtils {
      */
     public static void deleteDB_clienttaste(TableView<TClient> clientTable) throws SQLException{
         String query=null;
-        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+        Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );;
         PreparedStatement preparedStatement =null;
         ResultSet resultSet =null;
         TClient tclient =null;
@@ -494,7 +494,7 @@ public class DBUtils {
         ResultSet resultSet=null;
 
         try{
-            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             checkUserExist= connection.prepareStatement("SELECT * FROM clinic WHERE idclinic=?");
             checkUserExist.setInt(1,idclinic);
             resultSet=checkUserExist.executeQuery();
@@ -540,7 +540,7 @@ public class DBUtils {
         ResultSet resultSet=null;
         int value = 0;
         try{
-            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             preparedStatement=connection.prepareStatement(query);
             resultSet=preparedStatement.executeQuery();
             while(resultSet.next()){
