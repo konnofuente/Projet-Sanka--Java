@@ -24,6 +24,7 @@ public class servicepagecontroller implements Initializable {
 
     @FXML
     private Button btn_close;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -47,13 +48,12 @@ public class servicepagecontroller implements Initializable {
                     DBUtils.changeover(actionEvent,"mainpage2.fxml","welcome");
                 }
             });
-
         btn_close.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 DBUtils.exit();
-
             }
         });
+
     }
 }

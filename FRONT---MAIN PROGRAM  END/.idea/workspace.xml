@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="658b0374-574e-4ad5-8a10-f1debe1bd84c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/2servicepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End_Java-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End_Java-Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/2servicepage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/mainpagecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/servicepagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/servicepagecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/sliderMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/sliderMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/updateclientTaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontend_javaproject/updateclientTaste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/frontend_javaproject/welcomeAdmin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/2servicepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/2servicepage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/admin_logincontrol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/clt_infocontroller$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/clt_infocontroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/condition.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/loggedin_admincontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpagecontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/signup_admincontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/slider_Menu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/testcontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/vaccinationcontroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpagecontroller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/mainpagecontroller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/servicepagecontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/sliderMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/sliderMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontend_javaproject/welcomeAdmin.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

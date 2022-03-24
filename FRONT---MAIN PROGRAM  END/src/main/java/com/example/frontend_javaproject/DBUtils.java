@@ -136,7 +136,7 @@ public class DBUtils {
                 preparedStatement2.execute();
 
                 connection.close();
-                //DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+                //DBUtils.changeover(actionEvent,"servicepage.fxml","CLIENT MANAGEMENT");
 
             }
         }
@@ -243,7 +243,7 @@ public class DBUtils {
             PreparedStatement preparedStatement2=connection.prepareStatement(query2);
             preparedStatement2.execute();
 
-            DBUtils.changeover(actionEvent,"2servicepage.fxml","CLIENT MANAGEMENT");
+            DBUtils.changeover(actionEvent,"servicepage.fxml","CLIENT MANAGEMENT");
 
 
             connection.close();

@@ -129,7 +129,7 @@ public class updateclientTaste implements Initializable {
 
         try {
             String query=null;
-            Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+            Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );;
             PreparedStatement preparedStatement =null;
             ResultSet resultSet =null;
             Client client =null;

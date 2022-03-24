@@ -82,7 +82,7 @@ public class sliderMenuController implements Initializable {
         });
 
         try{
-            Parent root= FXMLLoader.load(getClass().getResource("welcomeAdmin.fxml"));
+            Parent root= FXMLLoader.load(getClass().getResource("2servicepage.fxml"));
             contentArea.getChildren().removeAll();
             contentArea.getChildren().setAll(root);
         } catch (IOException e) {
@@ -96,7 +96,7 @@ public class sliderMenuController implements Initializable {
     }
 
     public void dashboard (ActionEvent actionEvent) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("welcomeAdmin.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("2servicepage.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
     }
