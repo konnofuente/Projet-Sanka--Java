@@ -129,7 +129,7 @@ public class updatecliniController implements Initializable {
     private void refresh()  {
         try{
 
-            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "" );
+            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/sanka", "root" , "1234" );
             PreparedStatement preparedStatement=null;
             ResultSet resultSet=null;
             String query=null;

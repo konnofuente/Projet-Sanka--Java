@@ -150,12 +150,11 @@ public class updateclientcontroller implements Initializable {
 
         try {
             String query=null;
-            Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );;
+            Connection connection =  DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "1234" );;
             PreparedStatement preparedStatement =null;
             ResultSet resultSet =null;
             Client client =null;
 
-           // connection = DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sanka", "root" , "" );
             clientlist.clear();
             query = "SELECT * FROM client_vaccine";
             preparedStatement = connection.prepareStatement(query);
